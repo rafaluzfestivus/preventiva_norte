@@ -41,7 +41,7 @@ export default function CaHome() {
       <AboutUs dict={ca.aboutUs} />
       <Gallery dict={ca.gallery} />
       <Testimonials dict={ca.testimonials} />
-      <ContactSection dict={ca.contact} />
+      <ContactSection />
     </>
   );
 }
