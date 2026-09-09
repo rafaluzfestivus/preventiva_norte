@@ -1,9 +1,12 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-    experimental: {
-        turbopackUseSystemTlsCerts: true,
-    },
+    // `experimental.turbopackUseSystemTlsCerts` (a local-TLS workaround) was
+    // removed from Next.js's ExperimentalConfig type as of the 16.3.4 bump
+    // (see PREVENTIVA_NORTE_IDENTITY.md) — it no longer exists in this
+    // version and broke `tsc --noEmit`/`next build`. este's fork history
+    // independently removed the same flag for the same class of reason
+    // ("workaround for local TLS interfering with Vercel build").
     async redirects() {
         return [
             // Retired standalone /servicios/* pages consolidated into /proteccion's anchors.
