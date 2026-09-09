@@ -2,16 +2,16 @@ import { Metadata } from "next";
 import ProteccionContent from "./ProteccionContent";
 
 export const metadata: Metadata = {
-    title: "Redes de Protección en Barcelona | Niños, Gatos y Aves",
-    description: "Protección integral para tu hogar en Barcelona. Mallas certificadas para seguridad infantil, protección de gatos y control de aves. Instalación profesional en 24h.",
-    keywords: ["redes para gatos barcelona", "seguridad infantil barcelona", "control de aves barcelona", "mallas de seguridad balcones", "protección ventanas niños", "Preventiva Este"],
+    title: "Redes de Proteção no Porto | Crianças, Gatos e Aves",
+    description: "Proteção integral para a sua casa no Porto e Norte de Portugal. Redes certificadas para segurança infantil, proteção de gatos e controlo de aves. Instalação profissional em 24h.",
+    keywords: ["redes para gatos porto", "segurança infantil porto", "controlo de aves porto", "redes de segurança varandas", "proteção janelas crianças", "Preventiva Norte"],
     alternates: {
-        canonical: "https://preventivaeste.com/proteccion",
+        canonical: "https://preventivanorte.pt/proteccion",
     },
     openGraph: {
-        url: "https://preventivaeste.com/proteccion",
-        title: "Redes de Protección en Barcelona | Niños, Gatos y Aves",
-        description: "Protección integral para tu hogar en Barcelona. Mallas certificadas para seguridad infantil, protección de gatos y control de aves.",
+        url: "https://preventivanorte.pt/proteccion",
+        title: "Redes de Proteção no Porto | Crianças, Gatos e Aves",
+        description: "Proteção integral para a sua casa no Porto e Norte de Portugal. Redes certificadas para segurança infantil, proteção de gatos e controlo de aves.",
         images: [{ url: "https://preventivanorte.pt/logo-preventiva-norte.png", alt: "Preventiva Norte" }],
     },
 };

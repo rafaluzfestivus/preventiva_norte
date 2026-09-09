@@ -61,7 +61,7 @@ export function Footer() {
                             <a href="#" className="hover:text-yellow-400 transition-colors">
                                 <Facebook className="w-5 h-5" />
                             </a>
-                            <a href="https://www.instagram.com/preventivaeste/" className="hover:text-rose-500 transition-colors" target="_blank" rel="noopener noreferrer">
+                            <a href="https://www.instagram.com/preventivanorte" className="hover:text-rose-500 transition-colors" target="_blank" rel="noopener noreferrer">
                                 <Instagram className="w-5 h-5" />
                             </a>
                         </div>
@@ -100,12 +100,13 @@ export function Footer() {
                                 <Phone className="w-5 h-5 text-yellow-400 shrink-0 mt-1" />
                                 <div>
                                     <span className="text-xs text-slate-400 font-bold uppercase block">{dict.mobileLabel}</span>
-                                    <a href="tel:+34681625566" className="hover:text-white transition-colors">Móvil: 681 625 566</a>
+                                    {/* Unconfirmed — live site shows 910 407 485, one digit differs. Confirm with client before launch. */}
+                                    <a href="tel:+351910407785" className="hover:text-white transition-colors">Móvil: 910 407 785</a>
                                 </div>
                             </li>
                             <li className="flex items-center gap-3">
                                 <Mail className="w-5 h-5 text-yellow-400 shrink-0" />
-                                <span>contacto@preventivaeste.com</span>
+                                <span>comercial@preventivanorte.pt</span>
                             </li>
                             <li className="flex items-start gap-3">
                                 <MapPin className="w-5 h-5 text-yellow-400 shrink-0" />
@@ -116,7 +117,7 @@ export function Footer() {
                 </div>
 
                 <div className="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-slate-400">
-                    <p>&copy; {new Date().getFullYear()} Preventiva Este. {dict.copyright}</p>
+                    <p>&copy; {new Date().getFullYear()} Preventiva Norte. {dict.copyright}</p>
                     <div className="flex gap-6">
                         <Link href={privacyHref} className="hover:text-white transition-colors">{dict.legalNotice}</Link>
                         <Link href={privacyHref} className="hover:text-white transition-colors">{dict.privacyPolicy}</Link>

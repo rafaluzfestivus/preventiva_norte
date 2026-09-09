@@ -9,12 +9,12 @@ import { CookieConsent } from "@/components/layout/CookieConsent";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Instalación de Redes de Protección en Barcelona | Preventiva Este",
-  description: "Especialistas en instalación de redes de protección para balcones, ventanas y terrazas en Barcelona y alrededores. Resistencia de 150kg/m² y 3 años de garantía.",
-  keywords: ["redes de protección barcelona", "mallas de seguridad barcelona", "redes para balcones barcelona", "redes para gatos barcelona", "seguridad infantil ventanas barcelona", "instalación redes barcelona", "mallas anticaídas", "protección terrazas barcelona", "Preventiva Este", "precio redes protección", "presupuesto mallas seguridad", "instaladores redes barcelona"],
-  authors: [{ name: "Preventiva Este", url: "https://preventivaeste.com" }],
-  creator: "Preventiva Este",
-  publisher: "Preventiva Este",
+  title: "Instalação de Redes de Proteção no Porto e Norte | Preventiva Norte",
+  description: "Especialistas em instalação de redes de proteção para varandas, janelas e terraços no Porto e em todo o Norte de Portugal. Resistência de 150kg/m² e 3 anos de garantia.",
+  keywords: ["redes de proteção porto", "redes de segurança porto", "redes para varandas porto", "redes para gatos porto", "segurança infantil janelas porto", "instalação redes porto", "redes anti-queda", "proteção terraços porto", "Preventiva Norte", "preço redes proteção", "orçamento redes segurança", "instaladores redes porto"],
+  authors: [{ name: "Preventiva Norte", url: "https://preventivanorte.pt" }],
+  creator: "Preventiva Norte",
+  publisher: "Preventiva Norte",
   formatDetection: {
     email: false,
     address: false,
@@ -23,10 +23,10 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "es_ES",
-    url: "https://preventivaeste.com",
-    title: "Preventiva Este | Redes de Protección en Barcelona",
-    description: "Instalación profesional de redes de protección y mallas de seguridad en Barcelona. Protege a tus seres queridos sin sacrificar la estética.",
-    siteName: "Preventiva Este",
+    url: "https://preventivanorte.pt",
+    title: "Preventiva Norte | Redes de Proteção no Porto e Norte de Portugal",
+    description: "Instalação profissional de redes de proteção e redes de segurança no Porto e Norte de Portugal. Proteja quem mais ama sem comprometer a estética da sua casa.",
+    siteName: "Preventiva Norte",
     images: [
       {
         url: "https://preventivanorte.pt/logo-preventiva-norte.png",
@@ -38,15 +38,15 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Preventiva Este | Redes de Protección en Barcelona",
-    description: "Instalación profesional de redes de protección y mallas de seguridad en Barcelona.",
+    title: "Preventiva Norte | Redes de Proteção no Porto e Norte de Portugal",
+    description: "Instalação profissional de redes de proteção e redes de segurança no Porto e Norte de Portugal.",
     images: ["https://preventivanorte.pt/logo-preventiva-norte.png"],
   },
   alternates: {
-    canonical: "https://preventivaeste.com",
+    canonical: "https://preventivanorte.pt",
     languages: {
-      "es": "https://preventivaeste.com",
-      "ca": "https://preventivaeste.com/ca",
+      "es": "https://preventivanorte.pt",
+      "ca": "https://preventivanorte.pt/ca",
     },
   },
   robots: {
@@ -77,7 +77,7 @@ export default function RootLayout({
     "@type": "HomeAndConstructionBusiness",
     "name": "Preventiva Norte",
     "image": "https://preventivanorte.pt/logo-preventiva-norte.png",
-    "description": "Especialistas en instalación de redes de protección y mallas de seguridad para balcones, ventanas y terrazas en Barcelona.",
+    "description": "Especialistas em instalação de redes de proteção e redes de segurança para varandas, janelas e terraços no Porto, Braga, Vila Nova de Gaia, Matosinhos, Maia, Gondomar e em todo o Norte de Portugal.",
     "address": {
       "@type": "PostalAddress",
       "addressLocality": "Porto",
@@ -97,75 +97,13 @@ export default function RootLayout({
       "Gondomar",
       "todo o Norte de Portugal"
     ],
-    "sameAs": ["https://www.instagram.com/preventivaeste/"],
+    "sameAs": ["https://www.instagram.com/preventivanorte", "https://www.facebook.com/preventivanorteredesdeprotecao"],
     "openingHoursSpecification": {
       "@type": "OpeningHoursSpecification",
       "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
       "opens": "09:00",
       "closes": "20:00"
-    },
-    "aggregateRating": {
-      "@type": "AggregateRating",
-      "ratingValue": "5",
-      "reviewCount": "5",
-      "bestRating": "5",
-      "worstRating": "1"
     }
-  };
-
-  const faqJsonLd = {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
-      {
-        "@type": "Question",
-        "name": "¿Cuánto tiempo tarda la instalación de redes de protección en Barcelona?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "La instalación suele completarse en pocas horas, dependiendo del tamaño y número de espacios. Trabajamos de forma limpia y sin obras."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "¿Qué garantía tienen las redes de protección?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Nuestras redes incluyen 3 años de garantía. Utilizamos materiales de alta resistencia certificados con una carga de 150 kg/m²."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "¿Podéis instalar redes en cualquier tipo de balcón o terraza en Barcelona?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Sí. Nos adaptamos a cualquier tipo de balcón, ventana o terraza, sea cual sea su forma o tamaño. Realizamos una medición personalizada antes de la instalación."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "¿Las redes de protección son visibles desde el exterior?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Las redes son prácticamente transparentes e imperceptibles desde la calle, preservando la estética de tu fachada sin renunciar a la seguridad."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "¿Cuánto cuesta instalar redes de protección en Barcelona?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "El precio depende de las dimensiones del espacio y el tipo de instalación. Ofrecemos presupuesto gratuito y sin compromiso. Contáctanos para recibir tu valoración personalizada."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "¿Instaláis redes en catalán y en otras ciudades del área metropolitana?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Sí, ofrecemos servicio en español y catalán en toda el área metropolitana de Barcelona, incluyendo L'Hospitalet, Badalona, Sabadell, Terrassa y Sant Cugat del Vallès."
-        }
-      }
-    ]
   };
 
   return (
@@ -200,9 +138,9 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         />
 
         {/* hreflang global */}
-        <link rel="alternate" hrefLang="es" href="https://preventivaeste.com" />
-        <link rel="alternate" hrefLang="ca" href="https://preventivaeste.com/ca" />
-        <link rel="alternate" hrefLang="x-default" href="https://preventivaeste.com" />
+        <link rel="alternate" hrefLang="es" href="https://preventivanorte.pt" />
+        <link rel="alternate" hrefLang="ca" href="https://preventivanorte.pt/ca" />
+        <link rel="alternate" hrefLang="x-default" href="https://preventivanorte.pt" />
       </head>
       <body className={`${inter.className} antialiased bg-gray-50 flex flex-col min-h-screen`}>
         <noscript>
@@ -216,10 +154,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(businessJsonLd) }}
-        />
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
         />
         <Navbar />
         <main className="flex-grow pt-20">
