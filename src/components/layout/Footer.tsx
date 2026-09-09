@@ -47,8 +47,8 @@ export function Footer() {
                     <div className="space-y-4">
                         <Link href={homeHref} className="inline-block relative">
                             <Image
-                                src="/logo-preventiva-este.png"
-                                alt="Preventiva Este Logo"
+                                src="/logo-preventiva-norte.png"
+                                alt="Preventiva Norte Logo"
                                 width={180}
                                 height={50}
                                 className="h-14 w-auto object-contain brightness-0 invert opacity-90 hover:opacity-100 transition-opacity"

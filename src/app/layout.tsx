@@ -29,10 +29,10 @@ export const metadata: Metadata = {
     siteName: "Preventiva Este",
     images: [
       {
-        url: "https://preventivaeste.com/logo-preventiva-este.png",
+        url: "https://preventivanorte.pt/logo-preventiva-norte.png",
         width: 800,
         height: 600,
-        alt: "Logo Preventiva Este",
+        alt: "Logo Preventiva Norte",
       },
     ],
   },
@@ -40,7 +40,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Preventiva Este | Redes de Protección en Barcelona",
     description: "Instalación profesional de redes de protección y mallas de seguridad en Barcelona.",
-    images: ["https://preventivaeste.com/logo-preventiva-este.png"],
+    images: ["https://preventivanorte.pt/logo-preventiva-norte.png"],
   },
   alternates: {
     canonical: "https://preventivaeste.com",
@@ -61,9 +61,9 @@ export const metadata: Metadata = {
     },
   },
   icons: {
-    icon: "/logo-preventiva-este.png",
-    shortcut: "/logo-preventiva-este.png",
-    apple: "/logo-preventiva-este.png",
+    icon: "/logo-preventiva-norte.png",
+    shortcut: "/logo-preventiva-norte.png",
+    apple: "/logo-preventiva-norte.png",
   },
 };
 
@@ -75,30 +75,27 @@ export default function RootLayout({
   const businessJsonLd = {
     "@context": "https://schema.org",
     "@type": "HomeAndConstructionBusiness",
-    "name": "Preventiva Este",
-    "image": "https://preventivaeste.com/logo-preventiva-este.png",
+    "name": "Preventiva Norte",
+    "image": "https://preventivanorte.pt/logo-preventiva-norte.png",
     "description": "Especialistas en instalación de redes de protección y mallas de seguridad para balcones, ventanas y terrazas en Barcelona.",
     "address": {
       "@type": "PostalAddress",
-      "addressLocality": "Barcelona",
-      "addressRegion": "Cataluña",
-      "addressCountry": "ES"
+      "addressLocality": "Porto",
+      "addressRegion": "Norte",
+      "addressCountry": "PT"
     },
-    "url": "https://preventivaeste.com",
-    "telephone": "+34681625566",
-    "email": "contacto@preventivaeste.com",
+    "url": "https://preventivanorte.pt",
+    "telephone": "+351253047599",
+    "email": "comercial@preventivanorte.pt",
     "priceRange": "$$",
     "areaServed": [
-      "Barcelona",
-      "L'Hospitalet de Llobregat",
-      "Badalona",
-      "Sabadell",
-      "Terrassa",
-      "Sant Cugat del Vallès",
-      "Cornellà de Llobregat",
-      "El Prat de Llobregat",
-      "Mataró",
-      "Área Metropolitana de Barcelona"
+      "Porto",
+      "Braga",
+      "Vila Nova de Gaia",
+      "Matosinhos",
+      "Maia",
+      "Gondomar",
+      "todo o Norte de Portugal"
     ],
     "sameAs": ["https://www.instagram.com/preventivaeste/"],
     "openingHoursSpecification": {

@@ -12,7 +12,7 @@ export const metadata: Metadata = {
         url: "https://preventivaeste.com/testes-certificaciones",
         title: "Certificaciones y Resistencia de Redes | Preventiva Este",
         description: "Calidad técnica certificada en Barcelona. Resistencia de 150kg/m², tratamiento Anti-UV e instalación profesional.",
-        images: [{ url: "https://preventivaeste.com/logo-preventiva-este.png", alt: "Preventiva Este" }],
+        images: [{ url: "https://preventivanorte.pt/logo-preventiva-norte.png", alt: "Preventiva Norte" }],
     },
 };
 

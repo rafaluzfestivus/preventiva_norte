@@ -25,7 +25,7 @@ export const metadata: Metadata = {
     title: "Xarxes de Protecció a Barcelona | Nens, Gats i Ocells",
     description:
       "Protecció integral per a la teva llar a Barcelona. Malles certificades per a seguretat infantil, protecció de gats i control d'ocells.",
-    images: [{ url: "https://preventivaeste.com/logo-preventiva-este.png", alt: "Preventiva Este" }],
+    images: [{ url: "https://preventivanorte.pt/logo-preventiva-norte.png", alt: "Preventiva Norte" }],
   },
 };
 

@@ -26,7 +26,7 @@ export const metadata: Metadata = {
     title: "Preventiva Este | Xarxes de Protecció a Barcelona",
     description:
       "Instal·lació professional de xarxes de protecció i malles de seguretat a Barcelona.",
-    images: [{ url: "https://preventivaeste.com/logo-preventiva-este.png", alt: "Preventiva Este" }],
+    images: [{ url: "https://preventivanorte.pt/logo-preventiva-norte.png", alt: "Preventiva Norte" }],
   },
 };
 

@@ -24,7 +24,7 @@ export const metadata: Metadata = {
     title: "Certificacions i Resistència de Xarxes | Preventiva Este",
     description:
       "Qualitat tècnica certificada a Barcelona. Resistència de 150kg/m², tractament Anti-UV i instal·lació professional.",
-    images: [{ url: "https://preventivaeste.com/logo-preventiva-este.png", alt: "Preventiva Este" }],
+    images: [{ url: "https://preventivanorte.pt/logo-preventiva-norte.png", alt: "Preventiva Norte" }],
   },
 };
 

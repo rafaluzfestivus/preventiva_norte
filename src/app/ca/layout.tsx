@@ -30,10 +30,10 @@ export const metadata: Metadata = {
     siteName: "Preventiva Este",
     images: [
       {
-        url: "https://preventivaeste.com/logo-preventiva-este.png",
+        url: "https://preventivanorte.pt/logo-preventiva-norte.png",
         width: 800,
         height: 600,
-        alt: "Logo Preventiva Este",
+        alt: "Logo Preventiva Norte",
       },
     ],
   },

@@ -99,7 +99,7 @@ export function Hero({ dict = defaultDict, basePath = "" }: HeroProps) {
                         className="mb-8 md:mb-0 order-1 md:order-2"
                     >
                         <Image
-                            src="/logo-preventiva-este.png"
+                            src="/logo-preventiva-norte.png"
                             alt={dict.logoAlt}
                             width={500}
                             height={250}

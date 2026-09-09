@@ -12,7 +12,7 @@ export const metadata: Metadata = {
         url: "https://preventivaeste.com/proteccion",
         title: "Redes de Protección en Barcelona | Niños, Gatos y Aves",
         description: "Protección integral para tu hogar en Barcelona. Mallas certificadas para seguridad infantil, protección de gatos y control de aves.",
-        images: [{ url: "https://preventivaeste.com/logo-preventiva-este.png", alt: "Preventiva Este" }],
+        images: [{ url: "https://preventivanorte.pt/logo-preventiva-norte.png", alt: "Preventiva Norte" }],
     },
 };
 
