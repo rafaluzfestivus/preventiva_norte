@@ -23,6 +23,9 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
+    type: "website",
+    locale: "es_ES",
+    siteName: "Preventiva Norte",
     url: "https://preventivanorte.pt/es",
     title: "Preventiva Norte | Redes de Protección en Porto y Norte de Portugal",
     description:
@@ -36,14 +39,14 @@ export default function EsHome() {
     <>
       <Hero dict={es.hero} basePath="/es" />
       <TrustBar dict={es.trustBar} />
-      <Services dict={es.services} />
+      <Services dict={es.services} basePath="/es" />
       <Benefits dict={es.benefits} />
       <WhyUs dict={es.whyUs} />
       <AboutUs dict={es.aboutUs} />
       <Gallery dict={es.gallery} />
       <Testimonials dict={es.testimonials} />
       <Resources dict={es.resources} />
-      <ContactSection />
+      <ContactSection dict={es.contact} />
     </>
   );
 }

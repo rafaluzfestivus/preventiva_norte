@@ -15,14 +15,14 @@ export default function Home() {
     <>
       <Hero dict={pt.hero} basePath="" />
       <TrustBar dict={pt.trustBar} />
-      <Services dict={pt.services} />
+      <Services dict={pt.services} basePath="" />
       <Benefits dict={pt.benefits} />
       <WhyUs dict={pt.whyUs} />
       <AboutUs dict={pt.aboutUs} />
       <Gallery dict={pt.gallery} />
       <Testimonials dict={pt.testimonials} />
       <Resources dict={pt.resources} />
-      <ContactSection />
+      <ContactSection dict={pt.contact} />
     </>
   );
 }

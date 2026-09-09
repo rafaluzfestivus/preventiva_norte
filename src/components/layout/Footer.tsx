@@ -39,6 +39,11 @@ export function Footer() {
     };
     const privacyHref = isES ? "/es/politica-privacitat" : "/politica-privacidade";
     const homeHref = isES ? "/es" : "/";
+    // Locale-aware link resolver: dict.quickLinks/protectionLinks store
+    // unprefixed (PT-style) paths; prepend the ES basePath so they resolve
+    // under /es on the Spanish site. No-op for PT (basePath === "").
+    const basePath = isES ? "/es" : "";
+    const localizeHref = (href: string) => (href === "/" ? homeHref : `${basePath}${href}`);
 
     return (
         <footer className="bg-[#4d2a36] text-gray-300 pt-16 pb-8">
@@ -58,7 +63,7 @@ export function Footer() {
                             {dict.description}
                         </p>
                         <div className="flex gap-4 pt-2">
-                            <a href="#" className="hover:text-yellow-400 transition-colors">
+                            <a href="https://www.facebook.com/preventivanorteredesdeprotecao" className="hover:text-yellow-400 transition-colors" target="_blank" rel="noopener noreferrer">
                                 <Facebook className="w-5 h-5" />
                             </a>
                             <a href="https://www.instagram.com/preventivanorte" className="hover:text-rose-500 transition-colors" target="_blank" rel="noopener noreferrer">
@@ -72,7 +77,7 @@ export function Footer() {
                         <ul className="space-y-3 text-sm">
                             {dict.quickLinks.map((link) => (
                                 <li key={link.href + link.label}>
-                                    <Link href={link.href} className="hover:text-yellow-400 transition-colors">
+                                    <Link href={localizeHref(link.href)} className="hover:text-yellow-400 transition-colors">
                                         {link.label}
                                     </Link>
                                 </li>
@@ -85,7 +90,7 @@ export function Footer() {
                         <ul className="space-y-3 text-sm">
                             {dict.protectionLinks.map((link) => (
                                 <li key={link.href + link.label}>
-                                    <Link href={link.href} className="hover:text-yellow-400 transition-colors">
+                                    <Link href={localizeHref(link.href)} className="hover:text-yellow-400 transition-colors">
                                         {link.label}
                                     </Link>
                                 </li>
