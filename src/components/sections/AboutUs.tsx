@@ -46,19 +46,19 @@ export function AboutUs({ dict = defaultDict }: AboutUsProps) {
 
                     <div className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-6">
                         <div className="bg-yellow-50 border border-yellow-100 p-6 rounded-2xl text-center">
-                            <h3 className="text-2xl font-bold text-[#4d2a36] mb-1">Barcelona</h3>
-                            <p className="text-slate-500 text-sm font-medium">Preventiva Este</p>
+                            <h3 className="text-2xl font-bold text-[#4d2a36] mb-1">Porto</h3>
+                            <p className="text-slate-500 text-sm font-medium">Preventiva Norte</p>
                         </div>
                         <div className="bg-gray-50 p-6 rounded-2xl border border-gray-100 text-center">
                             <h3 className="text-2xl font-bold text-[#4d2a36] mb-1">Madrid</h3>
                             <p className="text-slate-500 text-sm font-medium">Preventiva Centro</p>
                         </div>
                         <div className="bg-gray-50 p-6 rounded-2xl border border-gray-100 text-center">
-                            <h3 className="text-2xl font-bold text-[#4d2a36] mb-1">Galicia</h3>
+                            <h3 className="text-2xl font-bold text-[#4d2a36] mb-1">Galiza</h3>
                             <p className="text-slate-500 text-sm font-medium">Preventiva Norte</p>
                         </div>
                         <div className="bg-gray-50 p-6 rounded-2xl border border-gray-100 text-center">
-                            <h3 className="text-2xl font-bold text-[#4d2a36] mb-1">Andalucía</h3>
+                            <h3 className="text-2xl font-bold text-[#4d2a36] mb-1">Andaluzia</h3>
                             <p className="text-slate-500 text-sm font-medium">Preventiva Sur</p>
                         </div>
                     </div>
