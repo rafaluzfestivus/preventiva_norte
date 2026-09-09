@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import CaProteccioContent from "./CaProteccioContent";
+import EsProteccioContent from "./CaProteccioContent";
 
 export const metadata: Metadata = {
   title: "Redes de Proteção no Porto | Crianças, Gatos e Aves",
@@ -29,6 +29,6 @@ export const metadata: Metadata = {
   },
 };
 
-export default function CaProteccionPage() {
-  return <CaProteccioContent />;
+export default function EsProteccionPage() {
+  return <EsProteccioContent />;
 }

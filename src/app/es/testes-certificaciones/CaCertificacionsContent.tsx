@@ -14,7 +14,7 @@ const specIcons = [
   <EyeOff key="eye" className="w-12 h-12 text-yellow-500" />,
 ];
 
-export default function CaCertificacionsContent() {
+export default function EsCertificacionsContent() {
   return (
     <main className="pt-24 min-h-screen bg-white">
       <section className="bg-[#4d2a36] py-20 text-white relative overflow-hidden">

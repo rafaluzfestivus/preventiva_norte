@@ -2,8 +2,8 @@ import type { Metadata } from "next";
 import { es } from "@/dictionaries/es";
 
 export const metadata: Metadata = {
-  title: "Política de Privacitat | Preventiva Este",
-  description: "Política de Privacitat i Protecció de Dades de Preventiva Este.",
+  title: "Política de Privacidad | Preventiva Norte",
+  description: "Política de Privacidad y Protección de Datos de Preventiva Norte.",
   alternates: {
     canonical: "https://preventivanorte.pt/es/politica-privacitat",
     languages: {
@@ -15,7 +15,7 @@ export const metadata: Metadata = {
 
 const d = es.privacyPolicy;
 
-export default function EsPrivacitatPage() {
+export default function EsPrivacidadPage() {
   return (
     <div className="container mx-auto px-4 py-16 md:py-24 max-w-4xl">
       <h1 className="text-3xl md:text-5xl font-bold mb-8 text-slate-900">{d.title}</h1>
@@ -24,10 +24,12 @@ export default function EsPrivacitatPage() {
         <p>{d.intro}</p>
 
         <h2 className="text-2xl font-bold mt-8 mb-4 text-slate-900">{d.s1Title}</h2>
-        <p dangerouslySetInnerHTML={{ __html: d.s1Content.replace(
-          "contacto@preventivaeste.com",
-          '<strong>Correu electrònic de contacte:</strong> contacto@preventivaeste.com'
-        ).replace("681 625 566", '<strong>Telèfon:</strong> 681 625 566') }} />
+        <p>
+          Los datos personales recabados a través de este sitio web son responsabilidad de Preventiva Norte.<br />
+          <strong>Correo electrónico de contacto:</strong> comercial@preventivanorte.pt<br />
+          <strong>Teléfono:</strong> 910 407 785<br />
+          Ubicación: Portugal (Prestamos servicio en todo el Norte de Portugal).
+        </p>
 
         <h2 className="text-2xl font-bold mt-8 mb-4 text-slate-900">{d.s2Title}</h2>
         <p>{d.s2Intro}</p>
@@ -38,10 +40,9 @@ export default function EsPrivacitatPage() {
         </ul>
 
         <h2 className="text-2xl font-bold mt-8 mb-4 text-slate-900">{d.s3Title}</h2>
-        <p dangerouslySetInnerHTML={{ __html: d.s3Content
-          .replace("consentiment explícit", "<strong>consentiment explícit</strong>")
-          .replace("execució d'un contracte", "<strong>execució d'un contracte</strong>")
-        }} />
+        <p>
+          La base legal para el tratamiento de sus datos es su <strong>consentimiento explícito</strong> al enviar un formulario de contacto o aceptar nuestras cookies, así como la <strong>ejecución de un contrato</strong> en caso de contratación de nuestros servicios.
+        </p>
 
         <h2 className="text-2xl font-bold mt-8 mb-4 text-slate-900">{d.s4Title}</h2>
         <p>{d.s4Content}</p>
@@ -54,9 +55,7 @@ export default function EsPrivacitatPage() {
           ))}
         </ul>
         <p className="mt-4">
-          {d.s5Footer.replace("contacto@preventivaeste.com", "")}
-          <strong>contacto@preventivaeste.com</strong>
-          {" "}indicant el dret que voleu exercir.
+          Para ejercer estos derechos, puede enviar un correo electrónico a <strong>comercial@preventivanorte.pt</strong> indicando el derecho que desea ejercer.
         </p>
 
         <h2 className="text-2xl font-bold mt-8 mb-4 text-slate-900">{d.s6Title}</h2>

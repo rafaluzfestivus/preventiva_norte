@@ -10,18 +10,19 @@ import { es } from "@/dictionaries/es";
 
 const d = es.proteccion;
 
-export default function CaProteccioContent() {
+export default function EsProteccioContent() {
   const serviceSchema = {
     "@context": "https://schema.org",
     "@type": "Service",
     "serviceType": "Instal·lació de Xarxes de Protecció",
     "provider": {
       "@type": "HomeAndConstructionBusiness",
-      "name": "Preventiva Este"
+      "name": "Preventiva Norte",
+      "url": "https://preventivanorte.pt"
     },
     "areaServed": {
       "@type": "City",
-      "name": "Barcelona"
+      "name": "Porto"
     },
     "hasOfferCatalog": {
       "@type": "OfferCatalog",

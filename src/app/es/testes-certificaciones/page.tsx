@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import CaCertificacionsContent from "./CaCertificacionsContent";
+import EsCertificacionsContent from "./CaCertificacionsContent";
 
 export const metadata: Metadata = {
   title: "Certificações e Resistência das Redes | Preventiva Norte",
@@ -28,6 +28,6 @@ export const metadata: Metadata = {
   },
 };
 
-export default function CaCertificacionsPage() {
-  return <CaCertificacionsContent />;
+export default function EsCertificacionsPage() {
+  return <EsCertificacionsContent />;
 }
