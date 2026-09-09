@@ -12,9 +12,9 @@ import { Resources } from "@/components/sections/Resources";
 import { es } from "@/dictionaries/es";
 
 export const metadata: Metadata = {
-  title: "Instalação de Redes de Proteção no Porto e Norte | Preventiva Norte",
+  title: "Instalación de Redes de Protección en Porto y Norte | Preventiva Norte",
   description:
-    "Especialistas em instalação de redes de proteção para varandas, janelas e terraços no Porto e em todo o Norte de Portugal. Resistência de 150kg/m² e 3 anos de garantia.",
+    "Especialistas en la instalación de redes de protección para balcones, ventanas y terrazas en Porto y en todo el Norte de Portugal. Resistencia de 150kg/m² y 2 años de garantía.",
   alternates: {
     canonical: "https://preventivanorte.pt/es",
     languages: {
@@ -24,9 +24,9 @@ export const metadata: Metadata = {
   },
   openGraph: {
     url: "https://preventivanorte.pt/es",
-    title: "Preventiva Norte | Redes de Proteção no Porto e Norte de Portugal",
+    title: "Preventiva Norte | Redes de Protección en Porto y Norte de Portugal",
     description:
-      "Instalação profissional de redes de proteção e redes de segurança no Porto e Norte de Portugal.",
+      "Instalación profesional de redes de protección y redes de seguridad en Porto y Norte de Portugal.",
     images: [{ url: "https://preventivanorte.pt/logo-preventiva-norte.png", alt: "Preventiva Norte" }],
   },
 };

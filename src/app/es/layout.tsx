@@ -2,21 +2,21 @@ import type { Metadata } from "next";
 import { LocaleUpdater } from "@/components/layout/LocaleUpdater";
 
 export const metadata: Metadata = {
-  title: "Instalação de Redes de Proteção no Porto e Norte | Preventiva Norte",
+  title: "Instalación de Redes de Protección en Porto y Norte | Preventiva Norte",
   description:
-    "Especialistas em instalação de redes de proteção para varandas, janelas e terraços no Porto e em todo o Norte de Portugal. Resistência de 150kg/m² e 3 anos de garantia.",
+    "Especialistas en la instalación de redes de protección para balcones, ventanas y terrazas en Porto y en todo el Norte de Portugal. Resistencia de 150kg/m² y 2 años de garantía.",
   keywords: [
-    "redes de proteção porto",
-    "redes de segurança porto",
-    "redes para varandas porto",
+    "redes de protección porto",
+    "redes de seguridad porto",
+    "redes para balcones porto",
     "redes para gatos porto",
-    "segurança infantil janelas porto",
-    "instalação redes porto",
-    "redes anti-queda",
-    "proteção terraços porto",
+    "seguridad infantil ventanas porto",
+    "instalación redes porto",
+    "redes anti-caídas",
+    "protección terrazas porto",
     "Preventiva Norte",
-    "preço redes proteção",
-    "orçamento redes segurança",
+    "precio redes protección",
+    "presupuesto redes seguridad",
     "instaladores redes porto",
   ],
   authors: [{ name: "Preventiva Norte", url: "https://preventivanorte.pt" }],
@@ -24,9 +24,9 @@ export const metadata: Metadata = {
     type: "website",
     locale: "es_ES",
     url: "https://preventivanorte.pt/es",
-    title: "Preventiva Norte | Redes de Proteção no Porto e Norte de Portugal",
+    title: "Preventiva Norte | Redes de Protección en Porto y Norte de Portugal",
     description:
-      "Instalação profissional de redes de proteção e redes de segurança no Porto e Norte de Portugal. Proteja quem mais ama sem comprometer a estética da sua casa.",
+      "Instalación profesional de redes de protección y redes de seguridad en Porto y Norte de Portugal. Protege a quienes más quieres sin comprometer la estética de tu casa.",
     siteName: "Preventiva Norte",
     images: [
       {

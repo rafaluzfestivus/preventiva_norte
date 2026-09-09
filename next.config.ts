@@ -10,8 +10,11 @@ const nextConfig: NextConfig = {
             { source: "/servicios/aves", destination: "/proteccion#aves", permanent: true },
             { source: "/servicios/gatos", destination: "/proteccion#gatos", permanent: true },
             { source: "/servicios/ninos", destination: "/proteccion#ninos", permanent: true },
-            // Old WordPress URL slugs (Task 10 will verify/add these against
-            // Google Search Console for preventivanorte.pt before cutover).
+            // Real indexed URLs from preventivanorte.pt's live page-sitemap.xml
+            // (verified 2026-09-09; the site's other 4 sitemaps are spam-injected
+            // and excluded — see task-10-brief.md Step 2).
+            { source: "/home/es", destination: "/es", permanent: true },
+            { source: "/nones", destination: "/es", permanent: true },
         ];
     },
 };

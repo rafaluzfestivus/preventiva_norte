@@ -21,8 +21,27 @@ export const metadata: Metadata = {
 };
 
 export default function DireitoCondominioPage() {
+    const faqSchema = {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        mainEntity: [
+            {
+                "@type": "Question",
+                name: "O condomínio pode proibir a instalação de redes de proteção?",
+                acceptedAnswer: {
+                    "@type": "Answer",
+                    text: "Não. Segundo o artigo 1422.º do Código Civil e um parecer da DECO Proteste, uma rede de proteção é uma estrutura amovível que não se enquadra como obra nova, não exigindo aprovação prévia da assembleia de condóminos.",
+                },
+            },
+        ],
+    };
+
     return (
         <div className="container mx-auto px-4 py-16 md:py-24 max-w-4xl">
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+            />
             <h1 className="text-3xl md:text-5xl font-bold mb-8 text-slate-900">
                 O condomínio pode proibir a instalação de redes de proteção?
             </h1>

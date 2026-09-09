@@ -2,15 +2,15 @@ import type { Metadata } from "next";
 import EsProteccioContent from "./CaProteccioContent";
 
 export const metadata: Metadata = {
-  title: "Redes de Proteção no Porto | Crianças, Gatos e Aves",
+  title: "Redes de Protección en Porto | Niños, Gatos y Aves",
   description:
-    "Proteção integral para a sua casa no Porto e Norte de Portugal. Redes certificadas para segurança infantil, proteção de gatos e controlo de aves. Instalação profissional em 24h.",
+    "Protección integral para tu casa en Porto y Norte de Portugal. Redes certificadas para seguridad infantil, protección de gatos y control de aves. Instalación profesional en 24h.",
   keywords: [
     "redes para gatos porto",
-    "segurança infantil porto",
-    "controlo de aves porto",
-    "redes de segurança varandas",
-    "proteção janelas crianças",
+    "seguridad infantil porto",
+    "control de aves porto",
+    "redes de seguridad balcones",
+    "protección ventanas niños",
     "Preventiva Norte",
   ],
   alternates: {
@@ -22,9 +22,9 @@ export const metadata: Metadata = {
   },
   openGraph: {
     url: "https://preventivanorte.pt/es/proteccion",
-    title: "Redes de Proteção no Porto | Crianças, Gatos e Aves",
+    title: "Redes de Protección en Porto | Niños, Gatos y Aves",
     description:
-      "Proteção integral para a sua casa no Porto e Norte de Portugal. Redes certificadas para segurança infantil, proteção de gatos e controlo de aves.",
+      "Protección integral para tu casa en Porto y Norte de Portugal. Redes certificadas para seguridad infantil, protección de gatos y control de aves.",
     images: [{ url: "https://preventivanorte.pt/logo-preventiva-norte.png", alt: "Preventiva Norte" }],
   },
 };
