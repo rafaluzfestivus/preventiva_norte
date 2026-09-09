@@ -21,7 +21,7 @@ export function CookieConsent() {
         : {
               text: "Utilizamos cookies próprios e de terceiros para melhorar a sua experiência e os nossos serviços, analisando a navegação no nosso website. Se continuar a navegar, consideramos que aceita a sua utilização. Pode obter mais informação na nossa",
               linkText: "Política de Privacidade",
-              linkHref: "/politica-privacidad",
+              linkHref: "/politica-privacidade",
               accept: "Aceitar",
               close: "Fechar",
           };

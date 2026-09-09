@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "https://preventivanorte.pt/es/politica-privacitat",
     languages: {
-      pt: "https://preventivanorte.pt/politica-privacidad",
+      pt: "https://preventivanorte.pt/politica-privacidade",
       es: "https://preventivanorte.pt/es/politica-privacitat",
     },
   },

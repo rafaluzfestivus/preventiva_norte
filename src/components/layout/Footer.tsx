@@ -37,7 +37,7 @@ export function Footer() {
             { label: "Janelas e Escadas", href: "/#servicios" },
         ],
     };
-    const privacyHref = isES ? "/es/politica-privacitat" : "/politica-privacidad";
+    const privacyHref = isES ? "/es/politica-privacitat" : "/politica-privacidade";
     const homeHref = isES ? "/es" : "/";
 
     return (
