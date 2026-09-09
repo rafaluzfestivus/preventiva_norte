@@ -72,6 +72,10 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const GA_ID = process.env.NEXT_PUBLIC_GA_ID;
+  const GTM_ID = process.env.NEXT_PUBLIC_GTM_ID;
+  const ADS_ID = process.env.NEXT_PUBLIC_GOOGLE_ADS_ID;
+
   const businessJsonLd = {
     "@context": "https://schema.org",
     "@type": "HomeAndConstructionBusiness",
@@ -114,28 +118,31 @@ export default function RootLayout({
         <link rel="preconnect" href="https://www.googletagmanager.com" />
 
         {/* Google Ads tag — must initialize dataLayer before GTM */}
-        <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18111431326"></script>
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `
-              window.dataLayer = window.dataLayer || [];
-              function gtag(){dataLayer.push(arguments);}
-              gtag('js', new Date());
-              gtag('config', 'AW-18111431326');
-            `,
-          }}
-        />
+        {GA_ID && (
+          <>
+            <script async src={`https://www.googletagmanager.com/gtag/js?id=${GA_ID}`} />
+            <script
+              dangerouslySetInnerHTML={{
+                __html: `
+                  window.dataLayer = window.dataLayer || [];
+                  function gtag(){dataLayer.push(arguments);}
+                  gtag('js', new Date());
+                  gtag('config', '${GA_ID}');
+                  ${ADS_ID ? `gtag('config', '${ADS_ID}');` : ''}
+                `,
+              }}
+            />
+          </>
+        )}
 
         {/* Google Tag Manager */}
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-N5BW7JW9');`,
-          }}
-        />
+        {GTM_ID && (
+          <script
+            dangerouslySetInnerHTML={{
+              __html: `(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','${GTM_ID}');`,
+            }}
+          />
+        )}
 
         {/* hreflang global */}
         <link rel="alternate" hrefLang="es" href="https://preventivanorte.pt" />
@@ -143,14 +150,16 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         <link rel="alternate" hrefLang="x-default" href="https://preventivanorte.pt" />
       </head>
       <body className={`${inter.className} antialiased bg-gray-50 flex flex-col min-h-screen`}>
-        <noscript>
-          <iframe
-            src="https://www.googletagmanager.com/ns.html?id=GTM-N5BW7JW9"
-            height="0"
-            width="0"
-            style={{ display: "none", visibility: "hidden" }}
-          />
-        </noscript>
+        {GTM_ID && (
+          <noscript>
+            <iframe
+              src={`https://www.googletagmanager.com/ns.html?id=${GTM_ID}`}
+              height="0"
+              width="0"
+              style={{ display: 'none', visibility: 'hidden' }}
+            />
+          </noscript>
+        )}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(businessJsonLd) }}
