@@ -288,7 +288,7 @@ export default function CaProteccioContent() {
               681 625 566
             </Link>
             <Link
-              href="/ca#contacto"
+              href="/es#contacto"
               className="bg-white text-[#4d2a36] border-2 border-[#4d2a36] px-10 py-5 rounded-full font-bold text-lg flex items-center justify-center transition-all shadow-lg hover:bg-gray-50"
             >
               {d.finalCtaForm}

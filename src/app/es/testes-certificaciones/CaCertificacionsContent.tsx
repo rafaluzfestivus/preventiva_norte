@@ -102,7 +102,7 @@ export default function CaCertificacionsContent() {
               {d.ctaDescription}
             </p>
             <Link
-              href="/ca#contacto"
+              href="/es#contacto"
               className="inline-block bg-yellow-500 text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-yellow-600 transition-all transform hover:scale-105"
             >
               {d.ctaButton}

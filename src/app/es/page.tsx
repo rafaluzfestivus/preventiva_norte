@@ -11,9 +11,9 @@ import { AboutUs } from "@/components/sections/AboutUs";
 import { es } from "@/dictionaries/es";
 
 export const metadata: Metadata = {
-  title: "Instal·lació de Xarxes de Protecció a Barcelona | Preventiva Este",
+  title: "Instalação de Redes de Proteção no Porto e Norte | Preventiva Norte",
   description:
-    "Especialistes en instal·lació de xarxes de protecció per a balcons, finestres i terrasses a Barcelona i voltants. Resistència de 150kg/m² i 3 anys de garantia.",
+    "Especialistas em instalação de redes de proteção para varandas, janelas e terraços no Porto e em todo o Norte de Portugal. Resistência de 150kg/m² e 3 anos de garantia.",
   alternates: {
     canonical: "https://preventivanorte.pt/es",
     languages: {
@@ -23,9 +23,9 @@ export const metadata: Metadata = {
   },
   openGraph: {
     url: "https://preventivanorte.pt/es",
-    title: "Preventiva Este | Xarxes de Protecció a Barcelona",
+    title: "Preventiva Norte | Redes de Proteção no Porto e Norte de Portugal",
     description:
-      "Instal·lació professional de xarxes de protecció i malles de seguretat a Barcelona.",
+      "Instalação profissional de redes de proteção e redes de segurança no Porto e Norte de Portugal.",
     images: [{ url: "https://preventivanorte.pt/logo-preventiva-norte.png", alt: "Preventiva Norte" }],
   },
 };
