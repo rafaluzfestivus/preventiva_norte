@@ -5,42 +5,10 @@ import { useState } from "react";
 import type { SiteDict } from "@/dictionaries/types";
 
 interface TestimonialsProps {
-    dict?: SiteDict["testimonials"];
+    dict: SiteDict["testimonials"];
 }
 
-const defaultDict: SiteDict["testimonials"] = {
-    title: "Lo que dicen nuestros clientes",
-    verMas: "Ver más",
-    items: [
-        {
-            name: "Ana García",
-            location: "Gràcia, Barcelona",
-            text: "Llevaba meses buscando una solución para mis dos gatos en el balcón. Mandé una foto por WhatsApp y en menos de 24 horas ya tenía presupuesto. La instalación fue limpia, rápida y los chicos super amables. La red es prácticamente invisible y mis gatos ya disfrutan del sol sin que yo me muera de angustia. ¡Totalmente recomendable!",
-        },
-        {
-            name: "Miguel Fernández",
-            location: "Eixample, Barcelona",
-            text: "Llevaba dos años sufriendo con las palomas en la terraza. Manchaban todo, hacían ruido y era imposible limpiar. Llamé a Preventiva Este y en tres días solucionaron el problema de forma definitiva. La red apenas se ve y las palomas no han vuelto. Ojalá lo hubiera hecho antes.",
-        },
-        {
-            name: "Lucía Moreno",
-            location: "L'Hospitalet de Llobregat",
-            text: "Instalamos las redes de seguridad infantil en todas las ventanas del piso. Tenemos una niña de 2 años muy inquieta y desde el primer momento nos preocupó la seguridad. El equipo fue muy profesional, explicaron todo el proceso y terminaron en pocas horas. Ahora respiramos tranquilos.",
-        },
-        {
-            name: "Roberto Jiménez",
-            location: "Sant Cugat del Vallès",
-            text: "Pedí presupuesto a varias empresas y Preventiva Este fue la más competitiva y la que mejores referencias tenía. El resultado superó mis expectativas: la red está perfectamente tensada, sin arrugas, y la fijación en la pared quedó impecable. Atención al cliente de diez.",
-        },
-        {
-            name: "Carmen Vidal",
-            location: "Sarrià-Sant Gervasi, Barcelona",
-            text: "Mi gato se cayó del balcón hace dos años y por suerte sobrevivió. Desde entonces busqué la mejor protección posible. Preventiva Este instaló una red que cubre cada rincón sin dejar ni un hueco. El material es de una calidad increíble y el presupuesto fue justo. No dudaría en volver a contratar su servicio.",
-        },
-    ],
-};
-
-export function Testimonials({ dict = defaultDict }: TestimonialsProps) {
+export function Testimonials({ dict }: TestimonialsProps) {
     const testimonials = dict.items;
     const [selectedTestimonial, setSelectedTestimonial] = useState<typeof testimonials[0] | null>(null);
 

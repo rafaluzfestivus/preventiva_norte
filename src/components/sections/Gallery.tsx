@@ -4,23 +4,8 @@ import { motion } from "framer-motion";
 import type { SiteDict } from "@/dictionaries/types";
 
 interface GalleryProps {
-    dict?: SiteDict["gallery"];
+    dict: SiteDict["gallery"];
 }
-
-const defaultDict: SiteDict["gallery"] = {
-    title: "Nuestros Trabajos",
-    subtitle:
-        "Explora algunas de nuestras instalaciones recientes en Barcelona. Seguridad impecable con el mínimo impacto visual.",
-    viewMore: "Ver más en Instagram →",
-    projects: [
-        { cat: "Balcón", ariaLabel: "Proyecto de red de protección en Balcón" },
-        { cat: "Terraza", ariaLabel: "Proyecto de red de protección en Terraza" },
-        { cat: "Ventana", ariaLabel: "Proyecto de red de protección en Ventana" },
-        { cat: "Estructura", ariaLabel: "Proyecto de red de protección en Estructura" },
-        { cat: "Mascotas", ariaLabel: "Proyecto de red de protección para Mascotas" },
-        { cat: "Seguridad", ariaLabel: "Proyecto de red de protección de Seguridad" },
-    ],
-};
 
 const imageSrcs = [
     "/img-1.jpg",
@@ -31,7 +16,7 @@ const imageSrcs = [
     "/img-6.jpg",
 ];
 
-export function Gallery({ dict = defaultDict }: GalleryProps) {
+export function Gallery({ dict }: GalleryProps) {
     return (
         <section id="galeria" className="py-20 bg-gray-50">
             <div className="container mx-auto px-4 md:px-8">

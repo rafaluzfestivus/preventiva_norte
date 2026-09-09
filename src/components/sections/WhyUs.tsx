@@ -5,39 +5,8 @@ import { UserCheck, Sparkles, Clock, FileCheck2 } from "lucide-react";
 import type { SiteDict } from "@/dictionaries/types";
 
 interface WhyUsProps {
-    dict?: SiteDict["whyUs"];
+    dict: SiteDict["whyUs"];
 }
-
-const defaultDict: SiteDict["whyUs"] = {
-    tag: "Diferenciación Técnica",
-    title1: "¿Por qué confiar en",
-    title2: "Preventiva Este?",
-    description:
-        "Unimos la experiencia internacional con el servicio local en Barcelona para ofrecerte la máxima seguridad sin comprometer la estética de tu hogar.",
-    catAlt: "Gato protegido con red de seguridad en terraza",
-    reasons: [
-        {
-            title: "Instaladores Propios",
-            description:
-                "No subcontratamos. Nuestro personal está especializado exclusivamente en redes de alta seguridad.",
-        },
-        {
-            title: "10 Años en el Mercado",
-            description:
-                "Más de una década de experiencia instalando redes de protección en toda la Península Ibérica.",
-        },
-        {
-            title: "Atención Ágil",
-            description:
-                "Presupuestos por WhatsApp en menor tiempo y plazos de instalación mínimos en toda el Área Metropolitana de Barcelona.",
-        },
-        {
-            title: "Certificación Técnica",
-            description:
-                "Solo utilizamos polietileno virgen, testado para soportar 150kg/m².",
-        },
-    ],
-};
 
 const icons = [
     <UserCheck key="uc" className="w-8 h-8 text-yellow-500" />,
@@ -46,7 +15,7 @@ const icons = [
     <FileCheck2 key="fc" className="w-8 h-8 text-yellow-500" />,
 ];
 
-export function WhyUs({ dict = defaultDict }: WhyUsProps) {
+export function WhyUs({ dict }: WhyUsProps) {
     return (
         <section className="py-24 bg-[#4d2a36] text-white">
             <div className="container mx-auto px-4 md:px-8">

@@ -2,16 +2,10 @@ import { Star } from "lucide-react";
 import type { SiteDict } from "@/dictionaries/types";
 
 interface TrustBarProps {
-    dict?: SiteDict["trustBar"];
+    dict: SiteDict["trustBar"];
 }
 
-const defaultDict: SiteDict["trustBar"] = {
-    certified: "CE Certificado",
-    guarantee: "Garantía",
-    guaranteeHighlight: "Total",
-};
-
-export function TrustBar({ dict = defaultDict }: TrustBarProps) {
+export function TrustBar({ dict }: TrustBarProps) {
     return (
         <section className="bg-white border-b border-gray-100 py-10">
             <div className="container mx-auto px-4 md:px-8">

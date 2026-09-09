@@ -5,29 +5,10 @@ import { motion } from "framer-motion";
 import type { SiteDict } from "@/dictionaries/types";
 
 interface BenefitsProps {
-    dict?: SiteDict["benefits"];
+    dict: SiteDict["benefits"];
 }
 
-const defaultDict: SiteDict["benefits"] = {
-    tag: "Por Qué Elegirnos",
-    title1: "Seguridad que no se ve,",
-    title2: "tranquilidad que se siente",
-    description:
-        "Nuestras redes de polietileno de alta tenacidad son la opción preferida por familias y arquitectos. Combinan la máxima seguridad técnica con un impacto visual mínimo.",
-    items: [
-        "Resistencia Certificada: Soportan hasta 150kg/m².",
-        "Tratamiento Anti-UV: Larga durabilidad expuestas al sol.",
-        "Máxima Estética: No alteran la fachada ni las vistas.",
-        "Material Ignífugo y No Tóxico.",
-        "Instalación sin Obras molestas.",
-        "Garantía de 3 años en materiales e instalación.",
-        "Servicio a nivel nacional.",
-    ],
-    quote: "El mejor servicio",
-    quoteDesc: "Instalación rápida y el resultado es impecable. Muy recomendados.",
-};
-
-export function Benefits({ dict = defaultDict }: BenefitsProps) {
+export function Benefits({ dict }: BenefitsProps) {
     return (
         <section id="beneficios" className="py-20 bg-white">
             <div className="container mx-auto px-4 md:px-8">

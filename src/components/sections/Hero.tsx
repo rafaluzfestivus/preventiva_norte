@@ -7,23 +7,11 @@ import Image from "next/image";
 import type { SiteDict } from "@/dictionaries/types";
 
 interface HeroProps {
-    dict?: SiteDict["hero"];
+    dict: SiteDict["hero"];
     basePath?: string;
 }
 
-const defaultDict: SiteDict["hero"] = {
-    badge: "Seguridad Certificada",
-    title1: "Redes de Protección",
-    title2: "para tu Hogar",
-    description:
-        'Especialistas en la instalación de <strong>redes de seguridad en toda el Área Metropolitana de Barcelona y alrededores</strong>. Protección certificada para niños y gatos en balcones y ventanas sin perder las vistas.',
-    ctaPrimary: "Pedir Presupuesto GRATIS",
-    ctaSecondary: "Ver Instalaciones",
-    scrollHint: "Descubre más",
-    logoAlt: "Preventiva Este - Instalación de Redes en Barcelona",
-};
-
-export function Hero({ dict = defaultDict, basePath = "" }: HeroProps) {
+export function Hero({ dict, basePath = "" }: HeroProps) {
     return (
         <section id="hero" className="relative min-h-[90vh] flex items-start justify-center overflow-hidden bg-[#4d2a36]">
             <div className="absolute inset-0 z-0">
