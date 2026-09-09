@@ -14,7 +14,7 @@ export default function EsProteccioContent() {
   const serviceSchema = {
     "@context": "https://schema.org",
     "@type": "Service",
-    "serviceType": "Instal·lació de Xarxes de Protecció",
+    "serviceType": "Instalación de Redes de Protección",
     "provider": {
       "@type": "HomeAndConstructionBusiness",
       "name": "Preventiva Norte",
@@ -26,11 +26,11 @@ export default function EsProteccioContent() {
     },
     "hasOfferCatalog": {
       "@type": "OfferCatalog",
-      "name": "Serveis de Protecció",
+      "name": "Servicios de Protección",
       "itemListElement": [
-        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Seguretat Infantil" } },
-        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Xarxes per a Gats" } },
-        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Control d'Ocells" } }
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Seguridad Infantil" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Redes para Gatos" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Control de Aves" } }
       ]
     }
   };
@@ -54,14 +54,14 @@ export default function EsProteccioContent() {
               {d.heroTag}
             </span>
             <h1 className="text-4xl md:text-7xl font-bold mb-8">
-              {d.heroTitle} <span className="text-yellow-400">{d.heroTitleHighlight}</span> per a la teva Llar
+              {d.heroTitle} <span className="text-yellow-400">{d.heroTitleHighlight}</span> para tu Hogar
             </h1>
             <p className="text-xl text-slate-300 leading-relaxed mb-12">
               {d.heroDescription}
             </p>
             <div className="flex flex-col sm:flex-row justify-center gap-6">
               <Link
-                href="https://wa.me/34681625566"
+                href="https://wa.me/351910407785"
                 target="_blank"
                 className="bg-yellow-500 text-white px-10 py-5 rounded-full font-bold text-lg hover:bg-yellow-600 transition-all shadow-xl"
               >
@@ -89,7 +89,7 @@ export default function EsProteccioContent() {
         </div>
       </section>
 
-      {/* 1. SEGURETAT INFANTIL */}
+      {/* 1. SEGURIDAD INFANTIL */}
       <section id="ninos" className="py-24 overflow-hidden">
         <div className="container mx-auto px-4 md:px-8">
           <div className="flex flex-col lg:flex-row items-center gap-16">
@@ -128,7 +128,7 @@ export default function EsProteccioContent() {
                 </p>
               </div>
               <Link
-                href="https://wa.me/34681625566"
+                href="https://wa.me/351910407785"
                 target="_blank"
                 className="bg-[#4d2a36] text-white px-8 py-4 rounded-full font-bold inline-flex items-center gap-3 hover:bg-slate-800 transition-all"
               >
@@ -152,7 +152,7 @@ export default function EsProteccioContent() {
 
       <div className="container mx-auto px-4"><hr className="border-gray-100" /></div>
 
-      {/* 2. GATS */}
+      {/* 2. GATOS */}
       <section id="gatos" className="py-24 bg-gray-50/50">
         <div className="container mx-auto px-4 md:px-8">
           <div className="flex flex-col lg:flex-row-reverse items-center gap-16">
@@ -184,7 +184,7 @@ export default function EsProteccioContent() {
                 </li>
               </ul>
               <Link
-                href="https://wa.me/34681625566"
+                href="https://wa.me/351910407785"
                 target="_blank"
                 className="bg-yellow-500 text-white px-8 py-4 rounded-full font-bold inline-flex items-center gap-3 hover:bg-yellow-600 transition-all shadow-lg"
               >
@@ -203,7 +203,7 @@ export default function EsProteccioContent() {
 
       <div className="container mx-auto px-4"><hr className="border-gray-100" /></div>
 
-      {/* 3. OCELLS */}
+      {/* 3. AVES */}
       <section id="aves" className="py-24">
         <div className="container mx-auto px-4 md:px-8">
           <div className="flex flex-col lg:flex-row items-center gap-16">
@@ -252,7 +252,7 @@ export default function EsProteccioContent() {
                 <p className="text-xl font-bold mb-4 relative z-10 italic">{d.avesCtaTitle}</p>
                 <p className="text-slate-300 mb-6 relative z-10">{d.avesCtaDesc}</p>
                 <Link
-                  href="https://wa.me/34681625566"
+                  href="https://wa.me/351910407785"
                   target="_blank"
                   className="bg-yellow-500 text-white px-8 py-4 rounded-full font-bold inline-block hover:bg-yellow-600 transition-all relative z-10"
                 >
@@ -281,12 +281,12 @@ export default function EsProteccioContent() {
           </p>
           <div className="flex flex-col md:flex-row justify-center gap-6">
             <Link
-              href="https://wa.me/34681625566"
+              href="https://wa.me/351910407785"
               target="_blank"
               className="bg-[#4d2a36] text-white px-10 py-5 rounded-full font-bold text-lg flex items-center justify-center gap-3 hover:bg-slate-800 transition-all shadow-xl"
             >
               <Phone className="w-6 h-6" />
-              681 625 566
+              910 407 785
             </Link>
             <Link
               href="/es#contacto"
