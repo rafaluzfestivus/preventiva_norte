@@ -10,9 +10,22 @@ function getLocaleFromPath(pathname: string): "pt" | "es" {
     return pathname.startsWith("/es") ? "es" : "pt";
 }
 
+// The privacy-policy page is the one exception to the "same slug after the
+// /es prefix" assumption below: PT and ES use different slugs
+// (politica-privacidade vs politica-privacitat), so it needs an explicit
+// mapping rather than the generic prefix logic.
+const PRIVACY_PATH_OVERRIDES: Record<string, string> = {
+    "/politica-privacidade": "/es/politica-privacitat",
+    "/es/politica-privacitat": "/politica-privacidade",
+};
+
 function getAlternatePath(pathname: string, targetLocale: "pt" | "es"): string {
     const currentLocale = getLocaleFromPath(pathname);
     if (currentLocale === targetLocale) return pathname;
+
+    if (pathname in PRIVACY_PATH_OVERRIDES) {
+        return PRIVACY_PATH_OVERRIDES[pathname];
+    }
 
     if (targetLocale === "es") {
         return "/es" + pathname;

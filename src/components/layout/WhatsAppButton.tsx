@@ -5,12 +5,20 @@ import { motion, AnimatePresence } from "framer-motion";
 import { useState, useEffect } from "react";
 import { usePathname } from "next/navigation";
 
+// Minimal local augmentation for the optional gtag/dataLayer globals — avoids
+// bare `any` casts without introducing a project-wide Window type (mirrors
+// the WindowWithGtag pattern in ContactSection.tsx).
+type WindowWithGtag = Window & {
+    gtag?: (...args: unknown[]) => void;
+    dataLayer?: unknown[];
+};
+
 function trackWhatsAppClick() {
-    if (typeof window !== 'undefined' && typeof (window as any).gtag === 'function') {
-        (window as any).gtag('event', 'whatsapp_click', { 'event_category': 'contact' });
+    if (typeof window !== 'undefined' && typeof (window as WindowWithGtag).gtag === 'function') {
+        (window as WindowWithGtag).gtag?.('event', 'whatsapp_click', { 'event_category': 'contact' });
     }
-    if (typeof window !== 'undefined' && Array.isArray((window as any).dataLayer)) {
-        (window as any).dataLayer.push({ 'event': 'whatsapp_click' });
+    if (typeof window !== 'undefined' && Array.isArray((window as WindowWithGtag).dataLayer)) {
+        (window as WindowWithGtag).dataLayer?.push({ 'event': 'whatsapp_click' });
     }
 }
 
