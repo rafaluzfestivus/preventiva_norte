@@ -67,7 +67,7 @@ export function Gallery({ dict = defaultDict }: GalleryProps) {
                 </div>
 
                 <div className="text-center mt-12">
-                    <a href="https://www.instagram.com/preventivaeste/" target="_blank" rel="noopener noreferrer" className="text-yellow-600 font-semibold hover:underline">
+                    <a href="https://www.instagram.com/preventivanorte" target="_blank" rel="noopener noreferrer" className="text-yellow-600 font-semibold hover:underline">
                         {dict.viewMore}
                     </a>
                 </div>
