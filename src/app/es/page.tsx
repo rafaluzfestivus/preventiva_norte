@@ -8,6 +8,7 @@ import { Testimonials } from "@/components/sections/Testimonials";
 import { ContactSection } from "@/components/sections/ContactSection";
 import { WhyUs } from "@/components/sections/WhyUs";
 import { AboutUs } from "@/components/sections/AboutUs";
+import { Resources } from "@/components/sections/Resources";
 import { es } from "@/dictionaries/es";
 
 export const metadata: Metadata = {
@@ -41,6 +42,7 @@ export default function EsHome() {
       <AboutUs dict={es.aboutUs} />
       <Gallery dict={es.gallery} />
       <Testimonials dict={es.testimonials} />
+      <Resources dict={es.resources} />
       <ContactSection />
     </>
   );

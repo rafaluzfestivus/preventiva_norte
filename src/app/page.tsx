@@ -7,6 +7,7 @@ import { Testimonials } from "@/components/sections/Testimonials";
 import { ContactSection } from "@/components/sections/ContactSection";
 import { WhyUs } from "@/components/sections/WhyUs";
 import { AboutUs } from "@/components/sections/AboutUs";
+import { Resources } from "@/components/sections/Resources";
 import { pt } from "@/dictionaries/pt";
 
 export default function Home() {
@@ -20,6 +21,7 @@ export default function Home() {
       <AboutUs dict={pt.aboutUs} />
       <Gallery dict={pt.gallery} />
       <Testimonials dict={pt.testimonials} />
+      <Resources dict={pt.resources} />
       <ContactSection />
     </>
   );

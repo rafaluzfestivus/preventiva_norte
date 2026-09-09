@@ -29,6 +29,18 @@ export default function sitemap(): MetadataRoute.Sitemap {
             changeFrequency: 'yearly',
             priority: 0.3,
         },
+        {
+            url: `${BASE}/recursos/direito-condominio`,
+            lastModified: new Date(),
+            changeFrequency: 'yearly',
+            priority: 0.6,
+        },
+        {
+            url: `${BASE}/kit-instalacao`,
+            lastModified: new Date(),
+            changeFrequency: 'monthly',
+            priority: 0.6,
+        },
         // Spanish pages
         {
             url: `${BASE}/es`,
@@ -53,6 +65,18 @@ export default function sitemap(): MetadataRoute.Sitemap {
             lastModified: new Date(),
             changeFrequency: 'yearly',
             priority: 0.3,
+        },
+        {
+            url: `${BASE}/es/recursos/direito-condominio`,
+            lastModified: new Date(),
+            changeFrequency: 'yearly',
+            priority: 0.6,
+        },
+        {
+            url: `${BASE}/es/kit-instalacao`,
+            lastModified: new Date(),
+            changeFrequency: 'monthly',
+            priority: 0.6,
         },
     ]
 }

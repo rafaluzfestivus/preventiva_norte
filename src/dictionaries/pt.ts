@@ -413,4 +413,18 @@ export const pt: SiteDict = {
       'A Preventiva Norte reserva-se o direito de modificar esta política para a adaptar a novidades legislativas ou jurisprudenciais. Recomenda-se a sua leitura periódica.',
     lastUpdated: 'Última atualização:',
   },
+  resources: {
+    title: 'Recursos Úteis',
+    subtitle:
+      'Informação legal e soluções práticas para quem quer proteger a sua casa em Portugal.',
+    condoLawTitle: 'O condomínio pode proibir redes de proteção?',
+    condoLawDescription:
+      'Saiba o que diz o artigo 1422.º do Código Civil e a DECO Proteste sobre a instalação de redes de proteção em apartamentos e condomínios.',
+    condoLawHref: '/recursos/direito-condominio',
+    kitTitle: 'Kit de Instalação',
+    kitDescription:
+      'Rede, corda, ganchos e buchas para instalar você mesmo. Ideal para pequenas áreas, como janelas e varandas simples.',
+    kitHref: '/kit-instalacao',
+    readMore: 'Saber mais →',
+  },
 };

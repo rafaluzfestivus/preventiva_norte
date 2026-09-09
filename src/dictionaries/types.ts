@@ -241,4 +241,15 @@ export interface SiteDict {
     s8Content: string;
     lastUpdated: string;
   };
+  resources: {
+    title: string;
+    subtitle: string;
+    condoLawTitle: string;
+    condoLawDescription: string;
+    condoLawHref: string;
+    kitTitle: string;
+    kitDescription: string;
+    kitHref: string;
+    readMore: string;
+  };
 }

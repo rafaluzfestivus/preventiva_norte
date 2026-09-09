@@ -413,4 +413,18 @@ export const es: SiteDict = {
       'Preventiva Norte se reserva el derecho de modificar esta política para adaptarla a novedades legislativas o jurisprudenciales. Se recomienda su lectura periódica.',
     lastUpdated: 'Última actualización:',
   },
+  resources: {
+    title: 'Recursos Útiles',
+    subtitle:
+      'Información legal y soluciones prácticas para quien quiera proteger su casa en Portugal.',
+    condoLawTitle: '¿La comunidad de vecinos puede prohibir las redes de protección?',
+    condoLawDescription:
+      'Descubra qué dice el artículo 1422 del Código Civil portugués y DECO Proteste sobre la instalación de redes de protección en apartamentos y comunidades de vecinos.',
+    condoLawHref: '/es/recursos/direito-condominio',
+    kitTitle: 'Kit de Instalación',
+    kitDescription:
+      'Red, cuerda, ganchos y tacos para instalarlo usted mismo. Ideal para espacios pequeños, como ventanas y balcones sencillos.',
+    kitHref: '/es/kit-instalacao',
+    readMore: 'Saber más →',
+  },
 };
