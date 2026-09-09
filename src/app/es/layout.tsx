@@ -22,8 +22,8 @@ export const metadata: Metadata = {
   authors: [{ name: "Preventiva Este", url: "https://preventivaeste.com" }],
   openGraph: {
     type: "website",
-    locale: "ca_ES",
-    url: "https://preventivaeste.com/ca",
+    locale: "es_ES",
+    url: "https://preventivanorte.pt/es",
     title: "Preventiva Este | Xarxes de Protecció a Barcelona",
     description:
       "Instal·lació professional de xarxes de protecció i malles de seguretat a Barcelona. Protegeix els teus éssers estimats sense sacrificar l'estètica.",
@@ -38,20 +38,20 @@ export const metadata: Metadata = {
     ],
   },
   alternates: {
-    canonical: "https://preventivaeste.com/ca",
+    canonical: "https://preventivanorte.pt/es",
     languages: {
-      es: "https://preventivaeste.com",
-      ca: "https://preventivaeste.com/ca",
+      pt: "https://preventivanorte.pt",
+      es: "https://preventivanorte.pt/es",
     },
   },
 };
 
-export default function CaLayout({
+export default function EsLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
   return (
     <>
-      <LocaleUpdater locale="ca" />
+      <LocaleUpdater locale="es" />
       {children}
     </>
   );

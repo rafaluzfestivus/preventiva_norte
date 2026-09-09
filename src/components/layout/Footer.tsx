@@ -4,41 +4,41 @@ import Link from "next/link";
 import Image from "next/image";
 import { Facebook, Instagram, Phone, Mail, MapPin } from "lucide-react";
 import { usePathname } from "next/navigation";
-import { ca as caDict } from "@/dictionaries/ca";
+import { es as esDict } from "@/dictionaries/es";
 
 export function Footer() {
     const pathname = usePathname();
-    const isCA = pathname.startsWith("/ca");
-    const dict = isCA ? caDict.footer : {
+    const isES = pathname.startsWith("/es");
+    const dict = isES ? esDict.footer : {
         description:
-            "Especialistas en la instalación de redes de protección de alta resistencia en Barcelona. Seguridad certificada para balcones, ventanas, terrazas, niños y mascotas.",
-        quickLinksTitle: "Enlaces Rápidos",
-        protectionForTitle: "Protección Para",
+            "Especialistas em instalação de redes de proteção de alta resistência no Porto e Norte de Portugal. Segurança certificada para varandas, janelas, terraços, crianças e animais de estimação.",
+        quickLinksTitle: "Links Rápidos",
+        protectionForTitle: "Proteção Para",
         contactTitle: "Contacto",
-        copyright: "Todos los derechos reservados.",
+        copyright: "Todos os direitos reservados.",
         legalNotice: "Aviso Legal",
-        privacyPolicy: "Política de Privacidad",
+        privacyPolicy: "Política de Privacidade",
         cookies: "Cookies",
-        mobileLabel: "Barcelona",
-        serviceArea: "Barcelona y Área Metropolitana.",
-        serviceAreaSub: "Servicio en toda Cataluña.",
+        mobileLabel: "Porto",
+        serviceArea: "Porto e Área Metropolitana.",
+        serviceAreaSub: "Serviço em todo o Norte de Portugal.",
         quickLinks: [
-            { label: "Inicio", href: "/" },
-            { label: "Testes y Certificaciones", href: "/testes-certificaciones" },
-            { label: "Nuestros Servicios", href: "/#servicios" },
-            { label: "Galería", href: "/#galeria" },
+            { label: "Início", href: "/" },
+            { label: "Testes e Certificações", href: "/testes-certificaciones" },
+            { label: "Os Nossos Serviços", href: "/#servicios" },
+            { label: "Galeria", href: "/#galeria" },
             { label: "Contacto", href: "/#contacto" },
         ],
         protectionLinks: [
-            { label: "Seguridad Infantil", href: "/proteccion#ninos" },
+            { label: "Segurança Infantil", href: "/proteccion#ninos" },
             { label: "Redes para Gatos", href: "/proteccion#gatos" },
-            { label: "Control de Aves (Palomas)", href: "/proteccion#aves" },
-            { label: "Terrazas y Balcones", href: "/#servicios" },
-            { label: "Ventanas y Escaleras", href: "/#servicios" },
+            { label: "Controlo de Aves (Pombos)", href: "/proteccion#aves" },
+            { label: "Terraços e Varandas", href: "/#servicios" },
+            { label: "Janelas e Escadas", href: "/#servicios" },
         ],
     };
-    const privacyHref = isCA ? "/ca/politica-privacitat" : "/politica-privacidad";
-    const homeHref = isCA ? "/ca" : "/";
+    const privacyHref = isES ? "/es/politica-privacitat" : "/politica-privacidad";
+    const homeHref = isES ? "/es" : "/";
 
     return (
         <footer className="bg-[#4d2a36] text-gray-300 pt-16 pb-8">

@@ -8,21 +8,21 @@ import { Testimonials } from "@/components/sections/Testimonials";
 import { ContactSection } from "@/components/sections/ContactSection";
 import { WhyUs } from "@/components/sections/WhyUs";
 import { AboutUs } from "@/components/sections/AboutUs";
-import { ca } from "@/dictionaries/ca";
+import { es } from "@/dictionaries/es";
 
 export const metadata: Metadata = {
   title: "Instal·lació de Xarxes de Protecció a Barcelona | Preventiva Este",
   description:
     "Especialistes en instal·lació de xarxes de protecció per a balcons, finestres i terrasses a Barcelona i voltants. Resistència de 150kg/m² i 3 anys de garantia.",
   alternates: {
-    canonical: "https://preventivaeste.com/ca",
+    canonical: "https://preventivanorte.pt/es",
     languages: {
-      es: "https://preventivaeste.com",
-      ca: "https://preventivaeste.com/ca",
+      pt: "https://preventivanorte.pt",
+      es: "https://preventivanorte.pt/es",
     },
   },
   openGraph: {
-    url: "https://preventivaeste.com/ca",
+    url: "https://preventivanorte.pt/es",
     title: "Preventiva Este | Xarxes de Protecció a Barcelona",
     description:
       "Instal·lació professional de xarxes de protecció i malles de seguretat a Barcelona.",
@@ -30,17 +30,17 @@ export const metadata: Metadata = {
   },
 };
 
-export default function CaHome() {
+export default function EsHome() {
   return (
     <>
-      <Hero dict={ca.hero} basePath="/ca" />
-      <TrustBar dict={ca.trustBar} />
-      <Services dict={ca.services} />
-      <Benefits dict={ca.benefits} />
-      <WhyUs dict={ca.whyUs} />
-      <AboutUs dict={ca.aboutUs} />
-      <Gallery dict={ca.gallery} />
-      <Testimonials dict={ca.testimonials} />
+      <Hero dict={es.hero} basePath="/es" />
+      <TrustBar dict={es.trustBar} />
+      <Services dict={es.services} />
+      <Benefits dict={es.benefits} />
+      <WhyUs dict={es.whyUs} />
+      <AboutUs dict={es.aboutUs} />
+      <Gallery dict={es.gallery} />
+      <Testimonials dict={es.testimonials} />
       <ContactSection />
     </>
   );

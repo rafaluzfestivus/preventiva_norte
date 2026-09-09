@@ -1,10 +1,10 @@
 import { MetadataRoute } from 'next'
 
-const BASE = 'https://preventivaeste.com'
+const BASE = 'https://preventivanorte.pt'
 
 export default function sitemap(): MetadataRoute.Sitemap {
     return [
-        // Spanish pages
+        // Portuguese pages (default locale)
         {
             url: BASE,
             lastModified: new Date(),
@@ -29,27 +29,27 @@ export default function sitemap(): MetadataRoute.Sitemap {
             changeFrequency: 'yearly',
             priority: 0.3,
         },
-        // Catalan pages
+        // Spanish pages
         {
-            url: `${BASE}/ca`,
+            url: `${BASE}/es`,
             lastModified: new Date(),
             changeFrequency: 'monthly',
             priority: 1,
         },
         {
-            url: `${BASE}/ca/proteccion`,
+            url: `${BASE}/es/proteccion`,
             lastModified: new Date(),
             changeFrequency: 'monthly',
             priority: 0.9,
         },
         {
-            url: `${BASE}/ca/testes-certificaciones`,
+            url: `${BASE}/es/testes-certificaciones`,
             lastModified: new Date(),
             changeFrequency: 'monthly',
             priority: 0.8,
         },
         {
-            url: `${BASE}/ca/politica-privacitat`,
+            url: `${BASE}/es/politica-privacitat`,
             lastModified: new Date(),
             changeFrequency: 'yearly',
             priority: 0.3,

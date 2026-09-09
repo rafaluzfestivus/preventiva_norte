@@ -8,22 +8,22 @@ import { usePathname } from "next/navigation";
 export function CookieConsent() {
     const [isVisible, setIsVisible] = useState(false);
     const pathname = usePathname();
-    const isCA = pathname.startsWith("/ca");
+    const isES = pathname.startsWith("/es");
 
-    const dict = isCA
+    const dict = isES
         ? {
-              text: "Utilitzem galetes pròpies i de tercers per millorar la seva experiència i els nostres serveis, analitzant la navegació al nostre lloc web. Si continua navegant, considerem que accepta el seu ús. Podeu obtenir més informació a la nostra",
-              linkText: "Política de Privacitat",
-              linkHref: "/ca/politica-privacitat",
-              accept: "Acceptar",
-              close: "Tancar",
-          }
-        : {
               text: "Utilizamos cookies propias y de terceros para mejorar su experiencia y nuestros servicios, analizando la navegación en nuestro sitio web. Si continúa navegando, consideramos que acepta su uso. Puede obtener más información en nuestra",
               linkText: "Política de Privacidad",
-              linkHref: "/politica-privacidad",
+              linkHref: "/es/politica-privacitat",
               accept: "Aceptar",
               close: "Cerrar",
+          }
+        : {
+              text: "Utilizamos cookies próprios e de terceiros para melhorar a sua experiência e os nossos serviços, analisando a navegação no nosso website. Se continuar a navegar, consideramos que aceita a sua utilização. Pode obter mais informação na nossa",
+              linkText: "Política de Privacidade",
+              linkHref: "/politica-privacidad",
+              accept: "Aceitar",
+              close: "Fechar",
           };
 
     useEffect(() => {

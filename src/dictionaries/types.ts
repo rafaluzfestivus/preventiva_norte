@@ -1,4 +1,4 @@
-export type Locale = 'es' | 'ca';
+export type Locale = 'pt' | 'es';
 
 export interface ServiceItem {
   title: string;

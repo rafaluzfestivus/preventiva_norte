@@ -3,9 +3,9 @@
 import { motion } from "framer-motion";
 import { Shield, Sun, Weight, Flame, EyeOff, Anchor, CheckCircle2 } from "lucide-react";
 import Link from "next/link";
-import { ca } from "@/dictionaries/ca";
+import { es } from "@/dictionaries/es";
 
-const d = ca.certificaciones;
+const d = es.certificaciones;
 
 const specIcons = [
   <Sun key="sun" className="w-12 h-12 text-yellow-500" />,

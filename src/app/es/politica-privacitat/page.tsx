@@ -1,21 +1,21 @@
 import type { Metadata } from "next";
-import { ca } from "@/dictionaries/ca";
+import { es } from "@/dictionaries/es";
 
 export const metadata: Metadata = {
   title: "Política de Privacitat | Preventiva Este",
   description: "Política de Privacitat i Protecció de Dades de Preventiva Este.",
   alternates: {
-    canonical: "https://preventivaeste.com/ca/politica-privacitat",
+    canonical: "https://preventivanorte.pt/es/politica-privacitat",
     languages: {
-      es: "https://preventivaeste.com/politica-privacidad",
-      ca: "https://preventivaeste.com/ca/politica-privacitat",
+      pt: "https://preventivanorte.pt/politica-privacidad",
+      es: "https://preventivanorte.pt/es/politica-privacitat",
     },
   },
 };
 
-const d = ca.privacyPolicy;
+const d = es.privacyPolicy;
 
-export default function CaPrivacitatPage() {
+export default function EsPrivacitatPage() {
   return (
     <div className="container mx-auto px-4 py-16 md:py-24 max-w-4xl">
       <h1 className="text-3xl md:text-5xl font-bold mb-8 text-slate-900">{d.title}</h1>
@@ -69,7 +69,7 @@ export default function CaPrivacitatPage() {
         <p>{d.s8Content}</p>
 
         <p className="text-sm text-slate-500 mt-12">
-          {d.lastUpdated} {new Date().toLocaleDateString("ca-ES")}
+          {d.lastUpdated} {new Date().toLocaleDateString("es-ES")}
         </p>
       </div>
     </div>

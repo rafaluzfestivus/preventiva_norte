@@ -6,9 +6,9 @@ import {
   Heart, ShieldAlert, Building2, Bird, Cat
 } from "lucide-react";
 import Link from "next/link";
-import { ca } from "@/dictionaries/ca";
+import { es } from "@/dictionaries/es";
 
-const d = ca.proteccion;
+const d = es.proteccion;
 
 export default function CaProteccioContent() {
   const serviceSchema = {

@@ -6,49 +6,49 @@ import { Menu, X, Phone, Globe } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import { usePathname } from "next/navigation";
 
-function getLocaleFromPath(pathname: string): "es" | "ca" {
-    return pathname.startsWith("/ca") ? "ca" : "es";
+function getLocaleFromPath(pathname: string): "pt" | "es" {
+    return pathname.startsWith("/es") ? "es" : "pt";
 }
 
-function getAlternatePath(pathname: string, targetLocale: "es" | "ca"): string {
+function getAlternatePath(pathname: string, targetLocale: "pt" | "es"): string {
     const currentLocale = getLocaleFromPath(pathname);
     if (currentLocale === targetLocale) return pathname;
 
-    if (targetLocale === "ca") {
-        return "/ca" + pathname;
+    if (targetLocale === "es") {
+        return "/es" + pathname;
     } else {
-        return pathname.replace(/^\/ca/, "") || "/";
+        return pathname.replace(/^\/es/, "") || "/";
     }
 }
 
 const navConfig = {
+    pt: {
+        links: [
+            { name: "Início", href: "/" },
+            { name: "Sobre Nós", href: "/#sobre-nosotros" },
+            { name: "Certificações", href: "/testes-certificaciones" },
+            { name: "Proteção", href: "/proteccion" },
+            { name: "Serviços", href: "/#servicios" },
+            { name: "Contacto", href: "/#contacto" },
+        ],
+        cta: "Ligar Agora",
+        ctaMobile: "Pedir Orçamento",
+        ctaHref: "/#contacto",
+        openMenu: "Abrir menu",
+    },
     es: {
         links: [
-            { name: "Inicio", href: "/" },
-            { name: "Nosotros", href: "/#sobre-nosotros" },
-            { name: "Certificaciones", href: "/testes-certificaciones" },
-            { name: "Protección", href: "/proteccion" },
-            { name: "Servicios", href: "/#servicios" },
-            { name: "Contacto", href: "/#contacto" },
+            { name: "Inicio", href: "/es" },
+            { name: "Nosotros", href: "/es#sobre-nosotros" },
+            { name: "Certificaciones", href: "/es/testes-certificaciones" },
+            { name: "Protección", href: "/es/proteccion" },
+            { name: "Servicios", href: "/es#servicios" },
+            { name: "Contacto", href: "/es#contacto" },
         ],
         cta: "Llamar Ahora",
         ctaMobile: "Solicitar Presupuesto",
-        ctaHref: "/#contacto",
+        ctaHref: "/es#contacto",
         openMenu: "Abrir menú",
-    },
-    ca: {
-        links: [
-            { name: "Inici", href: "/ca" },
-            { name: "Nosaltres", href: "/ca#sobre-nosotros" },
-            { name: "Certificacions", href: "/ca/testes-certificaciones" },
-            { name: "Protecció", href: "/ca/proteccion" },
-            { name: "Serveis", href: "/ca#servicios" },
-            { name: "Contacte", href: "/ca#contacto" },
-        ],
-        cta: "Trucar Ara",
-        ctaMobile: "Sol·licitar Pressupost",
-        ctaHref: "/ca#contacto",
-        openMenu: "Obrir menú",
     },
 };
 
@@ -65,8 +65,8 @@ export function Navbar() {
         return () => window.removeEventListener("scroll", handleScroll);
     }, []);
 
+    const ptPath = getAlternatePath(pathname, "pt");
     const esPath = getAlternatePath(pathname, "es");
-    const caPath = getAlternatePath(pathname, "ca");
 
     return (
         <nav className={`fixed w-full z-50 transition-all duration-300 ${
@@ -101,19 +101,19 @@ export function Navbar() {
                     }`}>
                         <Globe className="w-3.5 h-3.5 mr-1 opacity-70" />
                         <Link
+                            href={ptPath}
+                            className={`transition-opacity ${locale === "pt" ? "opacity-100 underline underline-offset-2" : "opacity-50 hover:opacity-80"}`}
+                            aria-label="Versão em Português"
+                        >
+                            PT
+                        </Link>
+                        <span className="opacity-30 mx-0.5">|</span>
+                        <Link
                             href={esPath}
                             className={`transition-opacity ${locale === "es" ? "opacity-100 underline underline-offset-2" : "opacity-50 hover:opacity-80"}`}
                             aria-label="Versión en Español"
                         >
                             ES
-                        </Link>
-                        <span className="opacity-30 mx-0.5">|</span>
-                        <Link
-                            href={caPath}
-                            className={`transition-opacity ${locale === "ca" ? "opacity-100 underline underline-offset-2" : "opacity-50 hover:opacity-80"}`}
-                            aria-label="Versió en Català"
-                        >
-                            CA
                         </Link>
                     </div>
                 </div>
@@ -133,19 +133,19 @@ export function Navbar() {
                     scrolled ? "border-[#4d2a36]/30 text-[#4d2a36]" : "border-white/30 text-white"
                 }`}>
                     <Link
+                        href={ptPath}
+                        className={`transition-opacity ${locale === "pt" ? "opacity-100" : "opacity-40"}`}
+                        aria-label="Português"
+                    >
+                        PT
+                    </Link>
+                    <span className="opacity-30">|</span>
+                    <Link
                         href={esPath}
                         className={`transition-opacity ${locale === "es" ? "opacity-100" : "opacity-40"}`}
                         aria-label="Español"
                     >
                         ES
-                    </Link>
-                    <span className="opacity-30">|</span>
-                    <Link
-                        href={caPath}
-                        className={`transition-opacity ${locale === "ca" ? "opacity-100" : "opacity-40"}`}
-                        aria-label="Català"
-                    >
-                        CA
                     </Link>
                 </div>
             </div>

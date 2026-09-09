@@ -17,7 +17,7 @@ function trackWhatsAppClick() {
 export function WhatsAppButton() {
     const [isVisible, setIsVisible] = useState(false);
     const pathname = usePathname();
-    const isCA = pathname.startsWith("/ca");
+    const isES = pathname.startsWith("/es");
 
     useEffect(() => {
         const timer = setTimeout(() => setIsVisible(true), 1000);
@@ -25,10 +25,10 @@ export function WhatsAppButton() {
     }, []);
 
     const phoneNumber = "34681625566";
-    const message = isCA
-        ? "Hola, voldria més informació sobre les xarxes de protecció."
-        : "Hola, quisiera más información sobre las redes de protección.";
-    const ariaLabel = isCA ? "Contactar per WhatsApp" : "Contactar por WhatsApp";
+    const message = isES
+        ? "Hola, quisiera más información sobre las redes de protección."
+        : "Olá, gostaria de mais informações sobre as redes de proteção.";
+    const ariaLabel = isES ? "Contactar por WhatsApp" : "Contactar via WhatsApp";
 
     return (
         <AnimatePresence>

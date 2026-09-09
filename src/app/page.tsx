@@ -7,18 +7,19 @@ import { Testimonials } from "@/components/sections/Testimonials";
 import { ContactSection } from "@/components/sections/ContactSection";
 import { WhyUs } from "@/components/sections/WhyUs";
 import { AboutUs } from "@/components/sections/AboutUs";
+import { pt } from "@/dictionaries/pt";
 
 export default function Home() {
   return (
     <>
-      <Hero />
-      <TrustBar />
-      <Services />
-      <Benefits />
-      <WhyUs />
-      <AboutUs />
-      <Gallery />
-      <Testimonials />
+      <Hero dict={pt.hero} basePath="" />
+      <TrustBar dict={pt.trustBar} />
+      <Services dict={pt.services} />
+      <Benefits dict={pt.benefits} />
+      <WhyUs dict={pt.whyUs} />
+      <AboutUs dict={pt.aboutUs} />
+      <Gallery dict={pt.gallery} />
+      <Testimonials dict={pt.testimonials} />
       <ContactSection />
     </>
   );

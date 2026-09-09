@@ -22,7 +22,7 @@ export const metadata: Metadata = {
   },
   openGraph: {
     type: "website",
-    locale: "es_ES",
+    locale: "pt_PT",
     url: "https://preventivanorte.pt",
     title: "Preventiva Norte | Redes de Proteção no Porto e Norte de Portugal",
     description: "Instalação profissional de redes de proteção e redes de segurança no Porto e Norte de Portugal. Proteja quem mais ama sem comprometer a estética da sua casa.",
@@ -45,8 +45,8 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "https://preventivanorte.pt",
     languages: {
-      "es": "https://preventivanorte.pt",
-      "ca": "https://preventivanorte.pt/ca",
+      "pt": "https://preventivanorte.pt",
+      "es": "https://preventivanorte.pt/es",
     },
   },
   robots: {
@@ -111,7 +111,7 @@ export default function RootLayout({
   };
 
   return (
-    <html lang="es" className="scroll-smooth">
+    <html lang="pt" className="scroll-smooth">
       <head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
@@ -145,8 +145,8 @@ export default function RootLayout({
         )}
 
         {/* hreflang global */}
-        <link rel="alternate" hrefLang="es" href="https://preventivanorte.pt" />
-        <link rel="alternate" hrefLang="ca" href="https://preventivanorte.pt/ca" />
+        <link rel="alternate" hrefLang="pt" href="https://preventivanorte.pt" />
+        <link rel="alternate" hrefLang="es" href="https://preventivanorte.pt/es" />
         <link rel="alternate" hrefLang="x-default" href="https://preventivanorte.pt" />
       </head>
       <body className={`${inter.className} antialiased bg-gray-50 flex flex-col min-h-screen`}>
