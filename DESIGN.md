@@ -108,12 +108,23 @@ the obvious rename/rebrand pass was believed complete:
   task's own brief incorrectly assuming this file was "already correct."
   A bug in a component this central has the largest possible blast radius
   of anything found in the whole build.
-- **A hero background image showing the wrong city's landmark** — the
-  homepage hero used a hardcoded Unsplash URL depicting Barcelona's Sagrada
-  Família, with "Preventiva Norte" branding overlaid on top of it. This was
-  inherited silently from Este's hero component and was not caught by any
-  of Tasks 1–8's build/grep/curl-based reviews — it was only found when a
-  human actually looked at the rendered page in a browser.
+- **Two separate wrong-landmark occurrences, of two different mechanisms**
+  — both traced back to Este's original assets and both showing Barcelona's
+  Sagrada Família, but requiring different fixes:
+  - `src/components/sections/Hero.tsx` renders a background `<video>` element
+    (`<source src="/grok-video-75d457db-6ffe-4a84-8c5e-689da5f46f68.mp4">`)
+    whose AI-generated footage clearly shows the Sagrada Família playing
+    behind the headline and logo. **This one cannot be fixed by editing a
+    string** — the fix requires producing or sourcing a new video asset
+    entirely, which is a materially harder and slower fix than the others in
+    this list. This is the instance a manual browser walkthrough with the
+    video actually playing was needed to catch; none of Tasks 1–8's
+    build/grep/curl-based reviews caught it.
+  - `src/components/sections/Benefits.tsx:58` has a separate, ordinary
+    hardcoded Unsplash background-image URL
+    (`photo-1510563800743-aed236490d08` — the same landmark photo) on a
+    smaller `aspect-[4/3]` image box. Unlike the Hero video, this one is a
+    plain URL swap, no new asset production needed.
 - **Este's own real Google Ads conversion ID** (`AW-18111431326`), hardcoded
   in `ContactSection.tsx`, firing live conversion-tracking events under
   Este's ad account on every lead submitted through Norte's site — a bug
