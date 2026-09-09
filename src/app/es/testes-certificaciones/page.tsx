@@ -20,6 +20,9 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
+    type: "website",
+    locale: "es_ES",
+    siteName: "Preventiva Norte",
     url: "https://preventivanorte.pt/es/testes-certificaciones",
     title: "Certificaciones y Resistencia de las Redes | Preventiva Norte",
     description:

@@ -117,6 +117,11 @@ export default function RootLayout({
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link rel="preconnect" href="https://www.googletagmanager.com" />
 
+        {/* hreflang is emitted exclusively via each page's Metadata API
+            `alternates.languages` export — do not add hardcoded <link
+            rel="alternate" hreflang="..."> tags here, they would duplicate
+            and can drift out of sync with the per-page metadata. */}
+
         {/* Google Ads tag — must initialize dataLayer before GTM */}
         {GA_ID && (
           <>
@@ -144,10 +149,6 @@ export default function RootLayout({
           />
         )}
 
-        {/* hreflang global */}
-        <link rel="alternate" hrefLang="pt" href="https://preventivanorte.pt" />
-        <link rel="alternate" hrefLang="es" href="https://preventivanorte.pt/es" />
-        <link rel="alternate" hrefLang="x-default" href="https://preventivanorte.pt" />
       </head>
       <body className={`${inter.className} antialiased bg-gray-50 flex flex-col min-h-screen`}>
         {GTM_ID && (

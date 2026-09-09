@@ -7,8 +7,15 @@ export const metadata: Metadata = {
     keywords: ["certificação redes segurança", "resistência redes proteção", "polietileno alta tenacidade", "redes ignífugas porto", "Preventiva Norte"],
     alternates: {
         canonical: "https://preventivanorte.pt/testes-certificaciones",
+        languages: {
+            pt: "https://preventivanorte.pt/testes-certificaciones",
+            es: "https://preventivanorte.pt/es/testes-certificaciones",
+        },
     },
     openGraph: {
+        type: "website",
+        locale: "pt_PT",
+        siteName: "Preventiva Norte",
         url: "https://preventivanorte.pt/testes-certificaciones",
         title: "Certificações e Resistência das Redes | Preventiva Norte",
         description: "Qualidade técnica certificada no Porto e Norte de Portugal. Resistência de 150kg/m², tratamento Anti-UV e instalação profissional.",

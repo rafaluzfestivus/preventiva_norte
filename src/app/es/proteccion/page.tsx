@@ -21,6 +21,9 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
+    type: "website",
+    locale: "es_ES",
+    siteName: "Preventiva Norte",
     url: "https://preventivanorte.pt/es/proteccion",
     title: "Redes de Protección en Porto | Niños, Gatos y Aves",
     description:

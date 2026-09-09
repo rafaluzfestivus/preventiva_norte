@@ -12,6 +12,9 @@ export const metadata: Metadata = {
         },
     },
     openGraph: {
+        type: "website",
+        locale: "es_ES",
+        siteName: "Preventiva Norte",
         url: "https://preventivanorte.pt/es/recursos/direito-condominio",
         title: "¿La Comunidad Puede Prohibir las Redes de Protección? | Preventiva Norte",
         description:

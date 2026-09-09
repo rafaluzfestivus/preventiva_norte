@@ -12,6 +12,9 @@ export const metadata: Metadata = {
         },
     },
     openGraph: {
+        type: "website",
+        locale: "pt_PT",
+        siteName: "Preventiva Norte",
         url: "https://preventivanorte.pt/recursos/direito-condominio",
         title: "O Condomínio Pode Proibir Redes de Proteção? | Preventiva Norte",
         description:

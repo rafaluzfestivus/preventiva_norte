@@ -11,6 +11,15 @@ export const metadata: Metadata = {
       es: "https://preventivanorte.pt/es/politica-privacitat",
     },
   },
+  openGraph: {
+    type: "website",
+    locale: "es_ES",
+    siteName: "Preventiva Norte",
+    url: "https://preventivanorte.pt/es/politica-privacitat",
+    title: "Política de Privacidad | Preventiva Norte",
+    description: "Política de Privacidad y Protección de Datos de Preventiva Norte.",
+    images: [{ url: "https://preventivanorte.pt/logo-preventiva-norte.png", alt: "Preventiva Norte" }],
+  },
 };
 
 const d = es.privacyPolicy;

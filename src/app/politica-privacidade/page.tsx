@@ -3,6 +3,22 @@ import { Metadata } from 'next';
 export const metadata: Metadata = {
     title: 'Política de Privacidade | Preventiva Norte',
     description: 'Política de Privacidade e Proteção de Dados da Preventiva Norte.',
+    alternates: {
+        canonical: 'https://preventivanorte.pt/politica-privacidade',
+        languages: {
+            pt: 'https://preventivanorte.pt/politica-privacidade',
+            es: 'https://preventivanorte.pt/es/politica-privacitat',
+        },
+    },
+    openGraph: {
+        type: 'website',
+        locale: 'pt_PT',
+        siteName: 'Preventiva Norte',
+        url: 'https://preventivanorte.pt/politica-privacidade',
+        title: 'Política de Privacidade | Preventiva Norte',
+        description: 'Política de Privacidade e Proteção de Dados da Preventiva Norte.',
+        images: [{ url: 'https://preventivanorte.pt/logo-preventiva-norte.png', alt: 'Preventiva Norte' }],
+    },
 };
 
 export default function PrivacyPolicy() {
