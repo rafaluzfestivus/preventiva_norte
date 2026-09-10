@@ -7,6 +7,13 @@ interface KitOrderFormProps {
     locale: "pt" | "es";
 }
 
+// Minimal local augmentation for the optional gtag global — mirrors the
+// same pattern in ContactSection.tsx (avoids a bare `any` cast without
+// introducing a project-wide Window type).
+type WindowWithGtag = Window & {
+    gtag?: (...args: unknown[]) => void;
+};
+
 interface KitSpec {
     height: string;
     width: string;
@@ -60,6 +67,13 @@ export function KitOrderForm({ locale }: KitOrderFormProps) {
     const t = TEXT[locale];
     const [status, setStatus] = useState<"idle" | "sending" | "sent" | "error">("idle");
     const [kits, setKits] = useState<KitSpec[]>([makeDefaultKit()]);
+    // Raw text of the quantity input, tracked separately from `kits.length`
+    // so that clearing the field to retype a new value (e.g. "3" -> "" ->
+    // "15") doesn't momentarily resize `kits` down to 1 and discard
+    // in-progress kit data. The +/- buttons still resize immediately by
+    // calling setQuantity directly; free typing only resizes on blur (or
+    // when it parses to a valid quantity).
+    const [quantityInput, setQuantityInput] = useState(String(kits.length));
 
     function setQuantity(nextQuantity: number) {
         const quantity = Math.max(1, Math.min(20, nextQuantity));
@@ -68,6 +82,17 @@ export function KitOrderForm({ locale }: KitOrderFormProps) {
             if (quantity < current.length) return current.slice(0, quantity);
             return [...current, ...Array.from({ length: quantity - current.length }, makeDefaultKit)];
         });
+        setQuantityInput(String(quantity));
+    }
+
+    function commitQuantityInput() {
+        const parsed = Number(quantityInput);
+        if (quantityInput.trim() === "" || !Number.isInteger(parsed) || parsed < 1) {
+            // Invalid/empty on blur: snap back to the last valid quantity.
+            setQuantityInput(String(kits.length));
+            return;
+        }
+        setQuantity(parsed);
     }
 
     function updateKit(index: number, patch: Partial<KitSpec>) {
@@ -81,6 +106,10 @@ export function KitOrderForm({ locale }: KitOrderFormProps) {
         formData.append("access_key", process.env.NEXT_PUBLIC_WEB3FORMS_KEY ?? "");
         formData.append("subject", t.subject);
         formData.append("from_name", "Preventiva Norte - Kit de Instalação");
+        // Override the raw "quantity" field with the true kit count — the
+        // input may still hold an uncommitted string (e.g. submitted via
+        // Enter before onBlur ran) that hasn't resized `kits` yet.
+        formData.set("quantity", String(kits.length));
         kits.forEach((kit, i) => {
             formData.append(`kit_${i + 1}_altura`, kit.height);
             formData.append(`kit_${i + 1}_largura`, kit.width);
@@ -93,7 +122,14 @@ export function KitOrderForm({ locale }: KitOrderFormProps) {
                 body: formData,
             });
             const result = await res.json();
-            setStatus(result.success ? "sent" : "error");
+            if (result.success) {
+                setStatus("sent");
+                if (typeof window !== "undefined") {
+                    (window as WindowWithGtag).gtag?.("event", "form_submit", { form_name: "kit_order" });
+                }
+            } else {
+                setStatus("error");
+            }
         } catch {
             setStatus("error");
         }
@@ -106,7 +142,16 @@ export function KitOrderForm({ locale }: KitOrderFormProps) {
         >
             <h2 className="text-2xl font-bold text-slate-900">{t.formTitle}</h2>
 
-            <input type="checkbox" name="botcheck" className="hidden" style={{ display: "none" }} />
+            {status === "sent" && (
+                <div className="bg-green-50 border border-green-200 rounded-lg p-4 flex items-center gap-2 text-sm text-green-800">
+                    <CheckCircle className="w-5 h-5 text-green-500 flex-shrink-0" />
+                    {t.success}
+                </div>
+            )}
+
+            {status !== "sent" && (
+              <>
+                <input type="checkbox" name="botcheck" className="hidden" style={{ display: "none" }} />
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
                 <input
@@ -148,8 +193,9 @@ export function KitOrderForm({ locale }: KitOrderFormProps) {
                         name="quantity"
                         min={1}
                         max={20}
-                        value={kits.length}
-                        onChange={(e) => setQuantity(Number(e.target.value) || 1)}
+                        value={quantityInput}
+                        onChange={(e) => setQuantityInput(e.target.value)}
+                        onBlur={commitQuantityInput}
                         className="w-20 text-center px-3 py-2 rounded-lg border border-gray-200"
                     />
                     <button
@@ -196,6 +242,7 @@ export function KitOrderForm({ locale }: KitOrderFormProps) {
                                     <input
                                         type="radio"
                                         name={`kit-${index}-color`}
+                                        value="Branca"
                                         checked={kit.color === "Branca"}
                                         onChange={() => updateKit(index, { color: "Branca" })}
                                     />
@@ -205,6 +252,7 @@ export function KitOrderForm({ locale }: KitOrderFormProps) {
                                     <input
                                         type="radio"
                                         name={`kit-${index}-color`}
+                                        value="Preta"
                                         checked={kit.color === "Preta"}
                                         onChange={() => updateKit(index, { color: "Preta" })}
                                     />
@@ -222,12 +270,6 @@ export function KitOrderForm({ locale }: KitOrderFormProps) {
                     {t.error}
                 </div>
             )}
-            {status === "sent" && (
-                <div className="bg-green-50 border border-green-200 rounded-lg p-4 flex items-center gap-2 text-sm text-green-800">
-                    <CheckCircle className="w-5 h-5 text-green-500 flex-shrink-0" />
-                    {t.success}
-                </div>
-            )}
 
             <button
                 type="submit"
@@ -243,7 +285,9 @@ export function KitOrderForm({ locale }: KitOrderFormProps) {
                         <Send className="w-5 h-5" /> {t.submit}
                     </>
                 )}
-            </button>
+              </button>
+              </>
+            )}
         </form>
     );
 }
