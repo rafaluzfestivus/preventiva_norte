@@ -1,31 +1,39 @@
+// src/components/sections/BenefitsWhyUs.tsx
 "use client";
 
-import { CheckCircle2 } from "lucide-react";
+import { CheckCircle2, UserCheck, Clock, FileCheck2 } from "lucide-react";
 import { motion } from "framer-motion";
 import type { SiteDict } from "@/dictionaries/types";
 
-interface BenefitsProps {
-    dict: SiteDict["benefits"];
+interface BenefitsWhyUsProps {
+    benefits: SiteDict["benefits"];
+    whyUs: SiteDict["whyUs"];
 }
 
-export function Benefits({ dict }: BenefitsProps) {
+const reasonIcons = [
+    <UserCheck key="uc" className="w-7 h-7 text-yellow-500" />,
+    <Clock key="cl" className="w-7 h-7 text-yellow-500" />,
+    <FileCheck2 key="fc" className="w-7 h-7 text-yellow-500" />,
+];
+
+export function BenefitsWhyUs({ benefits, whyUs }: BenefitsWhyUsProps) {
     return (
         <section id="beneficios" className="py-20 bg-white">
             <div className="container mx-auto px-4 md:px-8">
-                <div className="flex flex-col lg:flex-row items-center gap-16">
+                <div className="flex flex-col lg:flex-row items-center gap-16 mb-16">
                     <div className="lg:w-1/2">
                         <span className="text-yellow-500 font-bold tracking-wider text-sm uppercase mb-2 block">
-                            {dict.tag}
+                            {benefits.tag}
                         </span>
                         <h2 className="text-3xl md:text-5xl font-bold text-slate-900 mb-6">
-                            {dict.title1} <br />
-                            <span className="text-yellow-500">{dict.title2}</span>
+                            {benefits.title1} <br />
+                            <span className="text-yellow-500">{benefits.title2}</span>
                         </h2>
                         <p className="text-lg text-slate-600 mb-8 leading-relaxed">
-                            {dict.description}
+                            {benefits.description}
                         </p>
                         <ul className="space-y-4">
-                            {dict.items.map((benefit, index) => (
+                            {benefits.items.map((benefit, index) => (
                                 <li key={index} className="flex items-center gap-3">
                                     <CheckCircle2 className="w-6 h-6 text-green-500 shrink-0" />
                                     <span className="text-slate-700 font-medium">{benefit}</span>
@@ -52,11 +60,34 @@ export function Benefits({ dict }: BenefitsProps) {
                             }}
                             className="absolute -bottom-6 -left-6 bg-white p-6 rounded-xl shadow-xl max-w-xs hidden md:block"
                         >
-                            <p className="font-bold text-slate-900 text-lg mb-1">&ldquo;{dict.quote}&rdquo;</p>
-                            <p className="text-slate-500 text-sm">{dict.quoteDesc}</p>
+                            <p className="font-bold text-slate-900 text-lg mb-1">&ldquo;{benefits.quote}&rdquo;</p>
+                            <p className="text-slate-500 text-sm">{benefits.quoteDesc}</p>
                             <div className="flex text-yellow-400 mt-2">★★★★★</div>
                         </motion.div>
                     </div>
+                </div>
+
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    {whyUs.reasons.map((reason, index) => (
+                        <motion.div
+                            key={index}
+                            initial={{ opacity: 0, y: 20 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            transition={{ duration: 0.5, delay: index * 0.1 }}
+                            viewport={{ once: true }}
+                            className="bg-gray-50 p-8 rounded-2xl border border-gray-100 hover:border-yellow-400 transition-all group"
+                        >
+                            <div className="mb-4 group-hover:scale-110 transition-transform duration-300">
+                                {reasonIcons[index]}
+                            </div>
+                            <h3 className="text-xl font-bold text-slate-900 mb-2 group-hover:text-yellow-600 transition-colors">
+                                {reason.title}
+                            </h3>
+                            <p className="text-slate-600 leading-relaxed">
+                                {reason.description}
+                            </p>
+                        </motion.div>
+                    ))}
                 </div>
             </div>
         </section>

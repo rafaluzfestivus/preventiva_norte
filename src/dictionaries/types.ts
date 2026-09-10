@@ -69,11 +69,6 @@ export interface SiteDict {
     quoteDesc: string;
   };
   whyUs: {
-    tag: string;
-    title1: string;
-    title2: string;
-    description: string;
-    catAlt: string;
     reasons: Reason[];
   };
   aboutUs: {

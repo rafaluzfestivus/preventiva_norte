@@ -95,29 +95,17 @@ export const es: SiteDict = {
       'Material Ignífugo y No Tóxico.',
       'Instalación sin obras molestas.',
       'Garantía de 2 años en materiales e instalación.',
-      'Servicio en todo el Norte de Portugal.',
     ],
     quote: 'El mejor servicio',
     quoteDesc:
       'Instalación rápida y el resultado es impecable. Muy recomendados.',
   },
   whyUs: {
-    tag: 'Diferenciación Técnica',
-    title1: '¿Por qué confiar en',
-    title2: 'Preventiva Norte?',
-    description:
-      'Unimos la experiencia internacional con el servicio local en Porto y el Norte para ofrecerte la máxima seguridad sin comprometer la estética de tu hogar.',
-    catAlt: 'Gato protegido con red de seguridad en terraza',
     reasons: [
       {
         title: 'Instaladores Propios',
         description:
           'No subcontratamos. Nuestro personal está especializado exclusivamente en redes de alta seguridad.',
-      },
-      {
-        title: 'Instalación Limpia',
-        description:
-          'La limpieza de tu casa es nuestro compromiso. Tu casa quedará impecable.',
       },
       {
         title: 'Atención Ágil',

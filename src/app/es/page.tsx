@@ -2,11 +2,10 @@ import type { Metadata } from "next";
 import { Hero } from "@/components/sections/Hero";
 import { TrustBar } from "@/components/sections/TrustBar";
 import { Services } from "@/components/sections/Services";
-import { Benefits } from "@/components/sections/Benefits";
+import { BenefitsWhyUs } from "@/components/sections/BenefitsWhyUs";
 import { Gallery } from "@/components/sections/Gallery";
 import { Testimonials } from "@/components/sections/Testimonials";
 import { ContactSection } from "@/components/sections/ContactSection";
-import { WhyUs } from "@/components/sections/WhyUs";
 import { AboutUs } from "@/components/sections/AboutUs";
 import { Resources } from "@/components/sections/Resources";
 import { es } from "@/dictionaries/es";
@@ -40,8 +39,7 @@ export default function EsHome() {
       <Hero dict={es.hero} basePath="/es" />
       <TrustBar dict={es.trustBar} />
       <Services dict={es.services} basePath="/es" />
-      <Benefits dict={es.benefits} />
-      <WhyUs dict={es.whyUs} />
+      <BenefitsWhyUs benefits={es.benefits} whyUs={es.whyUs} />
       <AboutUs dict={es.aboutUs} />
       <Gallery dict={es.gallery} />
       <Testimonials dict={es.testimonials} />
