@@ -45,7 +45,7 @@ export function Highlights({ dict }: HighlightsProps) {
                                 </p>
                                 {item.kind === "video" && (
                                     <span className="mt-4 inline-block text-xs font-bold uppercase tracking-wide text-yellow-600 bg-yellow-50 px-3 py-1 rounded-full w-fit">
-                                        Em breve
+                                        {dict.comingSoonLabel}
                                     </span>
                                 )}
                             </>

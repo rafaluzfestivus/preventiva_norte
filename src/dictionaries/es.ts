@@ -387,6 +387,7 @@ export const es: SiteDict = {
     title: 'Destacados',
     subtitle:
       'Información útil, sentencias favorables y socios para quien quiera proteger su casa y a sus animales.',
+    comingSoonLabel: 'Próximamente',
     items: [
       {
         title: 'Sentencia Judicial Favorable',
