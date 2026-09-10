@@ -24,7 +24,7 @@ export const pt: SiteDict = {
     title1: 'Redes de Proteção',
     title2: 'para o seu Lar',
     description:
-      'Especialistas na instalação de <strong>redes de segurança no Porto, Braga e Norte de Portugal</strong>. Proteção certificada para crianças e gatos em varandas e janelas sem perder as vistas.',
+      'Especialistas na instalação de <strong>redes de segurança no Norte de Portugal</strong>. Proteção certificada para crianças e gatos em varandas e janelas sem perder as vistas.',
     ctaPrimary: 'Pedir Orçamento GRÁTIS',
     ctaSecondary: 'Ver Instalações',
     scrollHint: 'Descubra mais',

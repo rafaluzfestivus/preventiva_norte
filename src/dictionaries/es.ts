@@ -24,7 +24,7 @@ export const es: SiteDict = {
     title1: 'Redes de Protección',
     title2: 'para tu Hogar',
     description:
-      'Especialistas en la instalación de <strong>redes de seguridad en Porto, Braga y el Norte de Portugal</strong>. Protección certificada para niños y gatos en balcones y ventanas sin perder las vistas.',
+      'Especialistas en la instalación de <strong>redes de seguridad en el Norte de Portugal</strong>. Protección certificada para niños y gatos en balcones y ventanas sin perder las vistas.',
     ctaPrimary: 'Pedir Presupuesto GRATIS',
     ctaSecondary: 'Ver Instalaciones',
     scrollHint: 'Descubre más',
