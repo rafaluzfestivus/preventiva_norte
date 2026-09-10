@@ -5,37 +5,12 @@ import Image from "next/image";
 import { Facebook, Instagram, Phone, Mail, MapPin } from "lucide-react";
 import { usePathname } from "next/navigation";
 import { es as esDict } from "@/dictionaries/es";
+import { pt } from "@/dictionaries/pt";
 
 export function Footer() {
     const pathname = usePathname();
     const isES = pathname.startsWith("/es");
-    const dict = isES ? esDict.footer : {
-        description:
-            "Especialistas em instalação de redes de proteção de alta resistência no Porto e Norte de Portugal. Segurança certificada para varandas, janelas, terraços, crianças e animais de estimação.",
-        quickLinksTitle: "Links Rápidos",
-        protectionForTitle: "Proteção Para",
-        contactTitle: "Contacto",
-        copyright: "Todos os direitos reservados.",
-        legalNotice: "Aviso Legal",
-        privacyPolicy: "Política de Privacidade",
-        cookies: "Cookies",
-        mobileLabel: "Porto",
-        serviceArea: "Porto e Área Metropolitana.",
-        serviceAreaSub: "Serviço em todo o Norte de Portugal.",
-        quickLinks: [
-            { label: "Início", href: "/" },
-            { label: "Testes e Certificações", href: "/testes-certificaciones" },
-            { label: "Os Nossos Serviços", href: "/#servicios" },
-            { label: "Contacto", href: "/#contacto" },
-        ],
-        protectionLinks: [
-            { label: "Segurança Infantil", href: "/proteccion#ninos" },
-            { label: "Redes para Gatos", href: "/proteccion#gatos" },
-            { label: "Controlo de Aves (Pombos)", href: "/proteccion#aves" },
-            { label: "Terraços e Varandas", href: "/#servicios" },
-            { label: "Janelas e Escadas", href: "/#servicios" },
-        ],
-    };
+    const dict = isES ? esDict.footer : pt.footer;
     const privacyHref = isES ? "/es/politica-privacitat" : "/politica-privacidade";
     const homeHref = isES ? "/es" : "/";
     // Locale-aware link resolver: dict.quickLinks/protectionLinks store
