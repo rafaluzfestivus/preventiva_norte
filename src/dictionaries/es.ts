@@ -174,10 +174,11 @@ export const es: SiteDict = {
     formPhone: 'Teléfono',
     formEmail: 'Email',
     formPostal: 'Código Postal',
-    formService: 'Tipo de Servicio',
     formMessage: 'Mensaje',
     formNamePlaceholder: 'Tu nombre',
-    formMessagePlaceholder: 'Cuéntanos más sobre lo que necesitas...',
+    formMessagePlaceholder:
+      'Ej: Ventana del Salón - 1,5m x 1,2m\nBalcón - 3m de ancho x 1,60m de alto',
+    formAttachments: 'Adjuntar fotos y documentos',
     formSubmit: 'Enviar Solicitud',
     formSending: 'Enviando...',
     formSuccessTitle: '¡Mensaje Enviado!',
@@ -187,13 +188,6 @@ export const es: SiteDict = {
     formError:
       'Hubo un error al enviar el mensaje. Por favor, inténtalo de nuevo.',
     formPrivacy: 'Al enviar aceptas nuestra política de privacidad.',
-    defaultService: 'Protección para Balcón',
-    serviceOptions: [
-      'Protección para Balcón',
-      'Protección para Ventanas',
-      'Protección para Gatos',
-      'Otro',
-    ],
     subject: 'Nuevo mensaje de Preventiva Norte',
   },
   footer: {

@@ -143,26 +143,22 @@ export function ContactSection({ dict }: ContactSectionProps) {
               />
             </div>
             <div>
-              <label className="block text-sm font-medium text-slate-700 mb-1">{dict.formService}</label>
-              <select
-                name="service"
-                defaultValue={dict.defaultService}
-                className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:border-yellow-500 focus:ring-2 focus:ring-yellow-200 outline-none transition-all bg-white"
-              >
-                {dict.serviceOptions.map((option) => (
-                  <option key={option} value={option}>
-                    {option}
-                  </option>
-                ))}
-              </select>
-            </div>
-            <div>
               <label className="block text-sm font-medium text-slate-700 mb-1">{dict.formMessage}</label>
               <textarea
                 name="message"
                 rows={4}
                 placeholder={dict.formMessagePlaceholder}
                 className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:border-yellow-500 focus:ring-2 focus:ring-yellow-200 outline-none transition-all resize-none"
+              />
+            </div>
+            <div>
+              <label className="block text-sm font-medium text-slate-700 mb-1">{dict.formAttachments}</label>
+              <input
+                type="file"
+                name="attachments"
+                multiple
+                accept="image/*,.pdf,.doc,.docx"
+                className="w-full text-sm text-slate-600 file:mr-4 file:py-2 file:px-4 file:rounded-lg file:border-0 file:bg-yellow-50 file:text-yellow-700 file:font-medium hover:file:bg-yellow-100"
               />
             </div>
 

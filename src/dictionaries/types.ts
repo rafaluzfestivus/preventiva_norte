@@ -101,10 +101,10 @@ export interface SiteDict {
     formPhone: string;
     formEmail: string;
     formPostal: string;
-    formService: string;
     formMessage: string;
     formNamePlaceholder: string;
     formMessagePlaceholder: string;
+    formAttachments: string;
     formSubmit: string;
     formSending: string;
     formSuccessTitle: string;
@@ -112,8 +112,6 @@ export interface SiteDict {
     formSendAnother: string;
     formError: string;
     formPrivacy: string;
-    defaultService: string;
-    serviceOptions: string[];
     subject: string;
   };
   footer: {

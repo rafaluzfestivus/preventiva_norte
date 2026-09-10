@@ -174,10 +174,11 @@ export const pt: SiteDict = {
     formPhone: 'Telemóvel',
     formEmail: 'Email',
     formPostal: 'Código Postal',
-    formService: 'Tipo de Serviço',
     formMessage: 'Mensagem',
     formNamePlaceholder: 'O seu nome',
-    formMessagePlaceholder: 'Conte-nos mais sobre o que necessita...',
+    formMessagePlaceholder:
+      'Ex: Janela da Sala - 1,5m x 1,2m\nVaranda - 3m de largura x 1,60m de altura',
+    formAttachments: 'Anexar fotos e documentos',
     formSubmit: 'Enviar Pedido',
     formSending: 'A enviar...',
     formSuccessTitle: 'Mensagem Enviada!',
@@ -187,13 +188,6 @@ export const pt: SiteDict = {
     formError:
       'Ocorreu um erro ao enviar a mensagem. Por favor, tente novamente.',
     formPrivacy: 'Ao enviar aceita a nossa política de privacidade.',
-    defaultService: 'Proteção para Varanda',
-    serviceOptions: [
-      'Proteção para Varanda',
-      'Proteção para Janelas',
-      'Proteção para Gatos',
-      'Outro',
-    ],
     subject: 'Nova mensagem de Preventiva Norte',
   },
   footer: {
