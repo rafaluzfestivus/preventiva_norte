@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Scale, FileText, PlayCircle, Heart, type LucideIcon } from "lucide-react";
+import { Scale, FileText, PlayCircle, Heart, ArrowUpRight, type LucideIcon } from "lucide-react";
 import Link from "next/link";
 import type { SiteDict, HighlightItem } from "@/dictionaries/types";
 
@@ -33,26 +33,34 @@ export function Highlights({ dict }: HighlightsProps) {
                     {dict.items.map((item, index) => {
                         const Icon = iconFor(item);
                         const cardInner = (
-                            <>
-                                <div className="bg-yellow-50 w-16 h-16 rounded-full flex items-center justify-center mb-6 group-hover:bg-yellow-100 transition-colors">
-                                    <Icon className="w-8 h-8 text-yellow-500" />
+                            <div className="relative z-10 flex flex-col h-full">
+                                <div className="w-14 h-14 rounded-full bg-yellow-500/15 flex items-center justify-center mb-6 group-hover:bg-yellow-500/25 transition-colors">
+                                    <Icon className="w-7 h-7 text-yellow-400" />
                                 </div>
-                                <h3 className="text-xl font-bold text-slate-900 mb-3 group-hover:text-yellow-600 transition-colors">
+                                <h3 className="text-xl font-bold text-white mb-3">
                                     {item.title}
                                 </h3>
-                                <p className="text-slate-600 leading-relaxed">
+                                <p className="text-slate-300 leading-relaxed flex-grow">
                                     {item.description}
                                 </p>
-                                {item.kind === "video" && (
-                                    <span className="mt-4 inline-block text-xs font-bold uppercase tracking-wide text-yellow-600 bg-yellow-50 px-3 py-1 rounded-full w-fit">
-                                        {dict.comingSoonLabel}
+                                {item.kind === "video" ? (
+                                    <span className="mt-6 inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-wide text-yellow-400 bg-yellow-500/10 px-3 py-1.5 rounded-full w-fit">
+                                        <PlayCircle className="w-3.5 h-3.5" /> {dict.comingSoonLabel}
+                                    </span>
+                                ) : (
+                                    <span className="mt-6 inline-flex items-center gap-1 text-sm font-semibold text-yellow-400 group-hover:gap-2 transition-all w-fit">
+                                        <ArrowUpRight className="w-4 h-4" />
                                     </span>
                                 )}
-                            </>
+                            </div>
                         );
 
                         const cardClass =
-                            "bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all border border-gray-100 group flex flex-col h-full";
+                            "relative overflow-hidden bg-[#4d2a36] p-8 rounded-2xl border border-white/10 hover:border-yellow-400/50 hover:-translate-y-1 transition-all duration-300 group flex flex-col h-full";
+
+                        const watermark = (
+                            <Icon className="absolute -right-4 -bottom-4 w-32 h-32 text-white/5 group-hover:text-yellow-500/10 transition-colors pointer-events-none" />
+                        );
 
                         return (
                             <motion.div
@@ -63,7 +71,10 @@ export function Highlights({ dict }: HighlightsProps) {
                                 viewport={{ once: true }}
                             >
                                 {item.kind === "video" ? (
-                                    <div className={cardClass}>{cardInner}</div>
+                                    <div className={cardClass}>
+                                        {watermark}
+                                        {cardInner}
+                                    </div>
                                 ) : (
                                     <Link
                                         href={item.href}
@@ -71,6 +82,7 @@ export function Highlights({ dict }: HighlightsProps) {
                                         rel={item.kind === "external" ? "noopener noreferrer" : undefined}
                                         className={cardClass}
                                     >
+                                        {watermark}
                                         {cardInner}
                                     </Link>
                                 )}

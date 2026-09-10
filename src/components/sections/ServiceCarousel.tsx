@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Image from "next/image";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 
@@ -16,8 +16,19 @@ export interface ServiceCarouselProps {
   labels: ServiceCarouselLabels;
 }
 
+const AUTO_ADVANCE_MS = 2000;
+
 export function ServiceCarousel({ photos, alt, labels }: ServiceCarouselProps) {
   const [index, setIndex] = useState(0);
+  const [hovering, setHovering] = useState(false);
+
+  useEffect(() => {
+    if (!hovering || photos.length <= 1) return;
+    const id = setInterval(() => {
+      setIndex((i) => (i + 1) % photos.length);
+    }, AUTO_ADVANCE_MS);
+    return () => clearInterval(id);
+  }, [hovering, photos.length]);
 
   if (photos.length === 0) return null;
 
@@ -25,7 +36,11 @@ export function ServiceCarousel({ photos, alt, labels }: ServiceCarouselProps) {
   const next = () => setIndex((i) => (i + 1) % photos.length);
 
   return (
-    <div className="relative w-full h-40 rounded-xl overflow-hidden mb-6 bg-gray-100 group/carousel">
+    <div
+      className="relative w-full h-48 rounded-t-2xl overflow-hidden bg-gray-100 group/carousel"
+      onMouseEnter={() => setHovering(true)}
+      onMouseLeave={() => setHovering(false)}
+    >
       <Image
         src={photos[index]}
         alt={`${alt} - foto ${index + 1}`}

@@ -31,7 +31,7 @@ export function Services({ dict, basePath = "" }: ServicesProps) {
                             whileInView={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.5, delay: index * 0.1 }}
                             viewport={{ once: true }}
-                            className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all border border-gray-100 group flex flex-col h-full"
+                            className="bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all border border-gray-100 group flex flex-col h-full overflow-hidden"
                         >
                             <ServiceCarousel
                                 photos={service.photos ?? []}
@@ -42,17 +42,19 @@ export function Services({ dict, basePath = "" }: ServicesProps) {
                                     goToPrefix: dict.carouselGoToPrefix,
                                 }}
                             />
-                            <h3 className="text-xl font-bold text-slate-900 mb-3 group-hover:text-yellow-600 transition-colors">
-                                {service.title}
-                            </h3>
-                            <p className="text-slate-600 leading-relaxed mb-6 flex-grow">
-                                {service.description}
-                            </p>
-                            {service.href && (
-                                <Link href={`${basePath}${service.href}`} className="text-yellow-600 font-bold flex items-center gap-2 hover:gap-3 transition-all mt-auto">
-                                    {dict.readMore}
-                                </Link>
-                            )}
+                            <div className="p-8 pt-6 flex flex-col flex-grow">
+                                <h3 className="text-xl font-bold text-slate-900 mb-3 group-hover:text-yellow-600 transition-colors">
+                                    {service.title}
+                                </h3>
+                                <p className="text-slate-600 leading-relaxed mb-6 flex-grow">
+                                    {service.description}
+                                </p>
+                                {service.href && (
+                                    <Link href={`${basePath}${service.href}`} className="text-yellow-600 font-bold flex items-center gap-2 hover:gap-3 transition-all mt-auto">
+                                        {dict.readMore}
+                                    </Link>
+                                )}
+                            </div>
                         </motion.div>
                     ))}
                 </div>
