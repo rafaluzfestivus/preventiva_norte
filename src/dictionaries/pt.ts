@@ -385,6 +385,7 @@ export const pt: SiteDict = {
     subtitle:
       'Informação útil, decisões favoráveis e parceiros para quem quer proteger a sua casa e os seus animais.',
     comingSoonLabel: 'Em breve',
+    watchLabel: 'Assistir vídeo',
     items: [
       {
         title: 'Decisão Judicial Favorável',
@@ -402,8 +403,8 @@ export const pt: SiteDict = {
       },
       {
         title: 'Vídeo: Maracujá Roxo',
-        description: 'Em breve.',
-        href: '#',
+        description: 'Veja em vídeo uma das nossas instalações de rede de proteção.',
+        href: '/video-maracuja-roxo.mp4',
         kind: 'video',
       },
       {

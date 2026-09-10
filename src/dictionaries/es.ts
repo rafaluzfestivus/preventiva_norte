@@ -385,6 +385,7 @@ export const es: SiteDict = {
     subtitle:
       'Información útil, sentencias favorables y socios para quien quiera proteger su casa y a sus animales.',
     comingSoonLabel: 'Próximamente',
+    watchLabel: 'Ver vídeo',
     items: [
       {
         title: 'Sentencia Judicial Favorable',
@@ -402,8 +403,8 @@ export const es: SiteDict = {
       },
       {
         title: 'Vídeo: Maracujá Roxo',
-        description: 'Próximamente.',
-        href: '#',
+        description: 'Vea en vídeo una de nuestras instalaciones de red de protección.',
+        href: '/video-maracuja-roxo.mp4',
         kind: 'video',
       },
       {

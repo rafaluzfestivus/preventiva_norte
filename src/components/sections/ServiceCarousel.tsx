@@ -57,7 +57,7 @@ export function ServiceCarousel({ photos, alt, labels }: ServiceCarouselProps) {
               prev();
             }}
             aria-label={labels.prev}
-            className="absolute left-2 top-1/2 -translate-y-1/2 z-10 bg-white/80 hover:bg-white rounded-full p-1.5 opacity-0 group-hover/carousel:opacity-100 transition-opacity"
+            className="absolute left-2 top-1/2 -translate-y-1/2 z-10 bg-white/80 hover:bg-white rounded-full p-1.5 transition-colors"
           >
             <ChevronLeft className="w-4 h-4 text-slate-700" />
           </button>
@@ -68,7 +68,7 @@ export function ServiceCarousel({ photos, alt, labels }: ServiceCarouselProps) {
               next();
             }}
             aria-label={labels.next}
-            className="absolute right-2 top-1/2 -translate-y-1/2 z-10 bg-white/80 hover:bg-white rounded-full p-1.5 opacity-0 group-hover/carousel:opacity-100 transition-opacity"
+            className="absolute right-2 top-1/2 -translate-y-1/2 z-10 bg-white/80 hover:bg-white rounded-full p-1.5 transition-colors"
           >
             <ChevronRight className="w-4 h-4 text-slate-700" />
           </button>

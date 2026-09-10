@@ -238,6 +238,7 @@ export interface SiteDict {
     title: string;
     subtitle: string;
     comingSoonLabel: string;
+    watchLabel: string;
     items: HighlightItem[];
   };
 }

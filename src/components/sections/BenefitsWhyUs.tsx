@@ -3,6 +3,7 @@
 
 import { CheckCircle2, UserCheck, Clock, FileCheck2 } from "lucide-react";
 import { motion } from "framer-motion";
+import Image from "next/image";
 import type { SiteDict } from "@/dictionaries/types";
 
 interface BenefitsWhyUsProps {
@@ -45,8 +46,14 @@ export function BenefitsWhyUs({ benefits, whyUs }: BenefitsWhyUsProps) {
 
                     <div className="lg:w-1/2 relative">
                         <div className="relative rounded-2xl overflow-hidden shadow-2xl">
-                            <div className="aspect-[4/3] bg-slate-200">
-                                <div className="w-full h-full bg-[url('https://images.unsplash.com/photo-1510563800743-aed236490d08?q=80&w=2670&auto=format&fit=crop')] bg-cover bg-center" />
+                            <div className="relative aspect-[4/3] bg-slate-200">
+                                <Image
+                                    src="/img-1.jpg"
+                                    alt={benefits.title1}
+                                    fill
+                                    className="object-cover"
+                                    sizes="(max-width: 1024px) 100vw, 50vw"
+                                />
                             </div>
                         </div>
                         <motion.div

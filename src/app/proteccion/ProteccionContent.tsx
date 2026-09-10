@@ -138,7 +138,7 @@ export default function ProteccionContent() {
                         </div>
                         <div className="lg:w-1/2">
                             <div className="rounded-[2.5rem] overflow-hidden shadow-2xl aspect-square relative">
-                                <div className="w-full h-full bg-[url('https://images.unsplash.com/photo-1542129596030-cf8d268d2a34?q=80&w=2670&auto=format&fit=crop')] bg-cover bg-center" />
+                                <div className="w-full h-full bg-[url('/img-2.jpg')] bg-cover bg-center" />
                                 <div className="absolute inset-0 bg-gradient-to-t from-[#4d2a36]/40 to-transparent" />
                                 <div className="absolute bottom-10 left-10 right-10 bg-white/90 backdrop-blur-sm p-6 rounded-2xl shadow-xl border border-white/20">
                                     <p className="text-slate-900 font-bold mb-1 italic">&ldquo;{d.ninosOverlay}&rdquo;</p>
@@ -194,7 +194,7 @@ export default function ProteccionContent() {
                         </div>
                         <div className="lg:w-1/2">
                             <div className="rounded-[2.5rem] overflow-hidden shadow-2xl aspect-[4/5] relative">
-                                <div className="w-full h-full bg-[url('https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?q=80&w=2686&auto=format&fit=crop')] bg-cover bg-center" />
+                                <div className="w-full h-full bg-[url('/img-1.jpg')] bg-cover bg-center" />
                             </div>
                         </div>
                     </div>
@@ -265,7 +265,7 @@ export default function ProteccionContent() {
                         </div>
                         <div className="lg:w-1/2">
                             <div className="rounded-[3rem] overflow-hidden shadow-2xl aspect-square relative group">
-                                <div className="w-full h-full bg-[url('https://images.unsplash.com/photo-1549608276-5786d7ff1f1d?q=80&w=2670&auto=format&fit=crop')] bg-cover bg-center transition-transform duration-700 group-hover:scale-110" />
+                                <div className="w-full h-full bg-[url('/img-3.jpg')] bg-cover bg-center transition-transform duration-700 group-hover:scale-110" />
                             </div>
                         </div>
                     </div>
