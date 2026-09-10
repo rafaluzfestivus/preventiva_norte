@@ -40,6 +40,9 @@ export const pt: SiteDict = {
     subtitle:
       'Adaptamos as nossas redes de proteção a qualquer espaço e necessidade, garantindo a máxima resistência.',
     readMore: 'Ler mais →',
+    carouselPrev: 'Foto anterior',
+    carouselNext: 'Próxima foto',
+    carouselGoToPrefix: 'Ir para foto ',
     items: [
       {
         title: 'Redes para Gatos',

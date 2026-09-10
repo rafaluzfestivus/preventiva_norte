@@ -33,7 +33,15 @@ export function Services({ dict, basePath = "" }: ServicesProps) {
                             viewport={{ once: true }}
                             className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all border border-gray-100 group flex flex-col h-full"
                         >
-                            <ServiceCarousel photos={service.photos ?? []} alt={service.title} />
+                            <ServiceCarousel
+                                photos={service.photos ?? []}
+                                alt={service.title}
+                                labels={{
+                                    prev: dict.carouselPrev,
+                                    next: dict.carouselNext,
+                                    goToPrefix: dict.carouselGoToPrefix,
+                                }}
+                            />
                             <h3 className="text-xl font-bold text-slate-900 mb-3 group-hover:text-yellow-600 transition-colors">
                                 {service.title}
                             </h3>

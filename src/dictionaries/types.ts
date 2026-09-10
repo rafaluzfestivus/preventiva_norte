@@ -59,6 +59,9 @@ export interface SiteDict {
     title: string;
     subtitle: string;
     readMore: string;
+    carouselPrev: string;
+    carouselNext: string;
+    carouselGoToPrefix: string;
     items: ServiceItem[];
   };
   benefits: {

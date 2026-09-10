@@ -4,12 +4,19 @@ import { useState } from "react";
 import Image from "next/image";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 
+export interface ServiceCarouselLabels {
+  prev: string;
+  next: string;
+  goToPrefix: string;
+}
+
 export interface ServiceCarouselProps {
   photos: string[];
   alt: string;
+  labels: ServiceCarouselLabels;
 }
 
-export function ServiceCarousel({ photos, alt }: ServiceCarouselProps) {
+export function ServiceCarousel({ photos, alt, labels }: ServiceCarouselProps) {
   const [index, setIndex] = useState(0);
 
   if (photos.length === 0) return null;
@@ -34,7 +41,7 @@ export function ServiceCarousel({ photos, alt }: ServiceCarouselProps) {
               e.preventDefault();
               prev();
             }}
-            aria-label="Foto anterior"
+            aria-label={labels.prev}
             className="absolute left-2 top-1/2 -translate-y-1/2 z-10 bg-white/80 hover:bg-white rounded-full p-1.5 opacity-0 group-hover/carousel:opacity-100 transition-opacity"
           >
             <ChevronLeft className="w-4 h-4 text-slate-700" />
@@ -45,7 +52,7 @@ export function ServiceCarousel({ photos, alt }: ServiceCarouselProps) {
               e.preventDefault();
               next();
             }}
-            aria-label="Próxima foto"
+            aria-label={labels.next}
             className="absolute right-2 top-1/2 -translate-y-1/2 z-10 bg-white/80 hover:bg-white rounded-full p-1.5 opacity-0 group-hover/carousel:opacity-100 transition-opacity"
           >
             <ChevronRight className="w-4 h-4 text-slate-700" />
@@ -59,7 +66,7 @@ export function ServiceCarousel({ photos, alt }: ServiceCarouselProps) {
                   e.preventDefault();
                   setIndex(i);
                 }}
-                aria-label={`Ir para foto ${i + 1}`}
+                aria-label={`${labels.goToPrefix}${i + 1}`}
                 className={`w-1.5 h-1.5 rounded-full transition-colors ${
                   i === index ? "bg-yellow-500" : "bg-white/70"
                 }`}
