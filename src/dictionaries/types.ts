@@ -18,11 +18,6 @@ export interface Testimonial {
   text: string;
 }
 
-export interface GalleryProject {
-  cat: string;
-  ariaLabel: string;
-}
-
 export interface SiteDict {
   locale: Locale;
   navbar: {
@@ -78,12 +73,6 @@ export interface SiteDict {
     p1: string;
     p2: string;
     p3: string;
-  };
-  gallery: {
-    title: string;
-    subtitle: string;
-    viewMore: string;
-    projects: GalleryProject[];
   };
   testimonials: {
     title: string;

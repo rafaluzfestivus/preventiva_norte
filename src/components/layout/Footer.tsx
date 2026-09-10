@@ -26,7 +26,6 @@ export function Footer() {
             { label: "Início", href: "/" },
             { label: "Testes e Certificações", href: "/testes-certificaciones" },
             { label: "Os Nossos Serviços", href: "/#servicios" },
-            { label: "Galeria", href: "/#galeria" },
             { label: "Contacto", href: "/#contacto" },
         ],
         protectionLinks: [

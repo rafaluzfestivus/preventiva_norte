@@ -72,7 +72,7 @@ export function Hero({ dict, basePath = "" }: HeroProps) {
                                 <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                             </Link>
                             <Link
-                                href={`${basePath}#galeria`}
+                                href={`${basePath}#servicios`}
                                 className="px-8 py-4 bg-white/10 backdrop-blur-sm border border-white/20 text-white rounded-full font-bold text-lg hover:bg-white/20 transition-all flex items-center justify-center"
                             >
                                 {dict.ctaSecondary}

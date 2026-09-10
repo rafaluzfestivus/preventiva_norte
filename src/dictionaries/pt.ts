@@ -127,29 +127,6 @@ export const pt: SiteDict = {
     p2: 'A Preventiva Norte Redes de Proteção é atualmente a principal empresa no Norte de Portugal na instalação e venda de kits de redes de proteção. Fomos criados para responder às necessidades de quem convive com riscos de acidentes no lar, garantindo a proteção da vida e a integridade física, sobretudo de crianças e animais de estimação, contra o perigo de quedas em janelas, varandas, terraços, escadas e outras aberturas.',
     p3: 'Além disso, oferecemos soluções eficazes para impedir a entrada de aves indesejadas, garantindo a higiene e o usufruto pleno de terraços e varandas.',
   },
-  gallery: {
-    title: 'Os Nossos Trabalhos',
-    subtitle:
-      'Explore algumas das nossas instalações recentes. Segurança impecável com o mínimo impacto visual.',
-    viewMore: 'Ver mais no Instagram →',
-    projects: [
-      { cat: 'Varanda', ariaLabel: 'Projeto de rede de proteção em Varanda' },
-      { cat: 'Terraço', ariaLabel: 'Projeto de rede de proteção em Terraço' },
-      { cat: 'Janela', ariaLabel: 'Projeto de rede de proteção em Janela' },
-      {
-        cat: 'Estrutura',
-        ariaLabel: 'Projeto de rede de proteção em Estrutura',
-      },
-      {
-        cat: 'Animais',
-        ariaLabel: 'Projeto de rede de proteção para Animais',
-      },
-      {
-        cat: 'Segurança',
-        ariaLabel: 'Projeto de rede de proteção de Segurança',
-      },
-    ],
-  },
   testimonials: {
     title: 'O que dizem os nossos clientes',
     verMas: 'Ver mais',
@@ -239,7 +216,6 @@ export const pt: SiteDict = {
         href: '/testes-certificaciones',
       },
       { label: 'Os Nossos Serviços', href: '/#servicios' },
-      { label: 'Galeria', href: '/#galeria' },
       { label: 'Contacto', href: '/#contacto' },
     ],
     protectionLinks: [

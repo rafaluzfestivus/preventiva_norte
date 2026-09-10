@@ -3,7 +3,6 @@ import { Hero } from "@/components/sections/Hero";
 import { TrustBar } from "@/components/sections/TrustBar";
 import { Services } from "@/components/sections/Services";
 import { BenefitsWhyUs } from "@/components/sections/BenefitsWhyUs";
-import { Gallery } from "@/components/sections/Gallery";
 import { Testimonials } from "@/components/sections/Testimonials";
 import { ContactSection } from "@/components/sections/ContactSection";
 import { AboutUs } from "@/components/sections/AboutUs";
@@ -41,7 +40,6 @@ export default function EsHome() {
       <Services dict={es.services} basePath="/es" />
       <BenefitsWhyUs benefits={es.benefits} whyUs={es.whyUs} />
       <AboutUs dict={es.aboutUs} />
-      <Gallery dict={es.gallery} />
       <Testimonials dict={es.testimonials} />
       <Resources dict={es.resources} />
       <ContactSection dict={es.contact} />

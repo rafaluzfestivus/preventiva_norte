@@ -127,29 +127,6 @@ export const es: SiteDict = {
     p2: 'Preventiva Norte Redes de Protección es actualmente la principal empresa del Norte de Portugal en la instalación y venta de kits de redes de protección. Nacimos para responder a las necesidades de quienes conviven con riesgos de accidentes en el hogar, garantizando la protección de la vida y la integridad física, sobre todo de niños y mascotas, frente al peligro de caídas en ventanas, balcones, terrazas, escaleras y otras aberturas.',
     p3: 'Además, ofrecemos soluciones eficaces para impedir la entrada de aves indeseadas, garantizando la higiene y el disfrute pleno de terrazas y balcones.',
   },
-  gallery: {
-    title: 'Nuestros Trabajos',
-    subtitle:
-      'Explora algunas de nuestras instalaciones recientes. Seguridad impecable con el mínimo impacto visual.',
-    viewMore: 'Ver más en Instagram →',
-    projects: [
-      { cat: 'Balcón', ariaLabel: 'Proyecto de red de protección en Balcón' },
-      { cat: 'Terraza', ariaLabel: 'Proyecto de red de protección en Terraza' },
-      { cat: 'Ventana', ariaLabel: 'Proyecto de red de protección en Ventana' },
-      {
-        cat: 'Estructura',
-        ariaLabel: 'Proyecto de red de protección en Estructura',
-      },
-      {
-        cat: 'Animales',
-        ariaLabel: 'Proyecto de red de protección para Animales',
-      },
-      {
-        cat: 'Seguridad',
-        ariaLabel: 'Proyecto de red de protección de Seguridad',
-      },
-    ],
-  },
   testimonials: {
     title: 'Lo que dicen nuestros clientes',
     verMas: 'Ver más',
@@ -239,7 +216,6 @@ export const es: SiteDict = {
         href: '/testes-certificaciones',
       },
       { label: 'Nuestros Servicios', href: '/#servicios' },
-      { label: 'Galería', href: '/#galeria' },
       { label: 'Contacto', href: '/#contacto' },
     ],
     protectionLinks: [
