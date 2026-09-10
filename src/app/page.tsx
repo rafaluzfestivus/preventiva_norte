@@ -5,7 +5,7 @@ import { BenefitsWhyUs } from "@/components/sections/BenefitsWhyUs";
 import { Testimonials } from "@/components/sections/Testimonials";
 import { ContactSection } from "@/components/sections/ContactSection";
 import { AboutUs } from "@/components/sections/AboutUs";
-import { Resources } from "@/components/sections/Resources";
+import { Highlights } from "@/components/sections/Highlights";
 import { pt } from "@/dictionaries/pt";
 
 export default function Home() {
@@ -17,7 +17,7 @@ export default function Home() {
       <BenefitsWhyUs benefits={pt.benefits} whyUs={pt.whyUs} />
       <AboutUs dict={pt.aboutUs} />
       <Testimonials dict={pt.testimonials} />
-      <Resources dict={pt.resources} />
+      <Highlights dict={pt.highlights} />
       <ContactSection dict={pt.contact} />
     </>
   );

@@ -18,6 +18,13 @@ export interface Testimonial {
   text: string;
 }
 
+export interface HighlightItem {
+  title: string;
+  description: string;
+  href: string;
+  kind: 'internal' | 'external' | 'video';
+}
+
 export interface SiteDict {
   locale: Locale;
   navbar: {
@@ -226,15 +233,9 @@ export interface SiteDict {
     s8Content: string;
     lastUpdated: string;
   };
-  resources: {
+  highlights: {
     title: string;
     subtitle: string;
-    condoLawTitle: string;
-    condoLawDescription: string;
-    condoLawHref: string;
-    kitTitle: string;
-    kitDescription: string;
-    kitHref: string;
-    readMore: string;
+    items: HighlightItem[];
   };
 }

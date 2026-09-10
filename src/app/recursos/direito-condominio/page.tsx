@@ -74,12 +74,12 @@ export default function DireitoCondominioPage() {
 
                 <h2 className="text-2xl font-bold mt-8 mb-4 text-slate-900">Documentos para descarregar</h2>
                 <ul className="list-disc pl-6 space-y-2">
-                    <li>
+                    <li id="carta-condominio">
                         <a href="/documentos/carta-condominio.pdf" target="_blank" rel="noopener noreferrer">
                             Descarregue a carta-modelo para apresentar ao seu condomínio (PDF)
                         </a>
                     </li>
-                    <li>
+                    <li id="sentenca">
                         <a href="/documentos/sentenca-favoravel.pdf" target="_blank" rel="noopener noreferrer">
                             Consulte a sentença do Juizado de Paz favorável à instalação de redes (PDF)
                         </a>

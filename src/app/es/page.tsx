@@ -6,7 +6,7 @@ import { BenefitsWhyUs } from "@/components/sections/BenefitsWhyUs";
 import { Testimonials } from "@/components/sections/Testimonials";
 import { ContactSection } from "@/components/sections/ContactSection";
 import { AboutUs } from "@/components/sections/AboutUs";
-import { Resources } from "@/components/sections/Resources";
+import { Highlights } from "@/components/sections/Highlights";
 import { es } from "@/dictionaries/es";
 
 export const metadata: Metadata = {
@@ -41,7 +41,7 @@ export default function EsHome() {
       <BenefitsWhyUs benefits={es.benefits} whyUs={es.whyUs} />
       <AboutUs dict={es.aboutUs} />
       <Testimonials dict={es.testimonials} />
-      <Resources dict={es.resources} />
+      <Highlights dict={es.highlights} />
       <ContactSection dict={es.contact} />
     </>
   );

@@ -57,12 +57,12 @@ export default function EsDireitoCondominioPage() {
 
                 <h2 className="text-2xl font-bold mt-8 mb-4 text-slate-900">Documentos para descargar</h2>
                 <ul className="list-disc pl-6 space-y-2">
-                    <li>
+                    <li id="carta-condominio">
                         <a href="/documentos/carta-condominio.pdf" target="_blank" rel="noopener noreferrer">
                             Descargue la carta-modelo para presentar a su comunidad de vecinos (PDF)
                         </a>
                     </li>
-                    <li>
+                    <li id="sentenca">
                         <a href="/documentos/sentenca-favoravel.pdf" target="_blank" rel="noopener noreferrer">
                             Consulte la sentencia del Juzgado de Paz favorable a la instalación de redes (PDF)
                         </a>

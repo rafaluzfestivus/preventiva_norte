@@ -383,18 +383,44 @@ export const es: SiteDict = {
       'Preventiva Norte se reserva el derecho de modificar esta política para adaptarla a novedades legislativas o jurisprudenciales. Se recomienda su lectura periódica.',
     lastUpdated: 'Última actualización:',
   },
-  resources: {
-    title: 'Recursos Útiles',
+  highlights: {
+    title: 'Destacados',
     subtitle:
-      'Información legal y soluciones prácticas para quien quiera proteger su casa en Portugal.',
-    condoLawTitle: '¿La comunidad de vecinos puede prohibir las redes de protección?',
-    condoLawDescription:
-      'Descubra qué dice el artículo 1422 del Código Civil portugués y DECO Proteste sobre la instalación de redes de protección en apartamentos y comunidades de vecinos.',
-    condoLawHref: '/es/recursos/direito-condominio',
-    kitTitle: 'Kit de Instalación',
-    kitDescription:
-      'Red, cuerda, ganchos y tacos para instalarlo usted mismo. Ideal para espacios pequeños, como ventanas y balcones sencillos.',
-    kitHref: '/es/kit-instalacao',
-    readMore: 'Saber más →',
+      'Información útil, sentencias favorables y socios para quien quiera proteger su casa y a sus animales.',
+    items: [
+      {
+        title: 'Sentencia Judicial Favorable',
+        description:
+          'Una sentencia del Juzgado de Paz confirma: las redes de protección no necesitan autorización previa de la comunidad de vecinos.',
+        href: '/es/recursos/direito-condominio#sentenca',
+        kind: 'internal',
+      },
+      {
+        title: 'Carta a la Comunidad de Vecinos',
+        description:
+          'Un modelo de carta listo para presentar a su administración de fincas, basado en el Código Civil portugués.',
+        href: '/es/recursos/direito-condominio#carta-condominio',
+        kind: 'internal',
+      },
+      {
+        title: 'Vídeo: Maracujá Roxo',
+        description: 'Próximamente.',
+        href: '#',
+        kind: 'video',
+      },
+      {
+        title: 'Vídeo: Cris Azen',
+        description: 'Próximamente.',
+        href: '#',
+        kind: 'video',
+      },
+      {
+        title: 'Barkibu — Seguro para tu Animal',
+        description:
+          'Protege también la salud de tu perro o gato con el seguro veterinario de Barkibu.',
+        href: 'https://www.barkibu.com/pt',
+        kind: 'external',
+      },
+    ],
   },
 };
