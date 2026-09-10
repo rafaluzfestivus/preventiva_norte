@@ -4,6 +4,7 @@ export interface ServiceItem {
   title: string;
   description: string;
   href?: string;
+  photos?: string[];
 }
 
 export interface Reason {

@@ -46,33 +46,39 @@ export const pt: SiteDict = {
         description:
           "Especialistas em redes de proteção anti-queda. Evite o 'síndrome do paraquedista' com as nossas malhas de segurança.",
         href: '/proteccion#gatos',
+        photos: ['/img-1.jpg', '/gallery-1.jpg'],
       },
       {
         title: 'Segurança Infantil',
         description:
           'Proteção certificada para janelas, varandas e escadas. Substituição de grades com estética limpa.',
         href: '/proteccion#ninos',
+        photos: ['/img-2.jpg', '/gallery-2.jpg'],
       },
       {
         title: 'Controlo de Aves',
         description:
           'Solução definitiva contra pombos no Porto e Norte. Higiene e proteção ética para o seu edifício.',
         href: '/proteccion#aves',
+        photos: ['/img-3.jpg', '/gallery-3.jpg'],
       },
       {
         title: 'Redes Desportivas',
         description:
           'Redes de proteção para campos, pavilhões, ginásios e recintos desportivos.',
+        photos: ['/img-4.jpg', '/gallery-4.jpg'],
       },
       {
         title: 'Redes para Terraços',
         description:
           'Segurança e proteção para os seus terraços e varandas sem impacto visual.',
+        photos: ['/img-5.jpg', '/gallery-5.jpg'],
       },
       {
-        title: 'Redes para Piscinas',
+        title: 'Construção Civil e Industrial',
         description:
-          'Proteção e segurança de piscinas para poder desfrutar com total tranquilidade.',
+          'Redes de proteção e segurança para obras, fachadas e instalações industriais em todo o Norte de Portugal.',
+        photos: ['/img-6.jpg', '/gallery-6.jpg'],
       },
     ],
   },

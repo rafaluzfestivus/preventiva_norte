@@ -46,33 +46,39 @@ export const es: SiteDict = {
         description:
           "Especialistas en redes de protección anti-caídas. Evita el 'síndrome del paracaidista' con nuestras mallas de seguridad.",
         href: '/proteccion#gatos',
+        photos: ['/img-1.jpg', '/gallery-1.jpg'],
       },
       {
         title: 'Seguridad Infantil',
         description:
           'Protección certificada para ventanas, balcones y escaleras. Sustitución de rejas con estética limpia.',
         href: '/proteccion#ninos',
+        photos: ['/img-2.jpg', '/gallery-2.jpg'],
       },
       {
         title: 'Control de Aves',
         description:
           'Solución definitiva contra palomas en Porto y el Norte. Higiene y protección ética para tu edificio.',
         href: '/proteccion#aves',
+        photos: ['/img-3.jpg', '/gallery-3.jpg'],
       },
       {
         title: 'Redes Deportivas',
         description:
           'Redes de protección para campos, pabellones, gimnasios y recintos deportivos.',
+        photos: ['/img-4.jpg', '/gallery-4.jpg'],
       },
       {
         title: 'Redes para Terrazas',
         description:
           'Seguridad y protección para tus terrazas y balcones sin impacto visual.',
+        photos: ['/img-5.jpg', '/gallery-5.jpg'],
       },
       {
-        title: 'Redes para Piscinas',
+        title: 'Construcción Civil e Industrial',
         description:
-          'Protección y seguridad de piscinas para poder disfrutar con total tranquilidad.',
+          'Redes de protección y seguridad para obras, fachadas e instalaciones industriales en todo el Norte de Portugal.',
+        photos: ['/img-6.jpg', '/gallery-6.jpg'],
       },
     ],
   },

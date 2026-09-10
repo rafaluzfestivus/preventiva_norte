@@ -1,23 +1,14 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Home, Maximize, Shield, Dumbbell, Waves, Bird } from "lucide-react";
 import Link from "next/link";
 import type { SiteDict } from "@/dictionaries/types";
+import { ServiceCarousel } from "./ServiceCarousel";
 
 interface ServicesProps {
     dict: SiteDict["services"];
     basePath?: string;
 }
-
-const icons = [
-    <Home key="home" className="w-10 h-10 text-yellow-500" />,
-    <Shield key="shield" className="w-10 h-10 text-yellow-500" />,
-    <Bird key="bird" className="w-10 h-10 text-yellow-500" />,
-    <Dumbbell key="dumbbell" className="w-10 h-10 text-yellow-500" />,
-    <Maximize key="maximize" className="w-10 h-10 text-yellow-500" />,
-    <Waves key="waves" className="w-10 h-10 text-yellow-500" />,
-];
 
 export function Services({ dict, basePath = "" }: ServicesProps) {
     return (
@@ -42,9 +33,7 @@ export function Services({ dict, basePath = "" }: ServicesProps) {
                             viewport={{ once: true }}
                             className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all border border-gray-100 group flex flex-col h-full"
                         >
-                            <div className="bg-yellow-50 w-16 h-16 rounded-full flex items-center justify-center mb-6 group-hover:bg-yellow-100 transition-colors">
-                                {icons[index]}
-                            </div>
+                            <ServiceCarousel photos={service.photos ?? []} alt={service.title} />
                             <h3 className="text-xl font-bold text-slate-900 mb-3 group-hover:text-yellow-600 transition-colors">
                                 {service.title}
                             </h3>
