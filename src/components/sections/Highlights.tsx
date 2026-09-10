@@ -18,7 +18,7 @@ const iconFor = (item: HighlightItem): LucideIcon => {
 
 export function Highlights({ dict }: HighlightsProps) {
     return (
-        <section className="py-20 bg-white">
+        <section className="py-20 bg-gray-50">
             <div className="container mx-auto px-4 md:px-8">
                 <div className="text-center mb-16">
                     <h2 className="text-3xl md:text-5xl font-bold text-slate-900 mb-4">
@@ -52,7 +52,7 @@ export function Highlights({ dict }: HighlightsProps) {
                         );
 
                         const cardClass =
-                            "bg-gray-50 p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all border border-gray-100 group flex flex-col h-full";
+                            "bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all border border-gray-100 group flex flex-col h-full";
 
                         return (
                             <motion.div
