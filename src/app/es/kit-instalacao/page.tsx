@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { KitOrderForm } from "@/components/sections/KitOrderForm";
 
 export const metadata: Metadata = {
     title: "Kit de Instalación de Redes de Protección | Preventiva Norte",
@@ -48,6 +49,8 @@ export default function EsKitInstalacaoPage() {
                     </a>
                 </p>
             </div>
+
+            <KitOrderForm locale="es" />
         </div>
     );
 }
