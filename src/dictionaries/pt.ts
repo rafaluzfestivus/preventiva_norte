@@ -385,7 +385,10 @@ export const pt: SiteDict = {
     subtitle:
       'Informação útil, decisões favoráveis e parceiros para quem quer proteger a sua casa e os seus animais.',
     comingSoonLabel: 'Em breve',
-    watchLabel: 'Assistir vídeo',
+    watchLabel: 'Passe o cursor para ver',
+    linksGroupTitle: 'Links Úteis',
+    videosGroupTitle: 'Vídeos',
+    partnersGroupTitle: 'Parceiros',
     items: [
       {
         title: 'Decisão Judicial Favorável',
@@ -393,6 +396,7 @@ export const pt: SiteDict = {
           'Sentença do Juizado de Paz confirma: as redes de proteção não precisam de autorização prévia do condomínio.',
         href: '/recursos/direito-condominio#sentenca',
         kind: 'internal',
+        group: 'links',
       },
       {
         title: 'Carta ao Condomínio',
@@ -400,18 +404,29 @@ export const pt: SiteDict = {
           'Um modelo de carta pronto a apresentar à administração do seu condomínio, com base no Código Civil português.',
         href: '/recursos/direito-condominio#carta-condominio',
         kind: 'internal',
+        group: 'links',
+      },
+      {
+        title: 'O Condomínio Não Pode Proibir',
+        description:
+          'Segundo a DECO Proteste, o condomínio não pode proibir a instalação de redes de proteção.',
+        href: '#',
+        kind: 'external',
+        group: 'links',
       },
       {
         title: 'Vídeo: Maracujá Roxo',
         description: 'Veja em vídeo uma das nossas instalações de rede de proteção.',
         href: '/video-maracuja-roxo.mp4',
         kind: 'video',
+        group: 'videos',
       },
       {
         title: 'Vídeo: Cris Azen',
         description: 'Em breve.',
         href: '#',
         kind: 'video',
+        group: 'videos',
       },
       {
         title: 'Barkibu — Seguro para o seu Animal',
@@ -419,6 +434,7 @@ export const pt: SiteDict = {
           'Proteja também a saúde do seu cão ou gato com o seguro veterinário da Barkibu.',
         href: 'https://www.barkibu.com/pt',
         kind: 'external',
+        group: 'partners',
       },
     ],
   },

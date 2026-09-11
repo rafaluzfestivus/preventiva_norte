@@ -385,7 +385,10 @@ export const es: SiteDict = {
     subtitle:
       'Información útil, sentencias favorables y socios para quien quiera proteger su casa y a sus animales.',
     comingSoonLabel: 'Próximamente',
-    watchLabel: 'Ver vídeo',
+    watchLabel: 'Pasa el cursor para ver',
+    linksGroupTitle: 'Enlaces Útiles',
+    videosGroupTitle: 'Vídeos',
+    partnersGroupTitle: 'Socios',
     items: [
       {
         title: 'Sentencia Judicial Favorable',
@@ -393,6 +396,7 @@ export const es: SiteDict = {
           'Una sentencia del Juzgado de Paz confirma: las redes de protección no necesitan autorización previa de la comunidad de vecinos.',
         href: '/es/recursos/direito-condominio#sentenca',
         kind: 'internal',
+        group: 'links',
       },
       {
         title: 'Carta a la Comunidad de Vecinos',
@@ -400,18 +404,29 @@ export const es: SiteDict = {
           'Un modelo de carta listo para presentar a su administración de fincas, basado en el Código Civil portugués.',
         href: '/es/recursos/direito-condominio#carta-condominio',
         kind: 'internal',
+        group: 'links',
+      },
+      {
+        title: 'La Comunidad No Puede Prohibirlo',
+        description:
+          'Según DECO Proteste, la comunidad de vecinos no puede prohibir la instalación de redes de protección.',
+        href: '#',
+        kind: 'external',
+        group: 'links',
       },
       {
         title: 'Vídeo: Maracujá Roxo',
         description: 'Vea en vídeo una de nuestras instalaciones de red de protección.',
         href: '/video-maracuja-roxo.mp4',
         kind: 'video',
+        group: 'videos',
       },
       {
         title: 'Vídeo: Cris Azen',
         description: 'Próximamente.',
         href: '#',
         kind: 'video',
+        group: 'videos',
       },
       {
         title: 'Barkibu — Seguro para tu Animal',
@@ -419,6 +434,7 @@ export const es: SiteDict = {
           'Protege también la salud de tu perro o gato con el seguro veterinario de Barkibu.',
         href: 'https://www.barkibu.com/pt',
         kind: 'external',
+        group: 'partners',
       },
     ],
   },
