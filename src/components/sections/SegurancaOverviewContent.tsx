@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { Building2 } from "lucide-react";
 
@@ -96,8 +97,21 @@ export function SegurancaOverviewContent({ locale }: SegurancaOverviewContentPro
                 <h1 className="text-3xl md:text-5xl font-bold text-slate-900 mb-6">{t.title}</h1>
                 <p className="text-lg text-slate-600 leading-relaxed mb-10">{t.description}</p>
 
+                <div className="relative aspect-[4/5] sm:aspect-video rounded-2xl overflow-hidden shadow-md mb-10">
+                    <Image src="/seguranca-esquema.jpg" alt={t.title} fill className="object-contain bg-white" />
+                </div>
+
                 <h2 className="text-2xl font-bold text-slate-900 mb-4">{t.compositionTitle}</h2>
                 <p className="text-slate-600 leading-relaxed mb-10">{t.composition}</p>
+
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-10">
+                    <div className="relative aspect-[4/3] rounded-2xl overflow-hidden shadow-md">
+                        <Image src="/seguranca-perimetral-1.jpg" alt={t.title} fill className="object-cover" />
+                    </div>
+                    <div className="relative aspect-[4/3] rounded-2xl overflow-hidden shadow-md">
+                        <Image src="/seguranca-perimetral-2.jpg" alt={t.title} fill className="object-cover" />
+                    </div>
+                </div>
 
                 <h2 className="text-2xl font-bold text-slate-900 mb-6">{t.systemsTitle}</h2>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-12">

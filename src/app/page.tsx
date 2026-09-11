@@ -8,8 +8,11 @@ import { AboutUs } from "@/components/sections/AboutUs";
 import { Gallery } from "@/components/sections/Gallery";
 import { Highlights } from "@/components/sections/Highlights";
 import { pt } from "@/dictionaries/pt";
+import { getGalleryPhotos } from "@/lib/gallery";
 
 export default function Home() {
+  const galleryPhotos = getGalleryPhotos();
+
   return (
     <>
       <Hero dict={pt.hero} basePath="" />
@@ -17,7 +20,7 @@ export default function Home() {
       <Services dict={pt.services} basePath="" />
       <AboutUs dict={pt.aboutUs} />
       <BenefitsWhyUs benefits={pt.benefits} whyUs={pt.whyUs} />
-      <Gallery dict={pt.gallery} />
+      <Gallery dict={pt.gallery} photos={galleryPhotos} />
       <Testimonials dict={pt.testimonials} />
       <Highlights dict={pt.highlights} />
       <ContactSection dict={pt.contact} />

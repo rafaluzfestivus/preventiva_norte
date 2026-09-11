@@ -17,6 +17,7 @@ export default function EsSistemaTipoTPage() {
             tag="Sistema Certificado Tipo T"
             title="Red Inclinada de Bandeja"
             description="Red de seguridad inclinada con cuerda perimetral fija a soportes tipo ménsula horizontal, diseñada para amortiguar el impacto y recoger personas u objetos en caída. Se fija directamente a la estructura durante la construcción, protegiendo superficies inferiores y accesos contra la caída de escombros."
+            images={["/seguranca-tipo-t-1.jpg", "/seguranca-tipo-t-2.jpg"]}
             applications={[
                 "Protección de perímetro en obras de construcción",
                 "Protección de accesos y zonas de circulación inferiores",

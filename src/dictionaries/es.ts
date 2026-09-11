@@ -142,23 +142,6 @@ export const es: SiteDict = {
     subtitle:
       'Explora algunas de nuestras instalaciones recientes. Seguridad impecable con el mínimo impacto visual.',
     viewMore: 'Ver más en Instagram →',
-    projects: [
-      { cat: 'Balcón', ariaLabel: 'Proyecto de red de protección en Balcón' },
-      { cat: 'Terraza', ariaLabel: 'Proyecto de red de protección en Terraza' },
-      { cat: 'Ventana', ariaLabel: 'Proyecto de red de protección en Ventana' },
-      {
-        cat: 'Estructura',
-        ariaLabel: 'Proyecto de red de protección en Estructura',
-      },
-      {
-        cat: 'Animales',
-        ariaLabel: 'Proyecto de red de protección para Animales',
-      },
-      {
-        cat: 'Seguridad',
-        ariaLabel: 'Proyecto de red de protección de Seguridad',
-      },
-    ],
   },
   testimonials: {
     title: 'Lo que dicen nuestros clientes',

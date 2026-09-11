@@ -1,22 +1,15 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Image from "next/image";
 import type { SiteDict } from "@/dictionaries/types";
 
 interface GalleryProps {
     dict: SiteDict["gallery"];
+    photos: string[];
 }
 
-const imageSrcs = [
-    "/img-1.jpg",
-    "/img-2.jpg",
-    "/img-3.jpg",
-    "/img-4.jpg",
-    "/img-5.jpg",
-    "/img-6.jpg",
-];
-
-export function Gallery({ dict }: GalleryProps) {
+export function Gallery({ dict, photos }: GalleryProps) {
     return (
         <section id="galeria" className="py-20 bg-gray-50">
             <div className="container mx-auto px-4 md:px-8">
@@ -29,24 +22,23 @@ export function Gallery({ dict }: GalleryProps) {
                     </p>
                 </div>
 
-                <div className="grid grid-cols-2 md:grid-cols-3 gap-4 md:gap-8">
-                    {dict.projects.map((project, index) => (
+                <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6">
+                    {photos.map((src, index) => (
                         <motion.div
-                            key={index}
-                            initial={{ opacity: 0, scale: 0.9 }}
+                            key={src}
+                            initial={{ opacity: 0, scale: 0.95 }}
                             whileInView={{ opacity: 1, scale: 1 }}
-                            transition={{ duration: 0.4, delay: index * 0.1 }}
-                            viewport={{ once: true }}
-                            className="relative aspect-square group overflow-hidden rounded-xl bg-slate-200"
+                            transition={{ duration: 0.3, delay: (index % 12) * 0.03 }}
+                            viewport={{ once: true, margin: "150px" }}
+                            className="relative aspect-square overflow-hidden rounded-xl bg-slate-200 group"
                         >
-                            <div
-                                className="w-full h-full bg-cover bg-center transition-transform duration-700 group-hover:scale-110"
-                                style={{ backgroundImage: `url(${imageSrcs[index]})` }}
-                                aria-label={project.ariaLabel}
+                            <Image
+                                src={`/galeria/${src}`}
+                                alt=""
+                                fill
+                                className="object-cover transition-transform duration-700 group-hover:scale-110"
+                                sizes="(max-width: 768px) 50vw, (max-width: 1024px) 33vw, 25vw"
                             />
-                            <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
-                                <span className="text-white font-bold text-lg">{project.cat}</span>
-                            </div>
                         </motion.div>
                     ))}
                 </div>

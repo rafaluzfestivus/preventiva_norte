@@ -17,11 +17,6 @@ export interface Testimonial {
   text: string;
 }
 
-export interface GalleryProject {
-  cat: string;
-  ariaLabel: string;
-}
-
 export interface HighlightItem {
   title: string;
   description: string;
@@ -89,7 +84,6 @@ export interface SiteDict {
     title: string;
     subtitle: string;
     viewMore: string;
-    projects: GalleryProject[];
   };
   testimonials: {
     title: string;

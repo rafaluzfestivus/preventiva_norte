@@ -17,6 +17,7 @@ export default function SistemaTipoUPage() {
             tag="Sistema Certificado Tipo U"
             title="Fecho de Perímetro Vertical"
             description="Rede ligada a uma estrutura de suporte para uso vertical, fechando completamente o perímetro do vão para impedir quedas. Ideal para proteger zonas de trabalho e de circulação, bordas de piso, escadas e perímetros de edifícios em obras industriais e de escavação."
+            images={["/seguranca-tipo-u-1.jpg", "/seguranca-tipo-u-2.jpg"]}
             applications={[
                 "Proteção de zonas de trabalho e circulação",
                 "Bordas de piso, escadas e perímetros de edifícios",

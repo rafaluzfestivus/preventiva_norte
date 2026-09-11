@@ -17,6 +17,7 @@ export default function EsSistemaTipoVPage() {
             tag="Sistema Certificado Tipo V"
             title="Red Vertical Suspendida"
             description="Sistema de red de seguridad suspendida en vertical, con cuerda perimetral anclada a soportes tipo horca. Diseñada para retener personas u objetos en caída desde plataformas de trabajo, cerrando totalmente el perímetro de la zona de trabajo hasta 6 metros de altura (recomendado 3 metros). Utilizada como protección vertical en obras de construcción estructural."
+            images={["/seguranca-tipo-v-1.jpg", "/seguranca-tipo-v-2.jpg"]}
             applications={[
                 "Cierre vertical de perímetros de obra",
                 "Protección de fachadas en construcción",

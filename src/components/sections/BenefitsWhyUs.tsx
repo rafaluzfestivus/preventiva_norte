@@ -48,7 +48,7 @@ export function BenefitsWhyUs({ benefits, whyUs }: BenefitsWhyUsProps) {
                         <div className="relative rounded-2xl overflow-hidden shadow-2xl">
                             <div className="relative aspect-[4/3] bg-slate-200">
                                 <Image
-                                    src="/img-1.jpg"
+                                    src="/foto-seguranca.jpg"
                                     alt={benefits.title1}
                                     fill
                                     className="object-cover"

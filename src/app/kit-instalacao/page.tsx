@@ -35,7 +35,7 @@ export default function KitInstalacaoPage() {
 
             <div className="relative aspect-video rounded-2xl overflow-hidden shadow-lg mb-10">
                 <Image
-                    src="/img-2.jpg"
+                    src="/foto-kit.jpg"
                     alt="Kit de instalação de rede de proteção"
                     fill
                     className="object-cover"

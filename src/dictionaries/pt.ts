@@ -142,23 +142,6 @@ export const pt: SiteDict = {
     subtitle:
       'Explore algumas das nossas instalações recentes. Segurança impecável com o mínimo impacto visual.',
     viewMore: 'Ver mais no Instagram →',
-    projects: [
-      { cat: 'Varanda', ariaLabel: 'Projeto de rede de proteção em Varanda' },
-      { cat: 'Terraço', ariaLabel: 'Projeto de rede de proteção em Terraço' },
-      { cat: 'Janela', ariaLabel: 'Projeto de rede de proteção em Janela' },
-      {
-        cat: 'Estrutura',
-        ariaLabel: 'Projeto de rede de proteção em Estrutura',
-      },
-      {
-        cat: 'Animais',
-        ariaLabel: 'Projeto de rede de proteção para Animais',
-      },
-      {
-        cat: 'Segurança',
-        ariaLabel: 'Projeto de rede de proteção de Segurança',
-      },
-    ],
   },
   testimonials: {
     title: 'O que dizem os nossos clientes',

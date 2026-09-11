@@ -17,6 +17,7 @@ export default function EsSistemaTipoUPage() {
             tag="Sistema Certificado Tipo U"
             title="Cierre de Perímetro Vertical"
             description="Red conectada a una estructura de soporte para uso vertical, cerrando completamente el perímetro del hueco para impedir caídas. Ideal para proteger zonas de trabajo y circulación, bordes de forjado, escaleras y perímetros de edificios en obras industriales y de excavación."
+            images={["/seguranca-tipo-u-1.jpg", "/seguranca-tipo-u-2.jpg"]}
             applications={[
                 "Protección de zonas de trabajo y circulación",
                 "Bordes de forjado, escaleras y perímetros de edificios",

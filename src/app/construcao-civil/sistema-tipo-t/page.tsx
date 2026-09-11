@@ -17,6 +17,7 @@ export default function SistemaTipoTPage() {
             tag="Sistema Certificado Tipo T"
             title="Rede Inclinada de Bandeja"
             description="Rede de segurança inclinada com corda perimetral fixa a suportes tipo consola horizontal, concebida para amortecer o impacto e recolher pessoas ou objetos em queda. Fixa-se diretamente à estrutura durante a construção, protegendo superfícies inferiores e acessos contra a queda de destroços."
+            images={["/seguranca-tipo-t-1.jpg", "/seguranca-tipo-t-2.jpg"]}
             applications={[
                 "Proteção de perímetro em obras de construção",
                 "Proteção de acessos e zonas de circulação inferiores",

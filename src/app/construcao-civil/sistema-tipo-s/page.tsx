@@ -17,6 +17,7 @@ export default function SistemaTipoSPage() {
             tag="Sistema Certificado Tipo S"
             title="Proteção Horizontal para Trabalho em Altura"
             description="Sistema de proteção coletiva destinado à proteção horizontal em trabalhos em altura. A instalação é feita na horizontal ou com ligeira inclinação, utilizando diversos componentes de fixação para manter uma tensão uniforme e estabilidade estrutural."
+            images={["/seguranca-tipo-s-1.jpg", "/seguranca-tipo-s-2.jpg"]}
             applications={[
                 "Coberturas industriais",
                 "Estruturas metálicas ou de madeira",

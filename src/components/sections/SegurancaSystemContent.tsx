@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { CheckCircle2 } from "lucide-react";
 
@@ -8,6 +9,7 @@ interface SegurancaSystemContentProps {
     tag: string;
     title: string;
     description: string;
+    images: [string, string];
     applications: string[];
     components: { title: string; description: string }[];
     standard: string;
@@ -43,6 +45,7 @@ export function SegurancaSystemContent({
     tag,
     title,
     description,
+    images,
     applications,
     components,
     standard,
@@ -61,6 +64,14 @@ export function SegurancaSystemContent({
                 </span>
                 <h1 className="text-3xl md:text-5xl font-bold text-slate-900 mb-6">{title}</h1>
                 <p className="text-lg text-slate-600 leading-relaxed mb-10">{description}</p>
+
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-10">
+                    {images.map((src) => (
+                        <div key={src} className="relative aspect-[4/3] rounded-2xl overflow-hidden shadow-md">
+                            <Image src={src} alt={title} fill className="object-cover" />
+                        </div>
+                    ))}
+                </div>
 
                 <h2 className="text-2xl font-bold text-slate-900 mb-4">{t.appsTitle}</h2>
                 <ul className="space-y-3 mb-10">
