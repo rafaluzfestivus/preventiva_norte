@@ -30,8 +30,8 @@ export const metadata: Metadata = {
     images: [
       {
         url: "https://preventivanorte.pt/logo-preventiva-norte.png",
-        width: 794,
-        height: 794,
+        width: 643,
+        height: 482,
         alt: "Logo Preventiva Norte",
       },
     ],

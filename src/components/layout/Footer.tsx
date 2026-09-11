@@ -29,8 +29,8 @@ export function Footer() {
                                 src="/logo-preventiva-norte.png"
                                 alt="Preventiva Norte Logo"
                                 width={180}
-                                height={180}
-                                className="h-14 w-auto object-contain brightness-0 invert opacity-90 hover:opacity-100 transition-opacity"
+                                height={135}
+                                className="h-14 w-auto object-contain opacity-90 hover:opacity-100 transition-opacity"
                             />
                         </Link>
                         <p className="text-sm leading-relaxed">
