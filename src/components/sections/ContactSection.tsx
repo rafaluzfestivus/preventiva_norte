@@ -1,6 +1,6 @@
 "use client";
 
-import { Loader2, Send, CheckCircle, XCircle, Phone, Mail, MapPin } from "lucide-react";
+import { Loader2, Send, CheckCircle, XCircle, Phone, Mail, MapPin, Instagram } from "lucide-react";
 import { useState } from "react";
 import { usePathname } from "next/navigation";
 import Link from "next/link";
@@ -89,6 +89,21 @@ export function ContactSection({ dict }: ContactSectionProps) {
             </div>
 
             <div className="flex items-start gap-4">
+              <Instagram className="w-6 h-6 text-yellow-400 shrink-0 mt-1" />
+              <div>
+                <h3 className="font-bold text-white mb-1">{dict.instagramTitle}</h3>
+                <a
+                  href="https://www.instagram.com/preventivanorte"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-slate-200 hover:text-yellow-400 transition-colors"
+                >
+                  {dict.instagramHandle}
+                </a>
+              </div>
+            </div>
+
+            <div className="flex items-start gap-4">
               <MapPin className="w-6 h-6 text-yellow-400 shrink-0 mt-1" />
               <div>
                 <h3 className="font-bold text-white mb-1">{dict.serviceAreaTitle}</h3>
@@ -100,7 +115,7 @@ export function ContactSection({ dict }: ContactSectionProps) {
 
           <form
             onSubmit={handleSubmit}
-            className="lg:col-span-3 bg-white rounded-2xl p-8 shadow-2xl text-slate-900 space-y-4"
+            className="lg:col-span-3 bg-white rounded-2xl p-8 shadow-2xl text-slate-900 space-y-3"
           >
             <h3 className="text-xl font-bold mb-2">{dict.formTitle}</h3>
 
@@ -126,21 +141,23 @@ export function ContactSection({ dict }: ContactSectionProps) {
                 className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:border-yellow-500 focus:ring-2 focus:ring-yellow-200 outline-none transition-all"
               />
             </div>
-            <div>
-              <label className="block text-sm font-medium text-slate-700 mb-1">{dict.formEmail}</label>
-              <input
-                type="email"
-                name="email"
-                className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:border-yellow-500 focus:ring-2 focus:ring-yellow-200 outline-none transition-all"
-              />
-            </div>
-            <div>
-              <label className="block text-sm font-medium text-slate-700 mb-1">{dict.formPostal}</label>
-              <input
-                type="text"
-                name="postal_code"
-                className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:border-yellow-500 focus:ring-2 focus:ring-yellow-200 outline-none transition-all"
-              />
+            <div className="grid grid-cols-2 gap-4">
+              <div>
+                <label className="block text-sm font-medium text-slate-700 mb-1">{dict.formEmail}</label>
+                <input
+                  type="email"
+                  name="email"
+                  className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:border-yellow-500 focus:ring-2 focus:ring-yellow-200 outline-none transition-all"
+                />
+              </div>
+              <div>
+                <label className="block text-sm font-medium text-slate-700 mb-1">{dict.formPostal}</label>
+                <input
+                  type="text"
+                  name="postal_code"
+                  className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:border-yellow-500 focus:ring-2 focus:ring-yellow-200 outline-none transition-all"
+                />
+              </div>
             </div>
             <div>
               <label className="block text-sm font-medium text-slate-700 mb-1">{dict.formMessage}</label>

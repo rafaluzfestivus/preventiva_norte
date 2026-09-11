@@ -23,7 +23,7 @@ export interface HighlightItem {
   description: string;
   href: string;
   kind: 'internal' | 'external' | 'video';
-  group: 'links' | 'videos' | 'partners';
+  group: 'links' | 'videos';
 }
 
 export interface SiteDict {
@@ -97,6 +97,8 @@ export interface SiteDict {
     callTitle: string;
     callLabel: string;
     writeTitle: string;
+    instagramTitle: string;
+    instagramHandle: string;
     serviceAreaTitle: string;
     serviceAreaText: string;
     serviceAreaSub: string;
@@ -242,7 +244,6 @@ export interface SiteDict {
     watchLabel: string;
     linksGroupTitle: string;
     videosGroupTitle: string;
-    partnersGroupTitle: string;
     items: HighlightItem[];
   };
 }

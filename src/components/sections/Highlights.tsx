@@ -2,7 +2,7 @@
 
 import { useRef, useState } from "react";
 import { motion } from "framer-motion";
-import { Scale, FileText, PlayCircle, Heart, ArrowUpRight } from "lucide-react";
+import { Scale, FileText, PlayCircle, ArrowUpRight } from "lucide-react";
 import Link from "next/link";
 import type { SiteDict, HighlightItem } from "@/dictionaries/types";
 
@@ -11,71 +11,51 @@ interface HighlightsProps {
 }
 
 function HighlightIcon({ item, className }: { item: HighlightItem; className: string }) {
-    if (item.group === "partners") return <Heart className={className} />;
     if (item.title.toLowerCase().includes("carta")) return <FileText className={className} />;
     return <Scale className={className} />;
 }
 
-function LinkHighlightCard({ item, index, comingSoonLabel }: { item: HighlightItem; index: number; comingSoonLabel: string }) {
+function DocumentLinkRow({ item }: { item: HighlightItem }) {
     const hasHref = item.href !== "#";
 
-    const cardClass =
-        "relative overflow-hidden bg-[#4d2a36] p-8 rounded-2xl border border-white/10 hover:border-yellow-400/50 hover:-translate-y-1 transition-all duration-300 group flex flex-col h-full";
-
     const inner = (
-        <div className="relative z-10 flex flex-col h-full">
-            <div className="w-14 h-14 rounded-full bg-yellow-500/15 flex items-center justify-center mb-6 group-hover:bg-yellow-500/25 transition-colors">
-                <HighlightIcon item={item} className="w-7 h-7 text-yellow-400" />
+        <>
+            <div className="w-12 h-12 rounded-xl bg-yellow-50 flex items-center justify-center shrink-0 group-hover:bg-yellow-100 transition-colors">
+                <HighlightIcon item={item} className="w-6 h-6 text-yellow-600" />
             </div>
-            <h3 className="text-xl font-bold text-white mb-3">{item.title}</h3>
-            <p className="text-slate-300 leading-relaxed flex-grow">{item.description}</p>
-            {hasHref ? (
-                <span className="mt-6 inline-flex items-center gap-1 text-sm font-semibold text-yellow-400 group-hover:gap-2 transition-all w-fit">
-                    <ArrowUpRight className="w-4 h-4" />
-                </span>
-            ) : (
-                <span className="mt-6 inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-wide text-yellow-400 bg-yellow-500/10 px-3 py-1.5 rounded-full w-fit">
-                    {comingSoonLabel}
-                </span>
-            )}
-        </div>
+            <div className="flex-grow min-w-0">
+                <h3 className="font-bold text-slate-900">{item.title}</h3>
+                <p className="text-sm text-slate-600">{item.description}</p>
+            </div>
+            <ArrowUpRight className="w-5 h-5 text-slate-400 group-hover:text-yellow-600 transition-colors shrink-0" />
+        </>
     );
 
-    const watermark = (
-        <HighlightIcon
-            item={item}
-            className="absolute -right-4 -bottom-4 w-32 h-32 text-white/5 group-hover:text-yellow-500/10 transition-colors pointer-events-none"
-        />
-    );
+    const rowClass = "flex items-center gap-4 p-6 transition-colors group";
 
-    return (
-        <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: index * 0.1 }}
-            viewport={{ once: true }}
+    return hasHref ? (
+        <Link
+            href={item.href}
+            target={item.kind === "external" ? "_blank" : undefined}
+            rel={item.kind === "external" ? "noopener noreferrer" : undefined}
+            className={`${rowClass} hover:bg-gray-50`}
         >
-            {hasHref ? (
-                <Link
-                    href={item.href}
-                    target={item.kind === "external" ? "_blank" : undefined}
-                    rel={item.kind === "external" ? "noopener noreferrer" : undefined}
-                    className={cardClass}
-                >
-                    {watermark}
-                    {inner}
-                </Link>
-            ) : (
-                <div className={cardClass}>
-                    {watermark}
-                    {inner}
-                </div>
-            )}
-        </motion.div>
+            {inner}
+        </Link>
+    ) : (
+        <div className={rowClass}>{inner}</div>
     );
 }
 
-function VideoHighlightCard({ item, comingSoonLabel, hoverHint }: { item: HighlightItem; comingSoonLabel: string; hoverHint: string }) {
+function VideoHighlightCard({
+    item,
+    comingSoonLabel,
+    hoverHint,
+}: {
+    item: HighlightItem;
+    comingSoonLabel: string;
+    hoverHint: string;
+}) {
     const ready = item.href !== "#";
     const videoRef = useRef<HTMLVideoElement>(null);
     const [playing, setPlaying] = useState(false);
@@ -102,7 +82,7 @@ function VideoHighlightCard({ item, comingSoonLabel, hoverHint }: { item: Highli
             onMouseEnter={start}
             onMouseLeave={stop}
             onClick={() => (playing ? stop() : start())}
-            className="relative aspect-video rounded-2xl overflow-hidden bg-[#4d2a36] cursor-pointer group/video"
+            className="relative aspect-video overflow-hidden bg-[#4d2a36] cursor-pointer group/video"
         >
             {ready && (
                 <video
@@ -123,7 +103,7 @@ function VideoHighlightCard({ item, comingSoonLabel, hoverHint }: { item: Highli
             {ready && !playing && (
                 <PlayCircle className="absolute inset-0 m-auto w-14 h-14 text-white/90 drop-shadow-lg pointer-events-none" />
             )}
-            <div className="absolute bottom-4 left-4 right-4">
+            <div className="absolute bottom-6 left-6 right-6">
                 <h3 className="text-white font-bold text-lg mb-1">{item.title}</h3>
                 {ready ? (
                     !playing && <span className="text-xs text-white/70">{hoverHint}</span>
@@ -140,7 +120,6 @@ function VideoHighlightCard({ item, comingSoonLabel, hoverHint }: { item: Highli
 export function Highlights({ dict }: HighlightsProps) {
     const linkItems = dict.items.filter((item) => item.group === "links");
     const videoItems = dict.items.filter((item) => item.group === "videos");
-    const partnerItems = dict.items.filter((item) => item.group === "partners");
 
     return (
         <section className="py-20 bg-gray-50">
@@ -154,30 +133,29 @@ export function Highlights({ dict }: HighlightsProps) {
                     </p>
                 </div>
 
-                <h3 className="text-sm font-bold uppercase tracking-widest text-slate-500 mb-6">
+                <h3 className="text-sm font-bold uppercase tracking-widest text-slate-500 mb-6 text-center">
                     {dict.linksGroupTitle}
                 </h3>
-                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-                    {linkItems.map((item, index) => (
-                        <LinkHighlightCard key={item.title} item={item} index={index} comingSoonLabel={dict.comingSoonLabel} />
+                <motion.div
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.5 }}
+                    viewport={{ once: true }}
+                    className="max-w-2xl mx-auto bg-white rounded-2xl shadow-lg border border-gray-100 divide-y divide-gray-100 overflow-hidden"
+                >
+                    {linkItems.map((item) => (
+                        <DocumentLinkRow key={item.title} item={item} />
                     ))}
-                </div>
+                </motion.div>
+            </div>
 
-                <h3 className="text-sm font-bold uppercase tracking-widest text-slate-500 mb-6">
+            <div className="mt-16">
+                <h3 className="text-sm font-bold uppercase tracking-widest text-slate-500 mb-6 text-center">
                     {dict.videosGroupTitle}
                 </h3>
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 mb-16">
+                <div className="grid grid-cols-1 md:grid-cols-2">
                     {videoItems.map((item) => (
                         <VideoHighlightCard key={item.title} item={item} comingSoonLabel={dict.comingSoonLabel} hoverHint={dict.watchLabel} />
-                    ))}
-                </div>
-
-                <h3 className="text-sm font-bold uppercase tracking-widest text-slate-500 mb-6">
-                    {dict.partnersGroupTitle}
-                </h3>
-                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-                    {partnerItems.map((item, index) => (
-                        <LinkHighlightCard key={item.title} item={item} index={index} comingSoonLabel={dict.comingSoonLabel} />
                     ))}
                 </div>
             </div>

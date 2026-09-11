@@ -169,6 +169,8 @@ export const es: SiteDict = {
     callTitle: 'Llámanos',
     callLabel: 'Porto y Norte',
     writeTitle: 'Escríbenos',
+    instagramTitle: 'Síguenos',
+    instagramHandle: '@preventivanorte',
     serviceAreaTitle: 'Área de Servicio',
     serviceAreaText: 'Norte de Portugal',
     serviceAreaSub: 'Porto, Braga, Gaia y alrededores.',
@@ -382,13 +384,11 @@ export const es: SiteDict = {
   },
   highlights: {
     title: 'Destacados',
-    subtitle:
-      'Información útil, sentencias favorables y socios para quien quiera proteger su casa y a sus animales.',
+    subtitle: 'Información útil y sentencias favorables para quien quiera proteger su casa.',
     comingSoonLabel: 'Próximamente',
     watchLabel: 'Pasa el cursor para ver',
     linksGroupTitle: 'Enlaces Útiles',
     videosGroupTitle: 'Vídeos',
-    partnersGroupTitle: 'Socios',
     items: [
       {
         title: 'Sentencia Judicial Favorable',
@@ -419,14 +419,6 @@ export const es: SiteDict = {
         href: '#',
         kind: 'video',
         group: 'videos',
-      },
-      {
-        title: 'Barkibu — Seguro para tu Animal',
-        description:
-          'Protege también la salud de tu perro o gato con el seguro veterinario de Barkibu.',
-        href: 'https://www.barkibu.com/pt',
-        kind: 'external',
-        group: 'partners',
       },
     ],
   },
