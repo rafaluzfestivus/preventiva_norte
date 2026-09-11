@@ -16,16 +16,14 @@ export function Hero({ dict, basePath = "" }: HeroProps) {
         <section id="hero" className="relative min-h-[90vh] flex items-start justify-center overflow-hidden bg-[#4d2a36]">
             <div className="absolute inset-0 z-0">
                 <div className="absolute inset-0 bg-black/60 z-10" />
-                <video
-                    autoPlay
-                    loop
-                    muted
-                    playsInline
-                    className="w-full h-full object-cover"
-                    poster="/hero-new.jpg"
-                >
-                    <source src="/grok-video-75d457db-6ffe-4a84-8c5e-689da5f46f68.mp4" type="video/mp4" />
-                </video>
+                <Image
+                    src="/hero-new.jpg"
+                    alt=""
+                    fill
+                    priority
+                    className="object-cover"
+                    sizes="100vw"
+                />
             </div>
 
             <div className="container mx-auto px-4 md:px-8 relative z-20 pt-32 md:pt-40">
