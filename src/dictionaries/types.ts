@@ -83,7 +83,8 @@ export interface SiteDict {
     titleHighlight: string;
     p1: string;
     p2: string;
-    p3: string;
+    categories: { title: string; description: string }[];
+    closing: string;
   };
   testimonials: {
     title: string;

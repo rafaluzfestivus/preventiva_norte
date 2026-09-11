@@ -16,7 +16,7 @@ export interface ServiceCarouselProps {
   labels: ServiceCarouselLabels;
 }
 
-const AUTO_ADVANCE_MS = 2000;
+const AUTO_ADVANCE_MS = 1300;
 
 export function ServiceCarousel({ photos, alt, labels }: ServiceCarouselProps) {
   const [index, setIndex] = useState(0);
@@ -37,7 +37,7 @@ export function ServiceCarousel({ photos, alt, labels }: ServiceCarouselProps) {
 
   return (
     <div
-      className="relative w-full h-48 rounded-t-2xl overflow-hidden bg-gray-100 group/carousel"
+      className="relative w-full aspect-[3/4] rounded-t-2xl overflow-hidden bg-gray-100 group/carousel"
       onMouseEnter={() => setHovering(true)}
       onMouseLeave={() => setHovering(false)}
     >

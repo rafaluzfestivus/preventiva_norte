@@ -32,7 +32,15 @@ export function AboutUs({ dict }: AboutUsProps) {
                             {dict.p1}
                         </p>
                         <p>{dict.p2}</p>
-                        <p>{dict.p3}</p>
+                        <ul className="space-y-3 not-prose">
+                            {dict.categories.map((category) => (
+                                <li key={category.title} className="flex flex-wrap gap-x-2">
+                                    <span className="font-bold text-slate-900">{category.title}:</span>
+                                    <span className="text-slate-600">{category.description}</span>
+                                </li>
+                            ))}
+                        </ul>
+                        <p className="text-lg font-semibold text-slate-800">{dict.closing}</p>
                     </div>
 
                     <div className="mt-16 grid grid-cols-2 md:grid-cols-5 gap-6">

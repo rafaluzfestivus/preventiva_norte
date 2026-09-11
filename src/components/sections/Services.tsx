@@ -42,15 +42,15 @@ export function Services({ dict, basePath = "" }: ServicesProps) {
                                     goToPrefix: dict.carouselGoToPrefix,
                                 }}
                             />
-                            <div className="p-8 pt-6 flex flex-col flex-grow">
-                                <h3 className="text-xl font-bold text-slate-900 mb-3 group-hover:text-yellow-600 transition-colors">
+                            <div className="p-5 pt-4 flex flex-col flex-grow">
+                                <h3 className="text-lg font-bold text-slate-900 mb-1.5 group-hover:text-yellow-600 transition-colors">
                                     {service.title}
                                 </h3>
-                                <p className="text-slate-600 leading-relaxed mb-6 flex-grow">
+                                <p className="text-sm text-slate-600 leading-snug mb-3 line-clamp-2 flex-grow">
                                     {service.description}
                                 </p>
                                 {service.href && (
-                                    <Link href={`${basePath}${service.href}`} className="text-yellow-600 font-bold flex items-center gap-2 hover:gap-3 transition-all mt-auto">
+                                    <Link href={`${basePath}${service.href}`} className="text-yellow-600 font-bold text-sm flex items-center gap-2 hover:gap-3 transition-all mt-auto">
                                         {dict.readMore}
                                     </Link>
                                 )}

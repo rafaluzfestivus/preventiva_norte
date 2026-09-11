@@ -49,39 +49,39 @@ export const pt: SiteDict = {
         description:
           "Especialistas em redes de proteção anti-queda. Evite o 'síndrome do paraquedista' com as nossas malhas de segurança.",
         href: '/proteccion#gatos',
-        photos: ['/img-1.jpg', '/gallery-1.jpg'],
+        photos: ['/img-1.jpg', '/gallery-1.jpg', '/img-2.jpg', '/img-3.jpg', '/gallery-4.jpg'],
       },
       {
         title: 'Segurança Infantil',
         description:
           'Proteção certificada para janelas, varandas e escadas. Substituição de grades com estética limpa.',
         href: '/proteccion#ninos',
-        photos: ['/img-2.jpg', '/gallery-2.jpg'],
+        photos: ['/img-2.jpg', '/gallery-2.jpg', '/img-3.jpg', '/img-4.jpg', '/gallery-5.jpg'],
       },
       {
         title: 'Controlo de Aves',
         description:
           'Solução definitiva contra pombos no Porto e Norte. Higiene e proteção ética para o seu edifício.',
         href: '/proteccion#aves',
-        photos: ['/img-3.jpg', '/gallery-3.jpg'],
+        photos: ['/img-3.jpg', '/gallery-3.jpg', '/img-4.jpg', '/img-5.jpg', '/gallery-6.jpg'],
       },
       {
         title: 'Redes Desportivas',
         description:
           'Redes de proteção para campos, pavilhões, ginásios e recintos desportivos.',
-        photos: ['/img-4.jpg', '/gallery-4.jpg'],
+        photos: ['/img-4.jpg', '/gallery-4.jpg', '/img-5.jpg', '/img-6.jpg', '/gallery-1.jpg'],
       },
       {
         title: 'Redes para Terraços',
         description:
           'Segurança e proteção para os seus terraços e varandas sem impacto visual.',
-        photos: ['/img-5.jpg', '/gallery-5.jpg'],
+        photos: ['/img-5.jpg', '/gallery-5.jpg', '/img-6.jpg', '/img-1.jpg', '/gallery-2.jpg'],
       },
       {
         title: 'Construção Civil e Industrial',
         description:
           'Redes de proteção e segurança para obras, fachadas e instalações industriais em todo o Norte de Portugal.',
-        photos: ['/img-6.jpg', '/gallery-6.jpg'],
+        photos: ['/img-6.jpg', '/gallery-6.jpg', '/img-1.jpg', '/img-2.jpg', '/gallery-3.jpg'],
       },
     ],
   },
@@ -124,11 +124,25 @@ export const pt: SiteDict = {
   },
   aboutUs: {
     tag: 'A Nossa História',
-    title: 'Sobre',
-    titleHighlight: 'Nós',
-    p1: 'Após o sucesso da Preventiva Norte (cobrindo o Norte de Portugal e Galiza), Preventiva Centro e Preventiva Sul, consolidamos a nossa presença para oferecer as melhores soluções de segurança no mercado ibérico.',
-    p2: 'A Preventiva Norte Redes de Proteção é atualmente a principal empresa no Norte de Portugal na instalação e venda de kits de redes de proteção. Fomos criados para responder às necessidades de quem convive com riscos de acidentes no lar, garantindo a proteção da vida e a integridade física, sobretudo de crianças e animais de estimação, contra o perigo de quedas em janelas, varandas, terraços, escadas e outras aberturas.',
-    p3: 'Além disso, oferecemos soluções eficazes para impedir a entrada de aves indesejadas, garantindo a higiene e o usufruto pleno de terraços e varandas.',
+    title: 'Sobre a',
+    titleHighlight: 'Preventiva',
+    p1: 'Nascemos em 2016 com uma missão clara: proteger quem mais importa. O que começou como um cuidado familiar cresceu e hoje ultrapassa fronteiras, com presença consolidada em Portugal e Espanha (Madrid, Barcelona, Galiza e Málaga).',
+    p2: 'Com mais de 6.000 lares e empresas protegidos, somos especialistas em segurança e trabalho em altura, oferecendo soluções sob medida:',
+    categories: [
+      {
+        title: 'Residencial',
+        description: 'Redes de proteção certificadas para crianças e pets em janelas e varandas.',
+      },
+      {
+        title: 'Soluções Especiais',
+        description: 'Controlo e proteção contra aves, além de redes desportivas.',
+      },
+      {
+        title: 'Predial e Industrial',
+        description: 'Estruturas de alta segurança para condomínios e empresas.',
+      },
+    ],
+    closing: 'Máxima segurança, acabamento discreto e a tranquilidade que procura.',
   },
   testimonials: {
     title: 'O que dizem os nossos clientes',
