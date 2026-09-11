@@ -89,7 +89,7 @@ export function Hero({ dict, basePath = "" }: HeroProps) {
                             alt={dict.logoAlt}
                             width={500}
                             height={500}
-                            className="h-32 md:h-64 w-auto object-contain brightness-0 invert drop-shadow-2xl"
+                            className="h-32 md:h-64 w-auto object-contain drop-shadow-2xl"
                             priority
                         />
                     </motion.div>

@@ -4,7 +4,6 @@ export interface ServiceItem {
   title: string;
   description: string;
   href?: string;
-  photos?: string[];
 }
 
 export interface Reason {
@@ -16,6 +15,11 @@ export interface Testimonial {
   name: string;
   location: string;
   text: string;
+}
+
+export interface GalleryProject {
+  cat: string;
+  ariaLabel: string;
 }
 
 export interface HighlightItem {
@@ -58,9 +62,6 @@ export interface SiteDict {
     title: string;
     subtitle: string;
     readMore: string;
-    carouselPrev: string;
-    carouselNext: string;
-    carouselGoToPrefix: string;
     items: ServiceItem[];
   };
   benefits: {
@@ -83,6 +84,12 @@ export interface SiteDict {
     p2: string;
     categories: { title: string; description: string }[];
     closing: string;
+  };
+  gallery: {
+    title: string;
+    subtitle: string;
+    viewMore: string;
+    projects: GalleryProject[];
   };
   testimonials: {
     title: string;

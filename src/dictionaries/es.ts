@@ -40,48 +40,40 @@ export const es: SiteDict = {
     subtitle:
       'Adaptamos nuestras redes de protección a cualquier espacio y necesidad, garantizando la máxima resistencia.',
     readMore: 'Leer más →',
-    carouselPrev: 'Foto anterior',
-    carouselNext: 'Foto siguiente',
-    carouselGoToPrefix: 'Ir a la foto ',
     items: [
       {
-        title: 'Ventanas',
+        title: 'Mallas para Gatos',
         description:
           "Especialistas en redes de protección anti-caídas. Evita el 'síndrome del paracaidista' con nuestras mallas de seguridad.",
         href: '/proteccion#gatos',
-        photos: ['/img-1.jpg', '/gallery-1.jpg', '/img-2.jpg', '/img-3.jpg', '/gallery-4.jpg'],
       },
       {
-        title: 'Terrazas',
+        title: 'Seguridad Infantil',
         description:
           'Protección certificada para ventanas, balcones y escaleras. Sustitución de rejas con estética limpia.',
         href: '/proteccion#ninos',
-        photos: ['/img-2.jpg', '/gallery-2.jpg', '/img-3.jpg', '/img-4.jpg', '/gallery-5.jpg'],
       },
       {
-        title: 'Balcones',
+        title: 'Control de Aves',
         description:
           'Solución definitiva contra palomas en Porto y el Norte. Higiene y protección ética para tu edificio.',
         href: '/proteccion#aves',
-        photos: ['/img-3.jpg', '/gallery-3.jpg', '/img-4.jpg', '/img-5.jpg', '/gallery-6.jpg'],
-      },
-      {
-        title: 'Construcción Civil',
-        description:
-          'Redes de protección para campos, pabellones, gimnasios y recintos deportivos.',
-        photos: ['/img-4.jpg', '/gallery-4.jpg', '/img-5.jpg', '/img-6.jpg', '/gallery-1.jpg'],
       },
       {
         title: 'Pistas Deportivas',
         description:
-          'Seguridad y protección para tus terrazas y balcones sin impacto visual.',
-        photos: ['/img-5.jpg', '/gallery-5.jpg', '/img-6.jpg', '/img-1.jpg', '/gallery-2.jpg'],
+          'Redes de protección para campos, pabellones, gimnasios y recintos deportivos.',
       },
       {
-        title: 'Otras Soluciones',
+        title: 'Construcción Civil',
         description:
           'Redes de protección y seguridad para obras, fachadas e instalaciones industriales en todo el Norte de Portugal.',
-        photos: ['/img-6.jpg', '/gallery-6.jpg', '/img-1.jpg', '/img-2.jpg', '/gallery-3.jpg'],
+      },
+      {
+        title: 'Kits',
+        description:
+          'Kit DIY con red, cuerda, ganchos y tacos para instalarlo usted mismo en ventanas y balcones sencillos.',
+        href: '#kit-instalacao',
       },
     ],
   },
@@ -143,6 +135,29 @@ export const es: SiteDict = {
       },
     ],
     closing: 'Máxima seguridad, acabado discreto y la tranquilidad que buscas.',
+  },
+  gallery: {
+    title: 'Nuestros Trabajos',
+    subtitle:
+      'Explora algunas de nuestras instalaciones recientes. Seguridad impecable con el mínimo impacto visual.',
+    viewMore: 'Ver más en Instagram →',
+    projects: [
+      { cat: 'Balcón', ariaLabel: 'Proyecto de red de protección en Balcón' },
+      { cat: 'Terraza', ariaLabel: 'Proyecto de red de protección en Terraza' },
+      { cat: 'Ventana', ariaLabel: 'Proyecto de red de protección en Ventana' },
+      {
+        cat: 'Estructura',
+        ariaLabel: 'Proyecto de red de protección en Estructura',
+      },
+      {
+        cat: 'Animales',
+        ariaLabel: 'Proyecto de red de protección para Animales',
+      },
+      {
+        cat: 'Seguridad',
+        ariaLabel: 'Proyecto de red de protección de Seguridad',
+      },
+    ],
   },
   testimonials: {
     title: 'Lo que dicen nuestros clientes',
@@ -229,6 +244,7 @@ export const es: SiteDict = {
         href: '/testes-certificaciones',
       },
       { label: 'Nuestros Servicios', href: '/#servicios' },
+      { label: 'Galería', href: '/#galeria' },
       { label: 'Contacto', href: '/#contacto' },
     ],
     protectionLinks: [
@@ -400,7 +416,7 @@ export const es: SiteDict = {
     title: '¿La comunidad puede prohibirlo?',
     subtitle: 'Información útil y sentencias favorables para quien quiera proteger su casa.',
     comingSoonLabel: 'Próximamente',
-    watchLabel: 'Pasa el cursor para ver',
+    watchLabel: 'Toca para ver con sonido',
     videosGroupTitle: 'Vídeos',
     legalParagraphs: [
       'Según el artículo 1422.º del Código Civil portugués, los propietarios no pueden perjudicar la seguridad, la línea arquitectónica o el aspecto estético del edificio con obras nuevas. Sin embargo, una red de protección no se considera "obra nueva": es una estructura amovible, sin elementos metálicos visibles, hecha de filamentos de polietileno entrelazados que son prácticamente imperceptibles vistos desde el exterior — y puede retirarse fácilmente, ya que se fija con pequeños ganchos junto a la ventana.',

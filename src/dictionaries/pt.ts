@@ -40,48 +40,40 @@ export const pt: SiteDict = {
     subtitle:
       'Adaptamos as nossas redes de proteção a qualquer espaço e necessidade, garantindo a máxima resistência.',
     readMore: 'Ler mais →',
-    carouselPrev: 'Foto anterior',
-    carouselNext: 'Próxima foto',
-    carouselGoToPrefix: 'Ir para foto ',
     items: [
       {
-        title: 'Janelas',
+        title: 'Redes para Gatos',
         description:
           "Especialistas em redes de proteção anti-queda. Evite o 'síndrome do paraquedista' com as nossas malhas de segurança.",
         href: '/proteccion#gatos',
-        photos: ['/img-1.jpg', '/gallery-1.jpg', '/img-2.jpg', '/img-3.jpg', '/gallery-4.jpg'],
       },
       {
-        title: 'Terraços',
+        title: 'Segurança Infantil',
         description:
           'Proteção certificada para janelas, varandas e escadas. Substituição de grades com estética limpa.',
         href: '/proteccion#ninos',
-        photos: ['/img-2.jpg', '/gallery-2.jpg', '/img-3.jpg', '/img-4.jpg', '/gallery-5.jpg'],
       },
       {
-        title: 'Varandas',
+        title: 'Controlo de Aves',
         description:
           'Solução definitiva contra pombos no Porto e Norte. Higiene e proteção ética para o seu edifício.',
         href: '/proteccion#aves',
-        photos: ['/img-3.jpg', '/gallery-3.jpg', '/img-4.jpg', '/img-5.jpg', '/gallery-6.jpg'],
-      },
-      {
-        title: 'Construção Civil',
-        description:
-          'Redes de proteção para campos, pavilhões, ginásios e recintos desportivos.',
-        photos: ['/img-4.jpg', '/gallery-4.jpg', '/img-5.jpg', '/img-6.jpg', '/gallery-1.jpg'],
       },
       {
         title: 'Quadras Desportivas',
         description:
-          'Segurança e proteção para os seus terraços e varandas sem impacto visual.',
-        photos: ['/img-5.jpg', '/gallery-5.jpg', '/img-6.jpg', '/img-1.jpg', '/gallery-2.jpg'],
+          'Redes de proteção para campos, pavilhões, ginásios e recintos desportivos.',
       },
       {
-        title: 'Outras Soluções',
+        title: 'Construção Civil',
         description:
           'Redes de proteção e segurança para obras, fachadas e instalações industriais em todo o Norte de Portugal.',
-        photos: ['/img-6.jpg', '/gallery-6.jpg', '/img-1.jpg', '/img-2.jpg', '/gallery-3.jpg'],
+      },
+      {
+        title: 'Kits',
+        description:
+          'Kit DIY com rede, corda, ganchos e buchas para instalar você mesmo em janelas e varandas simples.',
+        href: '#kit-instalacao',
       },
     ],
   },
@@ -143,6 +135,29 @@ export const pt: SiteDict = {
       },
     ],
     closing: 'Máxima segurança, acabamento discreto e a tranquilidade que procura.',
+  },
+  gallery: {
+    title: 'Os Nossos Trabalhos',
+    subtitle:
+      'Explore algumas das nossas instalações recentes. Segurança impecável com o mínimo impacto visual.',
+    viewMore: 'Ver mais no Instagram →',
+    projects: [
+      { cat: 'Varanda', ariaLabel: 'Projeto de rede de proteção em Varanda' },
+      { cat: 'Terraço', ariaLabel: 'Projeto de rede de proteção em Terraço' },
+      { cat: 'Janela', ariaLabel: 'Projeto de rede de proteção em Janela' },
+      {
+        cat: 'Estrutura',
+        ariaLabel: 'Projeto de rede de proteção em Estrutura',
+      },
+      {
+        cat: 'Animais',
+        ariaLabel: 'Projeto de rede de proteção para Animais',
+      },
+      {
+        cat: 'Segurança',
+        ariaLabel: 'Projeto de rede de proteção de Segurança',
+      },
+    ],
   },
   testimonials: {
     title: 'O que dizem os nossos clientes',
@@ -229,6 +244,7 @@ export const pt: SiteDict = {
         href: '/testes-certificaciones',
       },
       { label: 'Os Nossos Serviços', href: '/#servicios' },
+      { label: 'Galeria', href: '/#galeria' },
       { label: 'Contacto', href: '/#contacto' },
     ],
     protectionLinks: [
@@ -400,7 +416,7 @@ export const pt: SiteDict = {
     title: 'O condomínio pode proibir?',
     subtitle: 'Informação útil e decisões favoráveis para quem quer proteger a sua casa.',
     comingSoonLabel: 'Em breve',
-    watchLabel: 'Passe o cursor para ver',
+    watchLabel: 'Toque para assistir com som',
     videosGroupTitle: 'Vídeos',
     legalParagraphs: [
       'Segundo o artigo 1422.º do Código Civil Português, os condóminos não podem prejudicar a segurança, a linha arquitetónica ou o arranjo estético do edifício com obras novas. No entanto, uma rede de proteção não se enquadra como "obra nova": é uma estrutura amovível, sem elementos metálicos aparentes, feita de filamentos de polietileno entrelaçados que são praticamente impercetíveis vistos do exterior — e pode ser retirada facilmente, já que é fixada com pequenos ganchos junto à janela.',

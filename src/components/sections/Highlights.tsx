@@ -18,15 +18,15 @@ function getYouTubeId(url: string): string | null {
 function YouTubeHighlightCard({
     videoId,
     title,
-    hoverHint,
+    watchLabel,
 }: {
     videoId: string;
     title: string;
-    hoverHint: string;
+    watchLabel: string;
 }) {
     const [playing, setPlaying] = useState(false);
     const thumbnailUrl = `https://img.youtube.com/vi/${videoId}/hqdefault.jpg`;
-    const embedUrl = `https://www.youtube.com/embed/${videoId}?autoplay=1&mute=1&loop=1&playlist=${videoId}&controls=0&modestbranding=1&rel=0`;
+    const embedUrl = `https://www.youtube.com/embed/${videoId}?autoplay=1&controls=1&modestbranding=1&rel=0`;
 
     return (
         <motion.div
@@ -34,10 +34,8 @@ function YouTubeHighlightCard({
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
             viewport={{ once: true }}
-            onMouseEnter={() => setPlaying(true)}
-            onMouseLeave={() => setPlaying(false)}
-            onClick={() => setPlaying((p) => !p)}
-            className="relative aspect-video overflow-hidden bg-[#4d2a36] cursor-pointer group/video"
+            onClick={() => setPlaying(true)}
+            className={`relative aspect-video overflow-hidden bg-[#4d2a36] group/video ${playing ? "" : "cursor-pointer"}`}
         >
             {playing ? (
                 <iframe
@@ -50,18 +48,16 @@ function YouTubeHighlightCard({
             ) : (
                 <Image src={thumbnailUrl} alt={title} fill className="object-cover" unoptimized />
             )}
-            <div
-                className={`absolute inset-0 bg-gradient-to-t from-black/80 via-black/10 to-transparent pointer-events-none transition-opacity ${
-                    playing ? "opacity-40" : "opacity-100"
-                }`}
-            />
             {!playing && (
-                <PlayCircle className="absolute inset-0 m-auto w-14 h-14 text-white/90 drop-shadow-lg pointer-events-none" />
+                <>
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/10 to-transparent pointer-events-none" />
+                    <PlayCircle className="absolute inset-0 m-auto w-14 h-14 text-white/90 drop-shadow-lg pointer-events-none" />
+                    <div className="absolute bottom-6 left-6 right-6 pointer-events-none">
+                        <h3 className="text-white font-bold text-lg mb-1">{title}</h3>
+                        <span className="text-xs text-white/70">{watchLabel}</span>
+                    </div>
+                </>
             )}
-            <div className="absolute bottom-6 left-6 right-6 pointer-events-none">
-                <h3 className="text-white font-bold text-lg mb-1">{title}</h3>
-                {!playing && <span className="text-xs text-white/70">{hoverHint}</span>}
-            </div>
         </motion.div>
     );
 }
@@ -69,27 +65,20 @@ function YouTubeHighlightCard({
 function VideoHighlightCard({
     item,
     comingSoonLabel,
-    hoverHint,
+    watchLabel,
 }: {
     item: HighlightItem;
     comingSoonLabel: string;
-    hoverHint: string;
+    watchLabel: string;
 }) {
     const ready = item.href !== "#";
     const videoRef = useRef<HTMLVideoElement>(null);
     const [playing, setPlaying] = useState(false);
 
     const start = () => {
-        if (!ready) return;
+        if (!ready || playing) return;
         videoRef.current?.play();
         setPlaying(true);
-    };
-
-    const stop = () => {
-        if (!ready) return;
-        videoRef.current?.pause();
-        if (videoRef.current) videoRef.current.currentTime = 0;
-        setPlaying(false);
     };
 
     return (
@@ -98,40 +87,37 @@ function VideoHighlightCard({
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
             viewport={{ once: true }}
-            onMouseEnter={start}
-            onMouseLeave={stop}
-            onClick={() => (playing ? stop() : start())}
-            className="relative aspect-video overflow-hidden bg-[#4d2a36] cursor-pointer group/video"
+            onClick={start}
+            className={`relative aspect-video overflow-hidden bg-[#4d2a36] group/video ${!playing ? "cursor-pointer" : ""}`}
         >
             {ready && (
                 <video
                     ref={videoRef}
                     src={item.href}
-                    muted
-                    loop
+                    controls={playing}
                     playsInline
                     preload="metadata"
                     className="absolute inset-0 w-full h-full object-cover"
                 />
             )}
-            <div
-                className={`absolute inset-0 bg-gradient-to-t from-black/80 via-black/10 to-transparent transition-opacity ${
-                    playing ? "opacity-60" : "opacity-100"
-                }`}
-            />
-            {ready && !playing && (
-                <PlayCircle className="absolute inset-0 m-auto w-14 h-14 text-white/90 drop-shadow-lg pointer-events-none" />
+            {!playing && (
+                <>
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/10 to-transparent pointer-events-none" />
+                    {ready && (
+                        <PlayCircle className="absolute inset-0 m-auto w-14 h-14 text-white/90 drop-shadow-lg pointer-events-none" />
+                    )}
+                    <div className="absolute bottom-6 left-6 right-6 pointer-events-none">
+                        <h3 className="text-white font-bold text-lg mb-1">{item.title}</h3>
+                        {ready ? (
+                            <span className="text-xs text-white/70">{watchLabel}</span>
+                        ) : (
+                            <span className="inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-wide text-yellow-400 bg-yellow-500/10 px-3 py-1.5 rounded-full w-fit">
+                                {comingSoonLabel}
+                            </span>
+                        )}
+                    </div>
+                </>
             )}
-            <div className="absolute bottom-6 left-6 right-6">
-                <h3 className="text-white font-bold text-lg mb-1">{item.title}</h3>
-                {ready ? (
-                    !playing && <span className="text-xs text-white/70">{hoverHint}</span>
-                ) : (
-                    <span className="inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-wide text-yellow-400 bg-yellow-500/10 px-3 py-1.5 rounded-full w-fit">
-                        {comingSoonLabel}
-                    </span>
-                )}
-            </div>
         </motion.div>
     );
 }
@@ -192,9 +178,9 @@ export function Highlights({ dict }: HighlightsProps) {
                     {dict.items.map((item) => {
                         const youtubeId = getYouTubeId(item.href);
                         return youtubeId ? (
-                            <YouTubeHighlightCard key={item.title} videoId={youtubeId} title={item.title} hoverHint={dict.watchLabel} />
+                            <YouTubeHighlightCard key={item.title} videoId={youtubeId} title={item.title} watchLabel={dict.watchLabel} />
                         ) : (
-                            <VideoHighlightCard key={item.title} item={item} comingSoonLabel={dict.comingSoonLabel} hoverHint={dict.watchLabel} />
+                            <VideoHighlightCard key={item.title} item={item} comingSoonLabel={dict.comingSoonLabel} watchLabel={dict.watchLabel} />
                         );
                     })}
                 </div>
