@@ -407,14 +407,6 @@ export const pt: SiteDict = {
         group: 'links',
       },
       {
-        title: 'O Condomínio Não Pode Proibir',
-        description:
-          'Segundo a DECO Proteste, o condomínio não pode proibir a instalação de redes de proteção.',
-        href: '#',
-        kind: 'external',
-        group: 'links',
-      },
-      {
         title: 'Vídeo: Maracujá Roxo',
         description: 'Veja em vídeo uma das nossas instalações de rede de proteção.',
         href: '/video-maracuja-roxo.mp4',

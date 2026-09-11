@@ -407,14 +407,6 @@ export const es: SiteDict = {
         group: 'links',
       },
       {
-        title: 'La Comunidad No Puede Prohibirlo',
-        description:
-          'Según DECO Proteste, la comunidad de vecinos no puede prohibir la instalación de redes de protección.',
-        href: '#',
-        kind: 'external',
-        group: 'links',
-      },
-      {
         title: 'Vídeo: Maracujá Roxo',
         description: 'Vea en vídeo una de nuestras instalaciones de red de protección.',
         href: '/video-maracuja-roxo.mp4',
