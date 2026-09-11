@@ -28,33 +28,31 @@ export function Gallery({ dict, categories }: GalleryProps) {
                     </p>
                 </div>
 
-                <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 md:gap-6">
+                <div className="grid grid-cols-2 sm:grid-cols-3 gap-5 md:gap-8">
                     {visibleCategories.map((cat) => (
                         <motion.button
                             key={cat}
                             type="button"
                             onClick={() => setOpen(cat)}
-                            initial={{ opacity: 0, scale: 0.95 }}
-                            whileInView={{ opacity: 1, scale: 1 }}
-                            transition={{ duration: 0.3 }}
+                            initial={{ opacity: 0, y: 16 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            transition={{ duration: 0.4 }}
                             viewport={{ once: true }}
-                            className="relative aspect-square overflow-hidden rounded-xl bg-slate-200 group text-left"
+                            className="relative aspect-[4/5] overflow-hidden rounded-2xl bg-slate-200 group text-left shadow-md hover:shadow-2xl ring-1 ring-black/5 transition-all duration-500 hover:-translate-y-1"
                         >
                             <Image
                                 src={`/galeria/${categories[cat][0]}`}
                                 alt={dict.categories[cat]}
                                 fill
                                 className="object-cover transition-transform duration-700 group-hover:scale-110"
-                                sizes="(max-width: 768px) 50vw, (max-width: 1024px) 33vw, 16vw"
+                                sizes="(max-width: 640px) 50vw, 33vw"
                             />
-                            <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-transparent" />
-                            <div className="absolute bottom-3 left-3 right-3">
-                                <span className="block text-white font-bold text-sm md:text-base">
+                            <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/10 to-transparent" />
+                            <div className="absolute inset-x-0 bottom-0 p-4 md:p-5">
+                                <span className="block text-white font-bold text-base md:text-xl tracking-tight">
                                     {dict.categories[cat]}
                                 </span>
-                                <span className="block text-white/70 text-xs">
-                                    {categories[cat].length}
-                                </span>
+                                <span className="block h-0.5 w-8 bg-yellow-500 mt-2 rounded-full transition-all duration-500 group-hover:w-14" />
                             </div>
                         </motion.button>
                     ))}
