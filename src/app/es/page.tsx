@@ -8,7 +8,6 @@ import { ContactSection } from "@/components/sections/ContactSection";
 import { AboutUs } from "@/components/sections/AboutUs";
 import { Gallery } from "@/components/sections/Gallery";
 import { Highlights } from "@/components/sections/Highlights";
-import { KitInstalacaoSection } from "@/components/sections/KitInstalacaoSection";
 import { es } from "@/dictionaries/es";
 
 export const metadata: Metadata = {
@@ -46,7 +45,6 @@ export default function EsHome() {
       <Testimonials dict={es.testimonials} />
       <Highlights dict={es.highlights} />
       <ContactSection dict={es.contact} />
-      <KitInstalacaoSection locale="es" />
     </>
   );
 }

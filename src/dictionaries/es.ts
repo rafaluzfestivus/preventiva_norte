@@ -68,12 +68,13 @@ export const es: SiteDict = {
         title: 'Construcción Civil',
         description:
           'Redes de protección y seguridad para obras, fachadas e instalaciones industriales en todo el Norte de Portugal.',
+        href: '/construcao-civil',
       },
       {
         title: 'Kits',
         description:
           'Kit DIY con red, cuerda, ganchos y tacos para instalarlo usted mismo en ventanas y balcones sencillos.',
-        href: '#kit-instalacao',
+        href: '/kit-instalacao',
       },
     ],
   },
