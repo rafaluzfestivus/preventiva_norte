@@ -122,7 +122,7 @@ export default function EsProteccioContent() {
                   <p className="text-sm text-slate-600">{d.ninosF4Desc}</p>
                 </div>
               </div>
-              <div className="p-6 bg-red-50 border-l-4 border-red-500 rounded-r-xl mb-8">
+              <div className="p-6 bg-red-50 rounded-2xl mb-8">
                 <p className="text-red-700 italic font-bold text-lg">
                   &ldquo;{d.ninosQuote}&rdquo;
                 </p>
