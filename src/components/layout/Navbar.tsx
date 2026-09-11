@@ -85,7 +85,7 @@ export function Navbar() {
 
     return (
         <nav className={`fixed w-full z-50 transition-all duration-300 ${
-            scrolled ? "bg-white/90 backdrop-blur-md shadow-md py-4" : "bg-transparent py-6"
+            scrolled ? "bg-white shadow-lg border-b border-gray-100 py-4" : "bg-transparent py-6"
         }`}>
             <div className="container mx-auto px-4 md:px-8 flex items-center justify-center relative">
                 <div className="hidden md:flex items-center gap-8">

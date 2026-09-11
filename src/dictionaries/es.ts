@@ -45,40 +45,40 @@ export const es: SiteDict = {
     carouselGoToPrefix: 'Ir a la foto ',
     items: [
       {
-        title: 'Redes para Gatos',
+        title: 'Ventanas',
         description:
           "Especialistas en redes de protección anti-caídas. Evita el 'síndrome del paracaidista' con nuestras mallas de seguridad.",
         href: '/proteccion#gatos',
         photos: ['/img-1.jpg', '/gallery-1.jpg', '/img-2.jpg', '/img-3.jpg', '/gallery-4.jpg'],
       },
       {
-        title: 'Seguridad Infantil',
+        title: 'Terrazas',
         description:
           'Protección certificada para ventanas, balcones y escaleras. Sustitución de rejas con estética limpia.',
         href: '/proteccion#ninos',
         photos: ['/img-2.jpg', '/gallery-2.jpg', '/img-3.jpg', '/img-4.jpg', '/gallery-5.jpg'],
       },
       {
-        title: 'Control de Aves',
+        title: 'Balcones',
         description:
           'Solución definitiva contra palomas en Porto y el Norte. Higiene y protección ética para tu edificio.',
         href: '/proteccion#aves',
         photos: ['/img-3.jpg', '/gallery-3.jpg', '/img-4.jpg', '/img-5.jpg', '/gallery-6.jpg'],
       },
       {
-        title: 'Redes Deportivas',
+        title: 'Construcción Civil',
         description:
           'Redes de protección para campos, pabellones, gimnasios y recintos deportivos.',
         photos: ['/img-4.jpg', '/gallery-4.jpg', '/img-5.jpg', '/img-6.jpg', '/gallery-1.jpg'],
       },
       {
-        title: 'Redes para Terrazas',
+        title: 'Pistas Deportivas',
         description:
           'Seguridad y protección para tus terrazas y balcones sin impacto visual.',
         photos: ['/img-5.jpg', '/gallery-5.jpg', '/img-6.jpg', '/img-1.jpg', '/gallery-2.jpg'],
       },
       {
-        title: 'Construcción Civil e Industrial',
+        title: 'Otras Soluciones',
         description:
           'Redes de protección y seguridad para obras, fachadas e instalaciones industriales en todo el Norte de Portugal.',
         photos: ['/img-6.jpg', '/gallery-6.jpg', '/img-1.jpg', '/img-2.jpg', '/gallery-3.jpg'],

@@ -45,40 +45,40 @@ export const pt: SiteDict = {
     carouselGoToPrefix: 'Ir para foto ',
     items: [
       {
-        title: 'Redes para Gatos',
+        title: 'Janelas',
         description:
           "Especialistas em redes de proteção anti-queda. Evite o 'síndrome do paraquedista' com as nossas malhas de segurança.",
         href: '/proteccion#gatos',
         photos: ['/img-1.jpg', '/gallery-1.jpg', '/img-2.jpg', '/img-3.jpg', '/gallery-4.jpg'],
       },
       {
-        title: 'Segurança Infantil',
+        title: 'Terraços',
         description:
           'Proteção certificada para janelas, varandas e escadas. Substituição de grades com estética limpa.',
         href: '/proteccion#ninos',
         photos: ['/img-2.jpg', '/gallery-2.jpg', '/img-3.jpg', '/img-4.jpg', '/gallery-5.jpg'],
       },
       {
-        title: 'Controlo de Aves',
+        title: 'Varandas',
         description:
           'Solução definitiva contra pombos no Porto e Norte. Higiene e proteção ética para o seu edifício.',
         href: '/proteccion#aves',
         photos: ['/img-3.jpg', '/gallery-3.jpg', '/img-4.jpg', '/img-5.jpg', '/gallery-6.jpg'],
       },
       {
-        title: 'Redes Desportivas',
+        title: 'Construção Civil',
         description:
           'Redes de proteção para campos, pavilhões, ginásios e recintos desportivos.',
         photos: ['/img-4.jpg', '/gallery-4.jpg', '/img-5.jpg', '/img-6.jpg', '/gallery-1.jpg'],
       },
       {
-        title: 'Redes para Terraços',
+        title: 'Quadras Desportivas',
         description:
           'Segurança e proteção para os seus terraços e varandas sem impacto visual.',
         photos: ['/img-5.jpg', '/gallery-5.jpg', '/img-6.jpg', '/img-1.jpg', '/gallery-2.jpg'],
       },
       {
-        title: 'Construção Civil e Industrial',
+        title: 'Outras Soluções',
         description:
           'Redes de proteção e segurança para obras, fachadas e instalações industriais em todo o Norte de Portugal.',
         photos: ['/img-6.jpg', '/gallery-6.jpg', '/img-1.jpg', '/img-2.jpg', '/gallery-3.jpg'],
