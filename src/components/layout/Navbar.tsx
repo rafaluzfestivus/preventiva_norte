@@ -83,9 +83,17 @@ export function Navbar() {
     const ptPath = getAlternatePath(pathname, "pt");
     const esPath = getAlternatePath(pathname, "es");
 
+    // Only the home and Proteção pages open on a full-bleed dark hero.
+    // Every other page (kit, legal, certifications, condo-law resource)
+    // starts on a light background, so the transparent/white navbar
+    // variant would render invisible there — force the opaque variant
+    // on those pages regardless of scroll position.
+    const hasDarkHero = pathname === "/" || pathname === "/es" || pathname === "/proteccion" || pathname === "/es/proteccion";
+    const overDarkHero = hasDarkHero && !scrolled;
+
     return (
         <nav className={`fixed w-full z-50 transition-all duration-300 ${
-            scrolled ? "bg-white shadow-lg border-b border-gray-100 py-4" : "bg-transparent py-6"
+            overDarkHero ? "bg-transparent py-6" : "bg-white shadow-lg border-b border-gray-100 py-4"
         }`}>
             <div className="container mx-auto px-4 md:px-8 flex items-center justify-center relative">
                 <div className="hidden md:flex items-center gap-8">
@@ -94,7 +102,7 @@ export function Navbar() {
                             key={link.name}
                             href={link.href}
                             className={`font-bold text-base tracking-wide transition-colors hover:text-yellow-400 ${
-                                scrolled ? "text-[#4d2a36]" : "text-white drop-shadow-md hover:text-yellow-300"
+                                overDarkHero ? "text-white drop-shadow-md hover:text-yellow-300" : "text-[#4d2a36]"
                             }`}
                         >
                             {link.name}
@@ -110,9 +118,9 @@ export function Navbar() {
 
                     {/* Language Switcher */}
                     <div className={`flex items-center gap-1 text-sm font-bold border rounded-full px-3 py-1.5 transition-colors ${
-                        scrolled
-                            ? "border-[#4d2a36]/30 text-[#4d2a36]"
-                            : "border-white/30 text-white"
+                        overDarkHero
+                            ? "border-white/30 text-white"
+                            : "border-[#4d2a36]/30 text-[#4d2a36]"
                     }`}>
                         <Globe className="w-3.5 h-3.5 mr-1 opacity-70" />
                         <Link
@@ -136,7 +144,7 @@ export function Navbar() {
                 <button
                     onClick={() => setIsOpen(!isOpen)}
                     className={`md:hidden p-2 rounded-lg absolute left-4 ${
-                        scrolled ? "text-[#4d2a36]" : "text-white"
+                        overDarkHero ? "text-white" : "text-[#4d2a36]"
                     }`}
                     aria-label={config.openMenu}
                 >
@@ -145,7 +153,7 @@ export function Navbar() {
 
                 {/* Mobile language switcher */}
                 <div className={`md:hidden absolute right-4 flex items-center gap-1 text-xs font-bold border rounded-full px-2 py-1 ${
-                    scrolled ? "border-[#4d2a36]/30 text-[#4d2a36]" : "border-white/30 text-white"
+                    overDarkHero ? "border-white/30 text-white" : "border-[#4d2a36]/30 text-[#4d2a36]"
                 }`}>
                     <Link
                         href={ptPath}
