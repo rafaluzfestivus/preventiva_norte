@@ -401,38 +401,25 @@ export const pt: SiteDict = {
     subtitle: 'Informação útil e decisões favoráveis para quem quer proteger a sua casa.',
     comingSoonLabel: 'Em breve',
     watchLabel: 'Passe o cursor para ver',
-    linksGroupTitle: 'Links Úteis',
     videosGroupTitle: 'Vídeos',
+    legalTitle: 'O condomínio pode proibir?',
+    legalParagraphs: [
+      'Segundo o artigo 1422.º do Código Civil Português, os condóminos não podem prejudicar a segurança, a linha arquitetónica ou o arranjo estético do edifício com obras novas. No entanto, uma rede de proteção não se enquadra como "obra nova": é uma estrutura amovível, sem elementos metálicos aparentes, feita de filamentos de polietileno entrelaçados que são praticamente impercetíveis vistos do exterior — e pode ser retirada facilmente, já que é fixada com pequenos ganchos junto à janela.',
+      'Em resposta a uma consulta sobre este tema, o setor jurídico da DECO Proteste confirmou por escrito que uma estrutura amovível deste tipo pode avançar sem necessidade de aprovação prévia da assembleia de condóminos.',
+      'Também já existe jurisprudência favorável: um tribunal considerou que uma estrutura amovível para envidraçar uma varanda não afeta a linha arquitetónica do edifício — o mesmo princípio que se aplica às redes de proteção.',
+    ],
+    legalCartaLabel: 'Carta ao Condomínio',
+    legalSentencaLabel: 'Sentença Favorável',
     items: [
-      {
-        title: 'Decisão Judicial Favorável',
-        description:
-          'Sentença do Juizado de Paz confirma: as redes de proteção não precisam de autorização prévia do condomínio.',
-        href: '/recursos/direito-condominio#sentenca',
-        kind: 'internal',
-        group: 'links',
-      },
-      {
-        title: 'Carta ao Condomínio',
-        description:
-          'Um modelo de carta pronto a apresentar à administração do seu condomínio, com base no Código Civil português.',
-        href: '/recursos/direito-condominio#carta-condominio',
-        kind: 'internal',
-        group: 'links',
-      },
       {
         title: 'Vídeo: Maracujá Roxo',
         description: 'Veja em vídeo uma das nossas instalações de rede de proteção.',
         href: '/video-maracuja-roxo.mp4',
-        kind: 'video',
-        group: 'videos',
       },
       {
         title: 'Vídeo: Cris Azen',
         description: 'Em breve.',
         href: '#',
-        kind: 'video',
-        group: 'videos',
       },
     ],
   },

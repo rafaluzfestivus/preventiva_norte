@@ -2,49 +2,11 @@
 
 import { useRef, useState } from "react";
 import { motion } from "framer-motion";
-import { Scale, FileText, PlayCircle, ArrowUpRight } from "lucide-react";
-import Link from "next/link";
+import { PlayCircle, Download } from "lucide-react";
 import type { SiteDict, HighlightItem } from "@/dictionaries/types";
 
 interface HighlightsProps {
     dict: SiteDict["highlights"];
-}
-
-function HighlightIcon({ item, className }: { item: HighlightItem; className: string }) {
-    if (item.title.toLowerCase().includes("carta")) return <FileText className={className} />;
-    return <Scale className={className} />;
-}
-
-function DocumentLinkRow({ item }: { item: HighlightItem }) {
-    const hasHref = item.href !== "#";
-
-    const inner = (
-        <>
-            <div className="w-12 h-12 rounded-xl bg-yellow-50 flex items-center justify-center shrink-0 group-hover:bg-yellow-100 transition-colors">
-                <HighlightIcon item={item} className="w-6 h-6 text-yellow-600" />
-            </div>
-            <div className="flex-grow min-w-0">
-                <h3 className="font-bold text-slate-900">{item.title}</h3>
-                <p className="text-sm text-slate-600">{item.description}</p>
-            </div>
-            <ArrowUpRight className="w-5 h-5 text-slate-400 group-hover:text-yellow-600 transition-colors shrink-0" />
-        </>
-    );
-
-    const rowClass = "flex items-center gap-4 p-6 transition-colors group";
-
-    return hasHref ? (
-        <Link
-            href={item.href}
-            target={item.kind === "external" ? "_blank" : undefined}
-            rel={item.kind === "external" ? "noopener noreferrer" : undefined}
-            className={`${rowClass} hover:bg-gray-50`}
-        >
-            {inner}
-        </Link>
-    ) : (
-        <div className={rowClass}>{inner}</div>
-    );
 }
 
 function VideoHighlightCard({
@@ -117,10 +79,23 @@ function VideoHighlightCard({
     );
 }
 
-export function Highlights({ dict }: HighlightsProps) {
-    const linkItems = dict.items.filter((item) => item.group === "links");
-    const videoItems = dict.items.filter((item) => item.group === "videos");
+function DownloadLink({ href, label }: { href: string; label: string }) {
+    return (
+        <a
+            href={href}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex-1 flex items-center gap-3 p-4 rounded-xl border border-gray-200 hover:border-yellow-400 hover:bg-yellow-50 transition-colors group"
+        >
+            <div className="w-10 h-10 rounded-lg bg-yellow-50 flex items-center justify-center shrink-0 group-hover:bg-yellow-100 transition-colors">
+                <Download className="w-5 h-5 text-yellow-600" />
+            </div>
+            <span className="font-semibold text-slate-900">{label}</span>
+        </a>
+    );
+}
 
+export function Highlights({ dict }: HighlightsProps) {
     return (
         <section className="py-20 bg-gray-50">
             <div className="container mx-auto px-4 md:px-8">
@@ -133,19 +108,23 @@ export function Highlights({ dict }: HighlightsProps) {
                     </p>
                 </div>
 
-                <h3 className="text-sm font-bold uppercase tracking-widest text-slate-500 mb-6 text-center">
-                    {dict.linksGroupTitle}
-                </h3>
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.5 }}
                     viewport={{ once: true }}
-                    className="max-w-2xl mx-auto bg-white rounded-2xl shadow-lg border border-gray-100 divide-y divide-gray-100 overflow-hidden"
+                    className="max-w-3xl mx-auto bg-white rounded-2xl shadow-lg border border-gray-100 p-8 md:p-10"
                 >
-                    {linkItems.map((item) => (
-                        <DocumentLinkRow key={item.title} item={item} />
-                    ))}
+                    <h3 className="text-2xl font-bold text-slate-900 mb-4">{dict.legalTitle}</h3>
+                    <div className="space-y-4 text-slate-600 leading-relaxed">
+                        {dict.legalParagraphs.map((paragraph, index) => (
+                            <p key={index}>{paragraph}</p>
+                        ))}
+                    </div>
+                    <div className="mt-8 pt-6 border-t border-gray-100 flex flex-col sm:flex-row gap-4">
+                        <DownloadLink href="/documentos/carta-condominio.pdf" label={dict.legalCartaLabel} />
+                        <DownloadLink href="/documentos/sentenca-favoravel.pdf" label={dict.legalSentencaLabel} />
+                    </div>
                 </motion.div>
             </div>
 
@@ -154,7 +133,7 @@ export function Highlights({ dict }: HighlightsProps) {
                     {dict.videosGroupTitle}
                 </h3>
                 <div className="grid grid-cols-1 md:grid-cols-2">
-                    {videoItems.map((item) => (
+                    {dict.items.map((item) => (
                         <VideoHighlightCard key={item.title} item={item} comingSoonLabel={dict.comingSoonLabel} hoverHint={dict.watchLabel} />
                     ))}
                 </div>

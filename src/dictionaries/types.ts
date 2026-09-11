@@ -22,8 +22,6 @@ export interface HighlightItem {
   title: string;
   description: string;
   href: string;
-  kind: 'internal' | 'external' | 'video';
-  group: 'links' | 'videos';
 }
 
 export interface SiteDict {
@@ -243,8 +241,11 @@ export interface SiteDict {
     subtitle: string;
     comingSoonLabel: string;
     watchLabel: string;
-    linksGroupTitle: string;
     videosGroupTitle: string;
+    legalTitle: string;
+    legalParagraphs: string[];
+    legalCartaLabel: string;
+    legalSentencaLabel: string;
     items: HighlightItem[];
   };
 }

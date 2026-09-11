@@ -401,38 +401,25 @@ export const es: SiteDict = {
     subtitle: 'Información útil y sentencias favorables para quien quiera proteger su casa.',
     comingSoonLabel: 'Próximamente',
     watchLabel: 'Pasa el cursor para ver',
-    linksGroupTitle: 'Enlaces Útiles',
     videosGroupTitle: 'Vídeos',
+    legalTitle: '¿La comunidad puede prohibirlo?',
+    legalParagraphs: [
+      'Según el artículo 1422.º del Código Civil portugués, los propietarios no pueden perjudicar la seguridad, la línea arquitectónica o el aspecto estético del edificio con obras nuevas. Sin embargo, una red de protección no se considera "obra nueva": es una estructura amovible, sin elementos metálicos visibles, hecha de filamentos de polietileno entrelazados que son prácticamente imperceptibles vistos desde el exterior — y puede retirarse fácilmente, ya que se fija con pequeños ganchos junto a la ventana.',
+      'En respuesta a una consulta sobre este tema, el departamento jurídico de DECO Proteste confirmó por escrito que una estructura amovible de este tipo puede instalarse sin necesidad de aprobación previa de la junta de propietarios.',
+      'También existe jurisprudencia favorable: un tribunal consideró que una estructura amovible para acristalar un balcón no afecta la línea arquitectónica del edificio — el mismo principio que se aplica a las redes de protección.',
+    ],
+    legalCartaLabel: 'Carta a la Comunidad de Vecinos',
+    legalSentencaLabel: 'Sentencia Favorable',
     items: [
-      {
-        title: 'Sentencia Judicial Favorable',
-        description:
-          'Una sentencia del Juzgado de Paz confirma: las redes de protección no necesitan autorización previa de la comunidad de vecinos.',
-        href: '/es/recursos/direito-condominio#sentenca',
-        kind: 'internal',
-        group: 'links',
-      },
-      {
-        title: 'Carta a la Comunidad de Vecinos',
-        description:
-          'Un modelo de carta listo para presentar a su administración de fincas, basado en el Código Civil portugués.',
-        href: '/es/recursos/direito-condominio#carta-condominio',
-        kind: 'internal',
-        group: 'links',
-      },
       {
         title: 'Vídeo: Maracujá Roxo',
         description: 'Vea en vídeo una de nuestras instalaciones de red de protección.',
         href: '/video-maracuja-roxo.mp4',
-        kind: 'video',
-        group: 'videos',
       },
       {
         title: 'Vídeo: Cris Azen',
         description: 'Próximamente.',
         href: '#',
-        kind: 'video',
-        group: 'videos',
       },
     ],
   },
