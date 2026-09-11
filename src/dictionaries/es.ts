@@ -397,12 +397,11 @@ export const es: SiteDict = {
     lastUpdated: 'Última actualización:',
   },
   highlights: {
-    title: 'Destacados',
+    title: '¿La comunidad puede prohibirlo?',
     subtitle: 'Información útil y sentencias favorables para quien quiera proteger su casa.',
     comingSoonLabel: 'Próximamente',
     watchLabel: 'Pasa el cursor para ver',
     videosGroupTitle: 'Vídeos',
-    legalTitle: '¿La comunidad puede prohibirlo?',
     legalParagraphs: [
       'Según el artículo 1422.º del Código Civil portugués, los propietarios no pueden perjudicar la seguridad, la línea arquitectónica o el aspecto estético del edificio con obras nuevas. Sin embargo, una red de protección no se considera "obra nueva": es una estructura amovible, sin elementos metálicos visibles, hecha de filamentos de polietileno entrelazados que son prácticamente imperceptibles vistos desde el exterior — y puede retirarse fácilmente, ya que se fija con pequeños ganchos junto a la ventana.',
       'En respuesta a una consulta sobre este tema, el departamento jurídico de DECO Proteste confirmó por escrito que una estructura amovible de este tipo puede instalarse sin necesidad de aprobación previa de la junta de propietarios.',
@@ -418,8 +417,8 @@ export const es: SiteDict = {
       },
       {
         title: 'Vídeo: Cris Azen',
-        description: 'Próximamente.',
-        href: '#',
+        description: 'Vea en vídeo una más de nuestras instalaciones de red de protección.',
+        href: 'https://www.youtube.com/watch?v=XZbwHSxPnZQ',
       },
     ],
   },

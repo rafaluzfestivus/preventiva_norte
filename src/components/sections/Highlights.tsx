@@ -2,11 +2,68 @@
 
 import { useRef, useState } from "react";
 import { motion } from "framer-motion";
+import Image from "next/image";
 import { PlayCircle, Download } from "lucide-react";
 import type { SiteDict, HighlightItem } from "@/dictionaries/types";
 
 interface HighlightsProps {
     dict: SiteDict["highlights"];
+}
+
+function getYouTubeId(url: string): string | null {
+    const match = url.match(/(?:youtube\.com\/watch\?v=|youtu\.be\/|youtube\.com\/embed\/)([\w-]{11})/);
+    return match ? match[1] : null;
+}
+
+function YouTubeHighlightCard({
+    videoId,
+    title,
+    hoverHint,
+}: {
+    videoId: string;
+    title: string;
+    hoverHint: string;
+}) {
+    const [playing, setPlaying] = useState(false);
+    const thumbnailUrl = `https://img.youtube.com/vi/${videoId}/hqdefault.jpg`;
+    const embedUrl = `https://www.youtube.com/embed/${videoId}?autoplay=1&mute=1&loop=1&playlist=${videoId}&controls=0&modestbranding=1&rel=0`;
+
+    return (
+        <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+            viewport={{ once: true }}
+            onMouseEnter={() => setPlaying(true)}
+            onMouseLeave={() => setPlaying(false)}
+            onClick={() => setPlaying((p) => !p)}
+            className="relative aspect-video overflow-hidden bg-[#4d2a36] cursor-pointer group/video"
+        >
+            {playing ? (
+                <iframe
+                    src={embedUrl}
+                    title={title}
+                    allow="autoplay; encrypted-media"
+                    className="absolute inset-0 w-full h-full"
+                    frameBorder={0}
+                />
+            ) : (
+                <Image src={thumbnailUrl} alt={title} fill className="object-cover" unoptimized />
+            )}
+            <div
+                className={`absolute inset-0 bg-gradient-to-t from-black/80 via-black/10 to-transparent pointer-events-none transition-opacity ${
+                    playing ? "opacity-40" : "opacity-100"
+                }`}
+            />
+            {!playing && (
+                <PlayCircle className="absolute inset-0 m-auto w-14 h-14 text-white/90 drop-shadow-lg pointer-events-none" />
+            )}
+            <div className="absolute bottom-6 left-6 right-6 pointer-events-none">
+                <h3 className="text-white font-bold text-lg mb-1">{title}</h3>
+                {!playing && <span className="text-xs text-white/70">{hoverHint}</span>}
+            </div>
+        </motion.div>
+    );
 }
 
 function VideoHighlightCard({
@@ -115,7 +172,6 @@ export function Highlights({ dict }: HighlightsProps) {
                     viewport={{ once: true }}
                     className="max-w-3xl mx-auto bg-white rounded-2xl shadow-lg border border-gray-100 p-8 md:p-10"
                 >
-                    <h3 className="text-2xl font-bold text-slate-900 mb-4">{dict.legalTitle}</h3>
                     <div className="space-y-4 text-slate-600 leading-relaxed">
                         {dict.legalParagraphs.map((paragraph, index) => (
                             <p key={index}>{paragraph}</p>
@@ -133,9 +189,14 @@ export function Highlights({ dict }: HighlightsProps) {
                     {dict.videosGroupTitle}
                 </h3>
                 <div className="grid grid-cols-1 md:grid-cols-2">
-                    {dict.items.map((item) => (
-                        <VideoHighlightCard key={item.title} item={item} comingSoonLabel={dict.comingSoonLabel} hoverHint={dict.watchLabel} />
-                    ))}
+                    {dict.items.map((item) => {
+                        const youtubeId = getYouTubeId(item.href);
+                        return youtubeId ? (
+                            <YouTubeHighlightCard key={item.title} videoId={youtubeId} title={item.title} hoverHint={dict.watchLabel} />
+                        ) : (
+                            <VideoHighlightCard key={item.title} item={item} comingSoonLabel={dict.comingSoonLabel} hoverHint={dict.watchLabel} />
+                        );
+                    })}
                 </div>
             </div>
         </section>

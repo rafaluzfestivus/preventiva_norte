@@ -1,6 +1,11 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
+    images: {
+        remotePatterns: [
+            { protocol: "https", hostname: "img.youtube.com" },
+        ],
+    },
     // `experimental.turbopackUseSystemTlsCerts` (a local-TLS workaround) was
     // removed from Next.js's ExperimentalConfig type as of the 16.3.4 bump
     // (see PREVENTIVA_NORTE_IDENTITY.md) — it no longer exists in this

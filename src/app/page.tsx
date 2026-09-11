@@ -6,6 +6,7 @@ import { Testimonials } from "@/components/sections/Testimonials";
 import { ContactSection } from "@/components/sections/ContactSection";
 import { AboutUs } from "@/components/sections/AboutUs";
 import { Highlights } from "@/components/sections/Highlights";
+import { KitInstalacaoSection } from "@/components/sections/KitInstalacaoSection";
 import { pt } from "@/dictionaries/pt";
 
 export default function Home() {
@@ -19,6 +20,7 @@ export default function Home() {
       <Testimonials dict={pt.testimonials} />
       <Highlights dict={pt.highlights} />
       <ContactSection dict={pt.contact} />
+      <KitInstalacaoSection locale="pt" />
     </>
   );
 }

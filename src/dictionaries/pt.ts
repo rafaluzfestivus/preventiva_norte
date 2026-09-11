@@ -397,12 +397,11 @@ export const pt: SiteDict = {
     lastUpdated: 'Última atualização:',
   },
   highlights: {
-    title: 'Destaques',
+    title: 'O condomínio pode proibir?',
     subtitle: 'Informação útil e decisões favoráveis para quem quer proteger a sua casa.',
     comingSoonLabel: 'Em breve',
     watchLabel: 'Passe o cursor para ver',
     videosGroupTitle: 'Vídeos',
-    legalTitle: 'O condomínio pode proibir?',
     legalParagraphs: [
       'Segundo o artigo 1422.º do Código Civil Português, os condóminos não podem prejudicar a segurança, a linha arquitetónica ou o arranjo estético do edifício com obras novas. No entanto, uma rede de proteção não se enquadra como "obra nova": é uma estrutura amovível, sem elementos metálicos aparentes, feita de filamentos de polietileno entrelaçados que são praticamente impercetíveis vistos do exterior — e pode ser retirada facilmente, já que é fixada com pequenos ganchos junto à janela.',
       'Em resposta a uma consulta sobre este tema, o setor jurídico da DECO Proteste confirmou por escrito que uma estrutura amovível deste tipo pode avançar sem necessidade de aprovação prévia da assembleia de condóminos.',
@@ -418,8 +417,8 @@ export const pt: SiteDict = {
       },
       {
         title: 'Vídeo: Cris Azen',
-        description: 'Em breve.',
-        href: '#',
+        description: 'Veja em vídeo mais uma das nossas instalações de rede de proteção.',
+        href: 'https://www.youtube.com/watch?v=XZbwHSxPnZQ',
       },
     ],
   },

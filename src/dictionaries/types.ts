@@ -242,7 +242,6 @@ export interface SiteDict {
     comingSoonLabel: string;
     watchLabel: string;
     videosGroupTitle: string;
-    legalTitle: string;
     legalParagraphs: string[];
     legalCartaLabel: string;
     legalSentencaLabel: string;
