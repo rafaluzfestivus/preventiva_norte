@@ -8,10 +8,10 @@ import { AboutUs } from "@/components/sections/AboutUs";
 import { Gallery } from "@/components/sections/Gallery";
 import { Highlights } from "@/components/sections/Highlights";
 import { pt } from "@/dictionaries/pt";
-import { getGalleryPhotos } from "@/lib/gallery";
+import { getGalleryCategories } from "@/lib/gallery";
 
 export default function Home() {
-  const galleryPhotos = getGalleryPhotos();
+  const galleryCategories = getGalleryCategories();
 
   return (
     <>
@@ -20,7 +20,7 @@ export default function Home() {
       <Services dict={pt.services} basePath="" />
       <AboutUs dict={pt.aboutUs} />
       <BenefitsWhyUs benefits={pt.benefits} whyUs={pt.whyUs} />
-      <Gallery dict={pt.gallery} photos={galleryPhotos} />
+      <Gallery dict={pt.gallery} categories={galleryCategories} />
       <Testimonials dict={pt.testimonials} />
       <Highlights dict={pt.highlights} />
       <ContactSection dict={pt.contact} />

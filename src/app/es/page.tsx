@@ -9,7 +9,7 @@ import { AboutUs } from "@/components/sections/AboutUs";
 import { Gallery } from "@/components/sections/Gallery";
 import { Highlights } from "@/components/sections/Highlights";
 import { es } from "@/dictionaries/es";
-import { getGalleryPhotos } from "@/lib/gallery";
+import { getGalleryCategories } from "@/lib/gallery";
 
 export const metadata: Metadata = {
   title: "Instalación de Redes de Protección en Porto y Norte | Preventiva Norte",
@@ -35,7 +35,7 @@ export const metadata: Metadata = {
 };
 
 export default function EsHome() {
-  const galleryPhotos = getGalleryPhotos();
+  const galleryCategories = getGalleryCategories();
 
   return (
     <>
@@ -44,7 +44,7 @@ export default function EsHome() {
       <Services dict={es.services} basePath="/es" />
       <AboutUs dict={es.aboutUs} />
       <BenefitsWhyUs benefits={es.benefits} whyUs={es.whyUs} />
-      <Gallery dict={es.gallery} photos={galleryPhotos} />
+      <Gallery dict={es.gallery} categories={galleryCategories} />
       <Testimonials dict={es.testimonials} />
       <Highlights dict={es.highlights} />
       <ContactSection dict={es.contact} />

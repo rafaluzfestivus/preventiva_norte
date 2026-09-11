@@ -18,13 +18,13 @@
   /* Gray-100 */
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
-}
+/* This site uses one fixed light theme throughout (white/gray-50
+   sections with dark-wine accents) — it was never designed to adapt
+   to the visitor's OS dark-mode preference, so the leftover
+   create-next-app dark-mode override (which flipped body to solid
+   black) is intentionally not applied here. Utility pages like
+   /kit-instalacao that don't have their own full-height section
+   background were showing that black body through on mobile. */
 
 body {
   color: rgb(var(--foreground-rgb));

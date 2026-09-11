@@ -142,6 +142,15 @@ export const pt: SiteDict = {
     subtitle:
       'Explore algumas das nossas instalações recentes. Segurança impecável com o mínimo impacto visual.',
     viewMore: 'Ver mais no Instagram →',
+    closeLabel: 'Fechar',
+    categories: {
+      varandas: 'Varandas',
+      terracos: 'Terraços',
+      janelas: 'Janelas',
+      quadras: 'Quadras',
+      outras: 'Outras',
+      detalhes: 'Detalhes',
+    },
   },
   testimonials: {
     title: 'O que dizem os nossos clientes',

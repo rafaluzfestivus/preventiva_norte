@@ -39,6 +39,11 @@ const TEXT = {
                 title: "Sistema Tipo U",
                 description: "Fecho de perímetro vertical, para bordas de piso, escadas e zonas de escavação.",
             },
+            {
+                slug: "fechamento-perimetro",
+                title: "Fechamento de Perímetro",
+                description: "Rede de fecho de perímetro em pisos desimpedidos, para janelas, escadas e elevadores.",
+            },
         ],
         ctaTitle: "Peça o seu orçamento",
         ctaDesc: "Fale connosco para uma avaliação técnica gratuita do seu projeto.",
@@ -76,6 +81,11 @@ const TEXT = {
                 title: "Sistema Tipo U",
                 description: "Cierre de perímetro vertical, para bordes de forjado, escaleras y zonas de excavación.",
             },
+            {
+                slug: "fechamento-perimetro",
+                title: "Cierre de Perímetro",
+                description: "Red de cierre de perímetro en plantas despejadas, para ventanas, escaleras y ascensores.",
+            },
         ],
         ctaTitle: "Solicite su presupuesto",
         ctaDesc: "Hable con nosotros para una evaluación técnica gratuita de su proyecto.",
@@ -103,15 +113,6 @@ export function SegurancaOverviewContent({ locale }: SegurancaOverviewContentPro
 
                 <h2 className="text-2xl font-bold text-slate-900 mb-4">{t.compositionTitle}</h2>
                 <p className="text-slate-600 leading-relaxed mb-10">{t.composition}</p>
-
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-10">
-                    <div className="relative aspect-[4/3] rounded-2xl overflow-hidden shadow-md">
-                        <Image src="/seguranca-perimetral-1.jpg" alt={t.title} fill className="object-cover" />
-                    </div>
-                    <div className="relative aspect-[4/3] rounded-2xl overflow-hidden shadow-md">
-                        <Image src="/seguranca-perimetral-2.jpg" alt={t.title} fill className="object-cover" />
-                    </div>
-                </div>
 
                 <h2 className="text-2xl font-bold text-slate-900 mb-6">{t.systemsTitle}</h2>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-12">

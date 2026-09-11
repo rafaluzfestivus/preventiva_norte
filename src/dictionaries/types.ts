@@ -84,6 +84,15 @@ export interface SiteDict {
     title: string;
     subtitle: string;
     viewMore: string;
+    closeLabel: string;
+    categories: {
+      varandas: string;
+      terracos: string;
+      janelas: string;
+      quadras: string;
+      outras: string;
+      detalhes: string;
+    };
   };
   testimonials: {
     title: string;
