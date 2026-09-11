@@ -29,7 +29,7 @@ export function Footer() {
                                 src="/logo-preventiva-norte.png"
                                 alt="Preventiva Norte Logo"
                                 width={180}
-                                height={50}
+                                height={180}
                                 className="h-14 w-auto object-contain brightness-0 invert opacity-90 hover:opacity-100 transition-opacity"
                             />
                         </Link>

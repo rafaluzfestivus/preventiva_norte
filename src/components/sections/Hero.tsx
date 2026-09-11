@@ -90,7 +90,7 @@ export function Hero({ dict, basePath = "" }: HeroProps) {
                             src="/logo-preventiva-norte.png"
                             alt={dict.logoAlt}
                             width={500}
-                            height={250}
+                            height={500}
                             className="h-32 md:h-64 w-auto object-contain brightness-0 invert drop-shadow-2xl"
                             priority
                         />

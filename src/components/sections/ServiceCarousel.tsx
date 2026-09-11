@@ -37,7 +37,7 @@ export function ServiceCarousel({ photos, alt, labels }: ServiceCarouselProps) {
 
   return (
     <div
-      className="relative w-full aspect-[3/4] rounded-t-2xl overflow-hidden bg-gray-100 group/carousel"
+      className="relative w-full aspect-[4/3] md:aspect-[3/4] rounded-t-2xl overflow-hidden bg-gray-100 group/carousel"
       onMouseEnter={() => setHovering(true)}
       onMouseLeave={() => setHovering(false)}
     >
