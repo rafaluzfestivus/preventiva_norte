@@ -26,6 +26,14 @@
           "src/app/es/proteccion/CaProteccioContent.tsx"
         ],
         "createdAt": "2026-09-11T12:49:26.566Z"
+      },
+      {
+        "rule": "gray-on-color",
+        "value": "*",
+        "files": [
+          "preventiva_norte/src/components/layout/Navbar.tsx"
+        ],
+        "createdAt": "2026-09-11T20:50:10.100Z"
       }
     ]
   }
