@@ -56,22 +56,6 @@ export function BenefitsWhyUs({ benefits, whyUs }: BenefitsWhyUsProps) {
                                 />
                             </div>
                         </div>
-                        <motion.div
-                            initial={{ opacity: 0, x: -20 }}
-                            whileInView={{ opacity: 1, x: 0 }}
-                            viewport={{ once: true }}
-                            animate={{ y: [0, -10, 0] }}
-                            transition={{
-                                opacity: { duration: 0.5, delay: 0.6 },
-                                x: { duration: 0.5, delay: 0.6 },
-                                y: { duration: 3, repeat: Infinity, ease: "easeInOut" },
-                            }}
-                            className="absolute -bottom-6 -left-6 bg-white p-6 rounded-xl shadow-xl max-w-xs hidden md:block"
-                        >
-                            <p className="font-bold text-slate-900 text-lg mb-1">&ldquo;{benefits.quote}&rdquo;</p>
-                            <p className="text-slate-500 text-sm">{benefits.quoteDesc}</p>
-                            <div className="flex text-yellow-400 mt-2">★★★★★</div>
-                        </motion.div>
                     </div>
                 </div>
             </div>

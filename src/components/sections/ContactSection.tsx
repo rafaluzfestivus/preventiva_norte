@@ -108,7 +108,6 @@ export function ContactSection({ dict }: ContactSectionProps) {
               <div>
                 <h3 className="font-bold text-white mb-1">{dict.serviceAreaTitle}</h3>
                 <p className="text-slate-200">{dict.serviceAreaText}</p>
-                <p className="text-slate-400 text-sm">{dict.serviceAreaSub}</p>
               </div>
             </div>
           </div>

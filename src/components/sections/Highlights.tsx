@@ -19,46 +19,55 @@ function YouTubeHighlightCard({
     videoId,
     title,
     watchLabel,
+    note,
 }: {
     videoId: string;
     title: string;
     watchLabel: string;
+    note?: string;
 }) {
     const [playing, setPlaying] = useState(false);
     const thumbnailUrl = `https://img.youtube.com/vi/${videoId}/hqdefault.jpg`;
     const embedUrl = `https://www.youtube.com/embed/${videoId}?autoplay=1&controls=1&modestbranding=1&rel=0`;
 
     return (
-        <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5 }}
-            viewport={{ once: true }}
-            onClick={() => setPlaying(true)}
-            className={`relative aspect-video overflow-hidden bg-[#4d2a36] group/video ${playing ? "" : "cursor-pointer"}`}
-        >
-            {playing ? (
-                <iframe
-                    src={embedUrl}
-                    title={title}
-                    allow="autoplay; encrypted-media"
-                    className="absolute inset-0 w-full h-full"
-                    frameBorder={0}
-                />
-            ) : (
-                <Image src={thumbnailUrl} alt={title} fill className="object-cover" unoptimized />
+        <div>
+            <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5 }}
+                viewport={{ once: true }}
+                onClick={() => setPlaying(true)}
+                className={`relative aspect-video overflow-hidden bg-[#4d2a36] group/video ${playing ? "" : "cursor-pointer"}`}
+            >
+                {playing ? (
+                    <iframe
+                        src={embedUrl}
+                        title={title}
+                        allow="autoplay; encrypted-media"
+                        className="absolute inset-0 w-full h-full"
+                        frameBorder={0}
+                    />
+                ) : (
+                    <Image src={thumbnailUrl} alt={title} fill className="object-cover" unoptimized />
+                )}
+                {!playing && (
+                    <>
+                        <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/10 to-transparent pointer-events-none" />
+                        <PlayCircle className="absolute inset-0 m-auto w-14 h-14 text-white/90 drop-shadow-lg pointer-events-none" />
+                        <div className="absolute bottom-6 left-6 right-6 pointer-events-none">
+                            <h3 className="text-white font-bold text-lg mb-1">{title}</h3>
+                            <span className="text-xs text-white/70">{watchLabel}</span>
+                        </div>
+                    </>
+                )}
+            </motion.div>
+            {note && (
+                <p className="text-center text-sm font-semibold text-slate-500 bg-gray-100 py-2">
+                    {note}
+                </p>
             )}
-            {!playing && (
-                <>
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/10 to-transparent pointer-events-none" />
-                    <PlayCircle className="absolute inset-0 m-auto w-14 h-14 text-white/90 drop-shadow-lg pointer-events-none" />
-                    <div className="absolute bottom-6 left-6 right-6 pointer-events-none">
-                        <h3 className="text-white font-bold text-lg mb-1">{title}</h3>
-                        <span className="text-xs text-white/70">{watchLabel}</span>
-                    </div>
-                </>
-            )}
-        </motion.div>
+        </div>
     );
 }
 
@@ -73,7 +82,7 @@ function VideoHighlightCard({
 }) {
     const ready = item.href !== "#";
     const videoRef = useRef<HTMLVideoElement>(null);
-    const [playing, setPlaying] = useState(false);
+    const [playing, setPlaying] = useState(!!item.autoplay && ready);
 
     const start = () => {
         if (!ready || playing) return;
@@ -95,6 +104,9 @@ function VideoHighlightCard({
                     ref={videoRef}
                     src={item.href}
                     controls={playing}
+                    autoPlay={item.autoplay}
+                    muted={item.autoplay}
+                    loop={item.autoplay}
                     playsInline
                     preload="metadata"
                     className="absolute inset-0 w-full h-full object-cover"
@@ -178,7 +190,7 @@ export function Highlights({ dict }: HighlightsProps) {
                     {dict.items.map((item) => {
                         const youtubeId = getYouTubeId(item.href);
                         return youtubeId ? (
-                            <YouTubeHighlightCard key={item.title} videoId={youtubeId} title={item.title} watchLabel={dict.watchLabel} />
+                            <YouTubeHighlightCard key={item.title} videoId={youtubeId} title={item.title} watchLabel={dict.watchLabel} note={item.note} />
                         ) : (
                             <VideoHighlightCard key={item.title} item={item} comingSoonLabel={dict.comingSoonLabel} watchLabel={dict.watchLabel} />
                         );

@@ -21,6 +21,8 @@ export interface HighlightItem {
   title: string;
   description: string;
   href: string;
+  note?: string;
+  autoplay?: boolean;
 }
 
 export interface SiteDict {
@@ -110,7 +112,6 @@ export interface SiteDict {
     instagramHandle: string;
     serviceAreaTitle: string;
     serviceAreaText: string;
-    serviceAreaSub: string;
     formTitle: string;
     formName: string;
     formPhone: string;

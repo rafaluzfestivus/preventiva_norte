@@ -195,7 +195,6 @@ export const pt: SiteDict = {
     instagramHandle: '@preventivanorte',
     serviceAreaTitle: 'Área de Serviço',
     serviceAreaText: 'Norte de Portugal',
-    serviceAreaSub: 'Porto, Braga, Gaia e arredores.',
     formTitle: 'Pedir Orçamento',
     formName: 'Nome',
     formPhone: 'Telemóvel',
@@ -219,7 +218,7 @@ export const pt: SiteDict = {
   },
   footer: {
     description:
-      'Especialistas em instalação de redes de proteção de alta resistência no Porto e Norte de Portugal. Segurança certificada para varandas, janelas, terraços, crianças e animais de estimação.',
+      'Especialistas em instalação de redes de proteção de alta resistência no Norte de Portugal. Segurança certificada para varandas, janelas, terraços, crianças e animais de estimação.',
     quickLinksTitle: 'Links Rápidos',
     protectionForTitle: 'Proteção Para',
     contactTitle: 'Contacto',
@@ -423,11 +422,13 @@ export const pt: SiteDict = {
         title: 'Vídeo: Maracujá Roxo',
         description: 'Veja em vídeo uma das nossas instalações de rede de proteção.',
         href: '/video-maracuja-roxo.mp4',
+        autoplay: true,
       },
       {
         title: 'Vídeo: Cris Azen',
         description: 'Veja em vídeo mais uma das nossas instalações de rede de proteção.',
         href: 'https://www.youtube.com/watch?v=XZbwHSxPnZQ',
+        note: 'Promoção Encerrada',
       },
     ],
   },

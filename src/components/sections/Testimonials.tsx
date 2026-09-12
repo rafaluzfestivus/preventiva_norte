@@ -1,6 +1,6 @@
 "use client";
 
-import { Star, Quote } from "lucide-react";
+import { Star, Quote, ChevronLeft, ChevronRight } from "lucide-react";
 import { useState } from "react";
 import type { SiteDict } from "@/dictionaries/types";
 
@@ -11,6 +11,12 @@ interface TestimonialsProps {
 export function Testimonials({ dict }: TestimonialsProps) {
     const testimonials = dict.items;
     const [selectedTestimonial, setSelectedTestimonial] = useState<typeof testimonials[0] | null>(null);
+    const [slide, setSlide] = useState(0);
+
+    const goTo = (index: number) => {
+        const total = testimonials.length;
+        setSlide(((index % total) + total) % total);
+    };
 
     return (
         <section className="py-20 bg-white">
@@ -19,40 +25,79 @@ export function Testimonials({ dict }: TestimonialsProps) {
                     {dict.title}
                 </h2>
 
-                <div className="flex overflow-x-auto gap-6 pb-8 snap-x snap-mandatory">
-                    {testimonials.map((t, index) => (
+                <div className="relative max-w-2xl mx-auto">
+                    <div className="overflow-hidden">
                         <div
-                            key={index}
-                            className="min-w-[300px] md:min-w-[400px] bg-gray-50 p-8 rounded-2xl shadow-sm hover:shadow-md transition-all relative flex flex-col snap-center h-full"
+                            className="flex transition-transform duration-500 ease-in-out"
+                            style={{ transform: `translateX(-${slide * 100}%)` }}
                         >
-                            <Quote className="absolute top-6 right-6 w-8 h-8 text-[#4d2a36]/10 fill-[#4d2a36]/10" />
-                            <div className="flex text-yellow-400 mb-4 gap-1">
-                                {[1, 2, 3, 4, 5].map((s) => (
-                                    <Star key={s} className="w-4 h-4 fill-yellow-400" />
+                            {testimonials.map((t, index) => (
+                                <div key={index} className="w-full shrink-0 px-1">
+                                    <div className="bg-gray-50 p-8 rounded-2xl shadow-sm relative flex flex-col min-h-[280px]">
+                                        <Quote className="absolute top-6 right-6 w-8 h-8 text-[#4d2a36]/10 fill-[#4d2a36]/10" />
+                                        <div className="flex text-yellow-400 mb-4 gap-1">
+                                            {[1, 2, 3, 4, 5].map((s) => (
+                                                <Star key={s} className="w-4 h-4 fill-yellow-400" />
+                                            ))}
+                                        </div>
+                                        <div className="flex-grow mb-6">
+                                            <p className="text-slate-600 italic line-clamp-4">&ldquo;{t.text}&rdquo;</p>
+                                            {t.text.length > 150 && (
+                                                <button
+                                                    onClick={() => setSelectedTestimonial(t)}
+                                                    className="text-yellow-600 text-sm font-semibold mt-2 hover:underline focus:outline-none"
+                                                >
+                                                    {dict.verMas}
+                                                </button>
+                                            )}
+                                        </div>
+                                        <div className="flex items-center gap-3 mt-auto pt-4 border-t border-gray-100">
+                                            <div className="w-10 h-10 rounded-full bg-yellow-500 flex items-center justify-center text-white font-bold shrink-0">
+                                                {t.name[0]}
+                                            </div>
+                                            <div className="overflow-hidden">
+                                                <h4 className="font-bold text-slate-900 truncate">{t.name}</h4>
+                                                <span className="text-sm text-slate-500 truncate block">{t.location}</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            ))}
+                        </div>
+                    </div>
+
+                    {testimonials.length > 1 && (
+                        <>
+                            <button
+                                type="button"
+                                onClick={() => goTo(slide - 1)}
+                                aria-label="Anterior"
+                                className="absolute top-1/2 -translate-y-1/2 -left-4 md:-left-12 bg-white shadow-md rounded-full p-2 hover:bg-gray-50 transition-colors"
+                            >
+                                <ChevronLeft className="w-5 h-5 text-slate-700" />
+                            </button>
+                            <button
+                                type="button"
+                                onClick={() => goTo(slide + 1)}
+                                aria-label="Próximo"
+                                className="absolute top-1/2 -translate-y-1/2 -right-4 md:-right-12 bg-white shadow-md rounded-full p-2 hover:bg-gray-50 transition-colors"
+                            >
+                                <ChevronRight className="w-5 h-5 text-slate-700" />
+                            </button>
+
+                            <div className="flex justify-center gap-2 mt-8">
+                                {testimonials.map((_, index) => (
+                                    <button
+                                        type="button"
+                                        key={index}
+                                        onClick={() => goTo(index)}
+                                        aria-label={`Depoimento ${index + 1}`}
+                                        className={`h-2.5 rounded-full transition-all ${index === slide ? "w-6 bg-yellow-500" : "w-2.5 bg-gray-300"}`}
+                                    />
                                 ))}
                             </div>
-                            <div className="flex-grow mb-6">
-                                <p className="text-slate-600 italic line-clamp-4">&ldquo;{t.text}&rdquo;</p>
-                                {t.text.length > 150 && (
-                                    <button
-                                        onClick={() => setSelectedTestimonial(t)}
-                                        className="text-yellow-600 text-sm font-semibold mt-2 hover:underline focus:outline-none"
-                                    >
-                                        {dict.verMas}
-                                    </button>
-                                )}
-                            </div>
-                            <div className="flex items-center gap-3 mt-auto pt-4 border-t border-gray-100">
-                                <div className="w-10 h-10 rounded-full bg-yellow-500 flex items-center justify-center text-white font-bold shrink-0">
-                                    {t.name[0]}
-                                </div>
-                                <div className="overflow-hidden">
-                                    <h4 className="font-bold text-slate-900 truncate">{t.name}</h4>
-                                    <span className="text-sm text-slate-500 truncate block">{t.location}</span>
-                                </div>
-                            </div>
-                        </div>
-                    ))}
+                        </>
+                    )}
                 </div>
             </div>
 

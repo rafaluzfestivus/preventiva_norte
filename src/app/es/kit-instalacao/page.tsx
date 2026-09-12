@@ -29,7 +29,7 @@ export default function EsKitInstalacaoPage() {
     return (
         <div className="container mx-auto px-4 py-16 md:py-24 max-w-4xl">
             <h1 className="text-3xl md:text-5xl font-bold mb-8 text-slate-900">
-                Kit de Instalación de Redes de Protección
+                Kit de Instalación de Redes de Protección a Medida
             </h1>
 
             <div className="relative aspect-video rounded-2xl overflow-hidden shadow-lg mb-10">

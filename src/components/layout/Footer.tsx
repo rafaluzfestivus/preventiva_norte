@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import Image from "next/image";
-import { Facebook, Instagram, Phone, Mail, MapPin } from "lucide-react";
+import { Instagram, Phone, Mail, MapPin } from "lucide-react";
 import { usePathname } from "next/navigation";
 import { es as esDict } from "@/dictionaries/es";
 import { pt } from "@/dictionaries/pt";
@@ -37,9 +37,6 @@ export function Footer() {
                             {dict.description}
                         </p>
                         <div className="flex gap-4 pt-2">
-                            <a href="https://www.facebook.com/preventivanorteredesdeprotecao" className="hover:text-yellow-400 transition-colors" target="_blank" rel="noopener noreferrer">
-                                <Facebook className="w-5 h-5" />
-                            </a>
                             <a href="https://www.instagram.com/preventivanorte" className="hover:text-rose-500 transition-colors" target="_blank" rel="noopener noreferrer">
                                 <Instagram className="w-5 h-5" />
                             </a>

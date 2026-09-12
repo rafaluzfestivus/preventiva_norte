@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Link from "next/link";
 import type { SiteDict } from "@/dictionaries/types";
 
 interface AboutUsProps {
@@ -44,10 +45,13 @@ export function AboutUs({ dict }: AboutUsProps) {
                     </div>
 
                     <div className="mt-16 grid grid-cols-2 md:grid-cols-5 gap-6">
-                        <div className="bg-yellow-50 border border-yellow-100 p-6 rounded-2xl text-center">
+                        <Link
+                            href="/"
+                            className="bg-yellow-50 p-6 rounded-2xl border border-yellow-100 text-center hover:border-yellow-400 hover:shadow-md transition-all"
+                        >
                             <h3 className="text-2xl font-bold text-[#4d2a36] mb-1">Porto</h3>
                             <p className="text-slate-500 text-sm font-medium">Preventiva Norte</p>
-                        </div>
+                        </Link>
                         <a
                             href="https://preventivacentro.es"
                             target="_blank"
@@ -57,10 +61,13 @@ export function AboutUs({ dict }: AboutUsProps) {
                             <h3 className="text-2xl font-bold text-[#4d2a36] mb-1">Madrid</h3>
                             <p className="text-slate-500 text-sm font-medium">Preventiva Centro</p>
                         </a>
-                        <div className="bg-white p-6 rounded-2xl border border-gray-100 text-center">
+                        <Link
+                            href="/es"
+                            className="bg-white p-6 rounded-2xl border border-gray-100 text-center hover:border-yellow-400 hover:shadow-md transition-all"
+                        >
                             <h3 className="text-2xl font-bold text-[#4d2a36] mb-1">Galiza</h3>
                             <p className="text-slate-500 text-sm font-medium">Preventiva Norte</p>
-                        </div>
+                        </Link>
                         <a
                             href="https://preventivasur.com"
                             target="_blank"

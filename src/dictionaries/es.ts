@@ -195,7 +195,6 @@ export const es: SiteDict = {
     instagramHandle: '@preventivanorte',
     serviceAreaTitle: 'Área de Servicio',
     serviceAreaText: 'Norte de Portugal',
-    serviceAreaSub: 'Porto, Braga, Gaia y alrededores.',
     formTitle: 'Solicitar Presupuesto',
     formName: 'Nombre',
     formPhone: 'Teléfono',
@@ -219,7 +218,7 @@ export const es: SiteDict = {
   },
   footer: {
     description:
-      'Especialistas en la instalación de redes de protección de alta resistencia en Porto y el Norte de Portugal. Seguridad certificada para balcones, ventanas, terrazas, niños y mascotas.',
+      'Especialistas en la instalación de redes de protección de alta resistencia en el Norte de Portugal. Seguridad certificada para balcones, ventanas, terrazas, niños y mascotas.',
     quickLinksTitle: 'Enlaces Rápidos',
     protectionForTitle: 'Protección Para',
     contactTitle: 'Contacto',
@@ -423,11 +422,13 @@ export const es: SiteDict = {
         title: 'Vídeo: Maracujá Roxo',
         description: 'Vea en vídeo una de nuestras instalaciones de red de protección.',
         href: '/video-maracuja-roxo.mp4',
+        autoplay: true,
       },
       {
         title: 'Vídeo: Cris Azen',
         description: 'Vea en vídeo una más de nuestras instalaciones de red de protección.',
         href: 'https://www.youtube.com/watch?v=XZbwHSxPnZQ',
+        note: 'Promoción Finalizada',
       },
     ],
   },
