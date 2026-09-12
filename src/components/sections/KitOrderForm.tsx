@@ -40,10 +40,10 @@ const TEXT = {
         subject: "Novo pedido de Kit de Instalação - Preventiva Norte",
     },
     es: {
-        formTitle: "Solicite su Kit",
+        formTitle: "Solicite su Kit de Automontaje",
         name: "Nombre",
         email: "Email",
-        phone: "Teléfono",
+        phone: "Móvil / WhatsApp",
         quantity: "Cantidad de kits",
         kitLabel: (n: number) => `Kit ${n}`,
         height: "Altura (m)",
@@ -55,7 +55,7 @@ const TEXT = {
         sending: "Enviando...",
         success: "¡Pedido enviado! Nos pondremos en contacto para confirmar los detalles.",
         error: "Ocurrió un error al enviar el pedido. Inténtelo de nuevo o contáctenos por WhatsApp.",
-        subject: "Nuevo pedido de Kit de Instalación - Preventiva Norte",
+        subject: "Nuevo pedido de Kit de Automontaje - Preventiva Norte",
     },
 };
 

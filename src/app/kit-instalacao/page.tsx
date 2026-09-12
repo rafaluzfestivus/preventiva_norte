@@ -56,7 +56,7 @@ export default function KitInstalacaoPage() {
                 </ul>
                 <p>Ideal para pequenas áreas, como janelas e varandas simples.</p>
                 <p className="mt-8">
-                    <Link href="https://wa.me/351910407785?text=Ol%C3%A1%2C%20gostaria%20de%20saber%20mais%20sobre%20o%20Kit%20de%20Instala%C3%A7%C3%A3o">
+                    <Link href="https://wa.me/351910407485?text=Ol%C3%A1%2C%20gostaria%20de%20saber%20mais%20sobre%20o%20Kit%20de%20Instala%C3%A7%C3%A3o">
                         Peça o seu kit por WhatsApp
                     </Link>
                 </p>

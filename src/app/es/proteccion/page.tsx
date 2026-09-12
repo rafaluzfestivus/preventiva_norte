@@ -2,13 +2,13 @@ import type { Metadata } from "next";
 import EsProteccioContent from "./CaProteccioContent";
 
 export const metadata: Metadata = {
-  title: "Redes de Protección en Porto | Niños, Gatos y Aves",
+  title: "Redes de Protección en Galicia | Niños, Gatos y Aves",
   description:
-    "Protección integral para tu casa en Porto y Norte de Portugal. Redes certificadas para seguridad infantil, protección de gatos y control de aves. Instalación profesional en 24h.",
+    "Protección integral para pisos y viviendas en Galicia y Norte de Portugal. Redes certificadas para seguridad infantil, protección de gatos y control de aves. Instalación profesional en 24h.",
   keywords: [
-    "redes para gatos porto",
-    "seguridad infantil porto",
-    "control de aves porto",
+    "redes para gatos galicia",
+    "seguridad infantil vigo",
+    "control de aves a coruña",
     "redes de seguridad balcones",
     "protección ventanas niños",
     "Preventiva Norte",
@@ -25,9 +25,9 @@ export const metadata: Metadata = {
     locale: "es_ES",
     siteName: "Preventiva Norte",
     url: "https://preventivanorte.pt/es/proteccion",
-    title: "Redes de Protección en Porto | Niños, Gatos y Aves",
+    title: "Redes de Protección en Galicia | Niños, Gatos y Aves",
     description:
-      "Protección integral para tu casa en Porto y Norte de Portugal. Redes certificadas para seguridad infantil, protección de gatos y control de aves.",
+      "Protección integral para pisos y viviendas en Galicia y Norte de Portugal. Redes certificadas para seguridad infantil, protección de gatos y control de aves.",
     images: [{ url: "https://preventivanorte.pt/logo-preventiva-norte.png", alt: "Preventiva Norte" }],
   },
 };

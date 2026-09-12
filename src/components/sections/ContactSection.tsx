@@ -69,8 +69,8 @@ export function ContactSection({ dict }: ContactSectionProps) {
               <div>
                 <h3 className="font-bold text-white mb-1">{dict.callTitle}</h3>
                 <p className="text-sm text-slate-400 mb-1">{dict.callLabel}</p>
-                <a href="tel:+351910407785" className="text-slate-200 hover:text-yellow-400 transition-colors">
-                  910 407 785
+                <a href="tel:+351910407485" className="text-slate-200 hover:text-yellow-400 transition-colors">
+                  {isES ? "+351 910 407 485" : "910 407 485"}
                 </a>
               </div>
             </div>

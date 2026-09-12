@@ -15,15 +15,20 @@ export function Hero({ dict, basePath = "" }: HeroProps) {
     return (
         <section id="hero" className="relative min-h-[90vh] flex items-start justify-center overflow-hidden bg-[#4d2a36]">
             <div className="absolute inset-0 z-0">
-                <div className="absolute inset-0 bg-black/60 z-10" />
-                <Image
-                    src="/hero-new.jpg"
-                    alt=""
-                    fill
-                    priority
-                    className="object-cover"
-                    sizes="100vw"
-                />
+                <video
+                    autoPlay
+                    muted
+                    loop
+                    playsInline
+                    preload="auto"
+                    poster="/hero-video-poster.jpg"
+                    className="absolute inset-0 w-full h-full object-cover"
+                >
+                    <source src="/hero-video.mp4" type="video/mp4" />
+                </video>
+                <div className="absolute inset-0 bg-black/55 z-10" />
+                <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/35 to-black/15 z-10" />
+                <div className="absolute inset-0 bg-gradient-to-t from-[#2c1720]/80 via-transparent to-black/30 z-10" />
             </div>
 
             <div className="container mx-auto px-4 md:px-8 relative z-20 pt-32 md:pt-40">

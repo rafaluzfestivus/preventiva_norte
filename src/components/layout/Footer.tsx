@@ -76,8 +76,9 @@ export function Footer() {
                                 <Phone className="w-5 h-5 text-yellow-400 shrink-0 mt-1" />
                                 <div>
                                     <span className="text-xs text-slate-400 font-bold uppercase block">{dict.mobileLabel}</span>
-                                    {/* Unconfirmed — live site shows 910 407 485, one digit differs. Confirm with client before launch. */}
-                                    <a href="tel:+351910407785" className="hover:text-white transition-colors">Móvil: 910 407 785</a>
+                                    <a href="tel:+351910407485" className="hover:text-white transition-colors">
+                                        Móvil: {isES ? "+351 910 407 485" : "910 407 485"}
+                                    </a>
                                 </div>
                             </li>
                             <li className="flex items-center gap-3">

@@ -2,31 +2,31 @@ import type { Metadata } from "next";
 import { LocaleUpdater } from "@/components/layout/LocaleUpdater";
 
 export const metadata: Metadata = {
-  title: "Instalación de Redes de Protección en Porto y Norte | Preventiva Norte",
+  title: "Instalación de Redes de Protección en Galicia y Norte de Portugal | Preventiva Norte",
   description:
-    "Especialistas en la instalación de redes de protección para balcones, ventanas y terrazas en Porto y en todo el Norte de Portugal. Resistencia de 150kg/m² y 2 años de garantía.",
+    "Especialistas en la instalación de redes de protección para balcones, ventanas y terrazas en Galicia y en todo el Norte de Portugal. Resistencia de 150kg/m² y 2 años de garantía.",
   keywords: [
-    "redes de protección porto",
-    "redes de seguridad porto",
-    "redes para balcones porto",
-    "redes para gatos porto",
-    "seguridad infantil ventanas porto",
-    "instalación redes porto",
+    "redes de protección galicia",
+    "redes de seguridad vigo",
+    "redes para balcones pontevedra",
+    "redes para gatos a coruña",
+    "seguridad infantil ventanas santiago de compostela",
+    "instalación redes ourense",
     "redes anti-caídas",
-    "protección terrazas porto",
+    "protección terrazas lugo",
     "Preventiva Norte",
     "precio redes protección",
     "presupuesto redes seguridad",
-    "instaladores redes porto",
+    "instaladores redes galicia",
   ],
   authors: [{ name: "Preventiva Norte", url: "https://preventivanorte.pt" }],
   openGraph: {
     type: "website",
     locale: "es_ES",
     url: "https://preventivanorte.pt/es",
-    title: "Preventiva Norte | Redes de Protección en Porto y Norte de Portugal",
+    title: "Preventiva Norte | Redes de Protección en Galicia y Norte de Portugal",
     description:
-      "Instalación profesional de redes de protección y redes de seguridad en Porto y Norte de Portugal. Protege a quienes más quieres sin comprometer la estética de tu casa.",
+      "Instalación profesional de redes de protección y redes de seguridad en Galicia y Norte de Portugal. Protege a quienes más quieres sin comprometer la estética de tu casa.",
     siteName: "Preventiva Norte",
     images: [
       {

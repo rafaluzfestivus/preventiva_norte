@@ -12,9 +12,9 @@ import { es } from "@/dictionaries/es";
 import { getGalleryCategories } from "@/lib/gallery";
 
 export const metadata: Metadata = {
-  title: "Instalación de Redes de Protección en Porto y Norte | Preventiva Norte",
+  title: "Instalación de Redes de Protección en Galicia y Norte de Portugal | Preventiva Norte",
   description:
-    "Especialistas en la instalación de redes de protección para balcones, ventanas y terrazas en Porto y en todo el Norte de Portugal. Resistencia de 150kg/m² y 2 años de garantía.",
+    "Especialistas en la instalación de redes de protección para balcones, ventanas y terrazas en Galicia y en todo el Norte de Portugal. Resistencia de 150kg/m² y 2 años de garantía.",
   alternates: {
     canonical: "https://preventivanorte.pt/es",
     languages: {
@@ -27,9 +27,9 @@ export const metadata: Metadata = {
     locale: "es_ES",
     siteName: "Preventiva Norte",
     url: "https://preventivanorte.pt/es",
-    title: "Preventiva Norte | Redes de Protección en Porto y Norte de Portugal",
+    title: "Preventiva Norte | Redes de Protección en Galicia y Norte de Portugal",
     description:
-      "Instalación profesional de redes de protección y redes de seguridad en Porto y Norte de Portugal.",
+      "Instalación profesional de redes de protección y redes de seguridad en Galicia y Norte de Portugal.",
     images: [{ url: "https://preventivanorte.pt/logo-preventiva-norte.png", alt: "Preventiva Norte" }],
   },
 };
@@ -42,7 +42,7 @@ export default function EsHome() {
       <Hero dict={es.hero} basePath="/es" />
       <TrustBar dict={es.trustBar} />
       <Services dict={es.services} basePath="/es" />
-      <AboutUs dict={es.aboutUs} />
+      <AboutUs dict={es.aboutUs} locale="es" />
       <BenefitsWhyUs benefits={es.benefits} whyUs={es.whyUs} />
       <Gallery dict={es.gallery} categories={galleryCategories} />
       <Testimonials dict={es.testimonials} />

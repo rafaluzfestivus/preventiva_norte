@@ -28,7 +28,7 @@ export const es: SiteDict = {
     ctaPrimary: 'Pedir Presupuesto GRATIS',
     ctaSecondary: 'Ver Instalaciones',
     scrollHint: 'Descubre más',
-    logoAlt: 'Preventiva Norte - Instalación de Redes en Porto',
+    logoAlt: 'Preventiva Norte - Redes de Protección en Galicia y Norte de Portugal',
   },
   trustBar: {
     certified: 'CE Certificado',
@@ -56,7 +56,7 @@ export const es: SiteDict = {
       {
         title: 'Control de Aves',
         description:
-          'Solución definitiva contra palomas en Porto y el Norte. Higiene y protección ética para tu edificio.',
+          'Solución definitiva contra palomas en Galicia y el Norte de Portugal. Higiene y protección ética para tu edificio.',
         href: '/proteccion#aves',
       },
       {
@@ -71,9 +71,9 @@ export const es: SiteDict = {
         href: '/construcao-civil',
       },
       {
-        title: 'Kits',
+        title: 'Kits de Automontaje',
         description:
-          'Kit DIY con red, cuerda, ganchos y tacos para instalarlo usted mismo en ventanas y balcones sencillos.',
+          'Kit "hazlo tú mismo" con red, cuerda, ganchos y tacos para instalarlo usted mismo en ventanas y balcones sencillos.',
         href: '/kit-instalacao',
       },
     ],
@@ -189,7 +189,7 @@ export const es: SiteDict = {
     description:
       'Solicita tu presupuesto gratuito y sin compromiso hoy mismo. Nuestro equipo te asesorará sobre la mejor solución para tu espacio.',
     callTitle: 'Llámanos',
-    callLabel: 'Porto y Norte',
+    callLabel: 'Galicia y Norte de Portugal',
     writeTitle: 'Escríbenos',
     instagramTitle: 'Síguenos',
     instagramHandle: '@preventivanorte',
@@ -197,7 +197,7 @@ export const es: SiteDict = {
     serviceAreaText: 'Norte de Portugal',
     formTitle: 'Solicitar Presupuesto',
     formName: 'Nombre',
-    formPhone: 'Teléfono',
+    formPhone: 'Móvil / WhatsApp',
     formEmail: 'Email',
     formPostal: 'Código Postal',
     formMessage: 'Mensaje',
@@ -218,7 +218,7 @@ export const es: SiteDict = {
   },
   footer: {
     description:
-      'Especialistas en la instalación de redes de protección de alta resistencia en el Norte de Portugal. Seguridad certificada para balcones, ventanas, terrazas, niños y mascotas.',
+      'Especialistas en la instalación de redes de protección de alta resistencia en Galicia y el Norte de Portugal. Seguridad certificada para balcones, ventanas, terrazas, niños y mascotas.',
     quickLinksTitle: 'Enlaces Rápidos',
     protectionForTitle: 'Protección Para',
     contactTitle: 'Contacto',
@@ -226,9 +226,9 @@ export const es: SiteDict = {
     legalNotice: 'Aviso Legal',
     privacyPolicy: 'Política de Privacidad',
     cookies: 'Cookies',
-    mobileLabel: 'Porto',
-    serviceArea: 'Porto y Área Metropolitana.',
-    serviceAreaSub: 'Servicio en todo el Norte de Portugal.',
+    mobileLabel: 'Galicia y Norte de Portugal',
+    serviceArea: 'Galicia y Norte de Portugal.',
+    serviceAreaSub: 'Vigo, A Coruña, Santiago de Compostela, Pontevedra, Ourense, Lugo, Ferrol y alrededores.',
     quickLinks: [
       { label: 'Inicio', href: '/' },
       {
@@ -262,7 +262,7 @@ export const es: SiteDict = {
     close: 'Cerrar',
   },
   proteccion: {
-    heroTag: 'Seguridad Integral en todo el Norte de Portugal',
+    heroTag: 'Seguridad Integral en Galicia y Norte de Portugal',
     heroTitle: 'Protección',
     heroTitleHighlight: 'Total',
     heroDescription:
@@ -367,7 +367,7 @@ export const es: SiteDict = {
       'En Preventiva Norte, nos comprometemos a proteger y respetar su privacidad. Esta Política de Privacidad explica cómo recopilamos, utilizamos y protegemos sus datos personales de acuerdo con el Reglamento General de Protección de Datos (RGPD) de la Unión Europea y la legislación portuguesa vigente.',
     s1Title: '1. Responsable del Tratamiento',
     s1Content:
-      'Los datos personales recabados a través de este sitio web son responsabilidad de Preventiva Norte. Correo electrónico de contacto: comercial@preventivanorte.pt. Teléfono: 910 407 785. Ubicación: Portugal (Prestamos servicio en todo el Norte de Portugal).',
+      'Los datos personales recabados a través de este sitio web son responsabilidad de Preventiva Norte. Correo electrónico de contacto: comercial@preventivanorte.pt. Teléfono: +351 910 407 485. Ubicación: Portugal (Prestamos servicio en Galicia y en todo el Norte de Portugal).',
     s2Title: '2. Finalidad del Tratamiento',
     s2Intro:
       'Recopilamos y tratamos sus datos personales con las siguientes finalidades:',
@@ -411,9 +411,9 @@ export const es: SiteDict = {
     watchLabel: 'Toca para ver con sonido',
     videosGroupTitle: 'Vídeos',
     legalParagraphs: [
-      'Según el artículo 1422.º del Código Civil portugués, los propietarios no pueden perjudicar la seguridad, la línea arquitectónica o el aspecto estético del edificio con obras nuevas. Sin embargo, una red de protección no se considera "obra nueva": es una estructura amovible, sin elementos metálicos visibles, hecha de filamentos de polietileno entrelazados que son prácticamente imperceptibles vistos desde el exterior — y puede retirarse fácilmente, ya que se fija con pequeños ganchos junto a la ventana.',
-      'En respuesta a una consulta sobre este tema, el departamento jurídico de DECO Proteste confirmó por escrito que una estructura amovible de este tipo puede instalarse sin necesidad de aprobación previa de la junta de propietarios.',
-      'También existe jurisprudencia favorable: un tribunal consideró que una estructura amovible para acristalar un balcón no afecta la línea arquitectónica del edificio — el mismo principio que se aplica a las redes de protección.',
+      'Según el Artículo 7.1 de la Ley de Propiedad Horizontal (LPH), el propietario de cada piso puede modificar elementos de su vivienda siempre que no menoscabe la seguridad del edificio ni altere su configuración exterior. Una red de protección encaja precisamente en ese supuesto: es un elemento desmontable y removible, sin partes metálicas visibles, hecho de filamentos de polietileno entrelazados prácticamente imperceptibles desde el exterior, y que puede retirarse fácilmente al estar fijado con pequeños ganchos junto a la ventana.',
+      'El propio Artículo 7.1 de la LPH exige únicamente comunicar la instalación de este tipo de elementos desmontables al presidente de la comunidad, sin necesidad de aprobación previa por parte de la junta de propietarios, siempre que no se altere el aspecto exterior del edificio ni se comprometa su seguridad estructural.',
+      'Este mismo criterio es aceptado de forma habitual por comunidades de vecinos y administradores de fincas, que autorizan la instalación de redes de protección al tratarse de un elemento no estructural y completamente reversible, en línea con el espíritu del Artículo 7.1 de la LPH.',
     ],
     legalCartaLabel: 'Carta a la Comunidad de Vecinos',
     legalSentencaLabel: 'Sentencia Favorable',

@@ -57,7 +57,7 @@ const navConfig = {
             { name: "Certificaciones", href: "/es/testes-certificaciones" },
             { name: "Protección", href: "/es/proteccion" },
             { name: "Servicios", href: "/es#servicios" },
-            { name: "Kit de Instalación", href: "/es/kit-instalacao" },
+            { name: "Kit de Automontaje", href: "/es/kit-instalacao" },
             { name: "Contacto", href: "/es#contacto" },
         ],
         cta: "Llamar Ahora",

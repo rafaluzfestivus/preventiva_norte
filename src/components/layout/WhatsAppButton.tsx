@@ -32,7 +32,7 @@ export function WhatsAppButton() {
         return () => clearTimeout(timer);
     }, []);
 
-    const phoneNumber = "351910407785";
+    const phoneNumber = "351910407485";
     const message = isES
         ? "Hola, quisiera más información sobre las redes de protección."
         : "Olá, gostaria de mais informações sobre as redes de proteção.";

@@ -4,12 +4,12 @@ import EsCertificacionsContent from "./CaCertificacionsContent";
 export const metadata: Metadata = {
   title: "Certificaciones y Resistencia de las Redes | Preventiva Norte",
   description:
-    "Conoce la calidad técnica de nuestras redes de protección en Porto y Norte de Portugal. Resistencia de 150kg/m², tratamiento Anti-UV e instalación certificada.",
+    "Conoce la calidad técnica de nuestras redes de protección en Galicia y Norte de Portugal. Resistencia de 150kg/m², tratamiento Anti-UV e instalación certificada.",
   keywords: [
     "certificación redes seguridad",
     "resistencia redes protección",
     "polietileno alta tenacidad",
-    "redes ignífugas porto",
+    "redes ignífugas galicia",
     "Preventiva Norte",
   ],
   alternates: {
@@ -26,7 +26,7 @@ export const metadata: Metadata = {
     url: "https://preventivanorte.pt/es/testes-certificaciones",
     title: "Certificaciones y Resistencia de las Redes | Preventiva Norte",
     description:
-      "Calidad técnica certificada en Porto y Norte de Portugal. Resistencia de 150kg/m², tratamiento Anti-UV e instalación profesional.",
+      "Calidad técnica certificada en Galicia y Norte de Portugal. Resistencia de 150kg/m², tratamiento Anti-UV e instalación profesional.",
     images: [{ url: "https://preventivanorte.pt/logo-preventiva-norte.png", alt: "Preventiva Norte" }],
   },
 };

@@ -35,7 +35,7 @@ export default function PrivacyPolicy() {
                 <p>
                     Os dados pessoais recolhidos através deste website são da responsabilidade da Preventiva Norte.<br />
                     <strong>E-mail de contacto:</strong> comercial@preventivanorte.pt<br />
-                    <strong>Telefone:</strong> 910 407 785<br />
+                    <strong>Telefone:</strong> 910 407 485<br />
                     Localização: Portugal (Prestamos serviço em todo o Norte de Portugal).
                 </p>
 

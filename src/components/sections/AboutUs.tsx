@@ -6,9 +6,10 @@ import type { SiteDict } from "@/dictionaries/types";
 
 interface AboutUsProps {
     dict: SiteDict["aboutUs"];
+    locale?: "pt" | "es";
 }
 
-export function AboutUs({ dict }: AboutUsProps) {
+export function AboutUs({ dict, locale = "pt" }: AboutUsProps) {
     return (
         <section id="sobre-nosotros" className="py-24 bg-gray-50">
             <div className="container mx-auto px-4 md:px-8">
@@ -65,8 +66,9 @@ export function AboutUs({ dict }: AboutUsProps) {
                             href="/es"
                             className="bg-white p-6 rounded-2xl border border-gray-100 text-center hover:border-yellow-400 hover:shadow-md transition-all"
                         >
-                            <h3 className="text-2xl font-bold text-[#4d2a36] mb-1">Galiza</h3>
+                            <h3 className="text-2xl font-bold text-[#4d2a36] mb-1">{locale === "es" ? "Galicia" : "Galiza"}</h3>
                             <p className="text-slate-500 text-sm font-medium">Preventiva Norte</p>
+                            {locale === "es" && <p className="text-slate-400 text-xs mt-0.5">Galiza</p>}
                         </Link>
                         <a
                             href="https://preventivasur.com"
