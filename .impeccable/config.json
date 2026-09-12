@@ -34,6 +34,14 @@
           "preventiva_norte/src/components/layout/Navbar.tsx"
         ],
         "createdAt": "2026-09-11T20:50:10.100Z"
+      },
+      {
+        "rule": "gradient-text",
+        "value": "*",
+        "files": [
+          "src/components/sections/Hero.tsx"
+        ],
+        "createdAt": "2026-09-12T10:35:34.429Z"
       }
     ]
   }
