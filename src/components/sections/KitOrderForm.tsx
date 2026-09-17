@@ -105,7 +105,6 @@ export function KitOrderForm({ locale }: KitOrderFormProps) {
         e.preventDefault();
         setStatus("sending");
         const formData = new FormData(e.currentTarget);
-        formData.append("access_key", process.env.NEXT_PUBLIC_WEB3FORMS_KEY ?? "");
         formData.append("subject", t.subject);
         formData.append("from_name", "Preventiva Norte - Kit de Instalação");
         // Override the raw "quantity" field with the true kit count — the
@@ -119,7 +118,7 @@ export function KitOrderForm({ locale }: KitOrderFormProps) {
         });
 
         try {
-            const res = await fetch("https://api.web3forms.com/submit", {
+            const res = await fetch("/api/submit-form", {
                 method: "POST",
                 body: formData,
             });

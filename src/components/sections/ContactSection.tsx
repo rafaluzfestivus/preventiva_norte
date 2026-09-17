@@ -29,12 +29,11 @@ export function ContactSection({ dict }: ContactSectionProps) {
     e.preventDefault();
     setStatus("sending");
     const formData = new FormData(e.currentTarget);
-    formData.append("access_key", process.env.NEXT_PUBLIC_WEB3FORMS_KEY ?? "");
     formData.append("subject", dict.subject);
     formData.append("from_name", "Preventiva Norte");
 
     try {
-      const res = await fetch("https://api.web3forms.com/submit", {
+      const res = await fetch("/api/submit-form", {
         method: "POST",
         body: formData,
       });
@@ -120,7 +119,7 @@ export function ContactSection({ dict }: ContactSectionProps) {
           >
             <h3 className="text-xl font-bold mb-2">{dict.formTitle}</h3>
 
-            {/* Web3Forms honeypot — bots tend to fill hidden fields, humans never see this */}
+            {/* Honeypot — bots tend to fill hidden fields, humans never see this */}
             <input type="checkbox" name="botcheck" className="hidden" style={{ display: "none" }} />
 
             <div>
