@@ -80,10 +80,10 @@ export function ContactSection({ dict }: ContactSectionProps) {
               <div>
                 <h3 className="font-bold text-white mb-1">{dict.writeTitle}</h3>
                 <a
-                  href="mailto:comercial@preventivanorte.pt"
+                  href="mailto:comercial@preventivanorte.com"
                   className="text-slate-200 hover:text-yellow-400 transition-colors"
                 >
-                  comercial@preventivanorte.pt
+                  comercial@preventivanorte.com
                 </a>
               </div>
             </div>

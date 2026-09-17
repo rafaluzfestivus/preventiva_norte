@@ -367,7 +367,7 @@ export const pt: SiteDict = {
       'Na Preventiva Norte, comprometemo-nos a proteger e respeitar a sua privacidade. Esta Política de Privacidade explica como recolhemos, utilizamos e protegemos os seus dados pessoais de acordo com o Regulamento Geral de Proteção de Dados (RGPD) da União Europeia e a legislação portuguesa vigente.',
     s1Title: '1. Responsável pelo Tratamento',
     s1Content:
-      'Os dados pessoais recolhidos através deste website são da responsabilidade da Preventiva Norte. E-mail de contacto: comercial@preventivanorte.pt. Telefone: 910 407 485. Localização: Portugal (Prestamos serviço em todo o Norte de Portugal).',
+      'Os dados pessoais recolhidos através deste website são da responsabilidade da Preventiva Norte. E-mail de contacto: comercial@preventivanorte.com. Telefone: 910 407 485. Localização: Portugal (Prestamos serviço em todo o Norte de Portugal).',
     s2Title: '2. Finalidade do Tratamento',
     s2Intro:
       'Recolhemos e tratamos os seus dados pessoais com as seguintes finalidades:',
@@ -392,7 +392,7 @@ export const pt: SiteDict = {
       'Portabilidade dos seus dados.',
     ],
     s5Footer:
-      'Para exercer estes direitos, pode enviar um e-mail para comercial@preventivanorte.pt indicando o direito que deseja exercer.',
+      'Para exercer estes direitos, pode enviar um e-mail para comercial@preventivanorte.com indicando o direito que deseja exercer.',
     s6Title: '6. Segurança dos Dados',
     s6Content:
       'Implementamos medidas técnicas e organizativas adequadas para proteger os seus dados pessoais contra o acesso não autorizado, a perda ou a alteração.',

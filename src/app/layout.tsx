@@ -90,7 +90,7 @@ export default function RootLayout({
     },
     "url": "https://preventivanorte.pt",
     "telephone": "+351253047599",
-    "email": "comercial@preventivanorte.pt",
+    "email": "comercial@preventivanorte.com",
     "priceRange": "$$",
     "areaServed": [
       "Porto",
