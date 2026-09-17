@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { useRouter } from "next/navigation";
 import { Loader2, Send, CheckCircle, XCircle, Plus, Minus } from "lucide-react";
 
 interface KitOrderFormProps {
@@ -65,6 +66,7 @@ function makeDefaultKit(): KitSpec {
 
 export function KitOrderForm({ locale }: KitOrderFormProps) {
     const t = TEXT[locale];
+    const router = useRouter();
     const [status, setStatus] = useState<"idle" | "sending" | "sent" | "error">("idle");
     const [kits, setKits] = useState<KitSpec[]>([makeDefaultKit()]);
     // Raw text of the quantity input, tracked separately from `kits.length`
@@ -127,6 +129,7 @@ export function KitOrderForm({ locale }: KitOrderFormProps) {
                 if (typeof window !== "undefined") {
                     (window as WindowWithGtag).gtag?.("event", "form_submit", { form_name: "kit_order" });
                 }
+                router.push(locale === "es" ? "/es/gracias" : "/obrigado");
             } else {
                 setStatus("error");
             }

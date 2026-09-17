@@ -107,8 +107,9 @@ export default function CertificacionesContent() {
                     <Anchor className="w-16 h-16 text-yellow-500 mx-auto mb-6" />
                     <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-6">Sistema de Fixação de Alta Performance</h2>
                     <p className="text-xl text-slate-600 leading-relaxed mb-12">
-                        Não só a rede é premium; o nosso sistema de ancoragem utiliza buchas expansivas e ganchos de aço galvanizado ou inoxidável,
-                        desenhados para se fixarem firmemente em tijolo, betão ou estruturas metálicas, sem risco de desprendimento.
+                        Não só a rede é premium; o nosso sistema de ancoragem utiliza buchas expansivas e ganchos de aço galvanizado,
+                        desenhados para se fixarem firmemente em tijolo, betão ou estruturas metálicas. Em capoto ou superfícies ocas,
+                        usamos buchas químicas e soluções de fixação específicas, garantindo sempre o mesmo nível de segurança sem risco de desprendimento.
                     </p>
                 </div>
             </section>

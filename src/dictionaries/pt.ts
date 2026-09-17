@@ -288,7 +288,7 @@ export const pt: SiteDict = {
     ninosF4Desc: 'Técnicos especialistas em todo o Norte de Portugal.',
     ninosQuote:
       'Não espere que o seu filho comece a gatinhar ou a escalar. Proteja a sua casa hoje.',
-    ninosCta: 'Peça visita técnica gratuita',
+    ninosCta: 'Peça o orçamento na visita técnica gratuita',
     ninosOverlay:
       'Quase impercetível para a vista, total proteção para os seus filhos.',
     ninosBrand: 'Premium Safety Mesh Portugal',
@@ -337,7 +337,7 @@ export const pt: SiteDict = {
     materialF3: 'Resistente a agentes químicos e ambientais',
     fixingTitle: 'Sistema de Fixação de Alta Performance',
     fixingDescription:
-      'Não só a rede é premium; o nosso sistema de ancoragem utiliza buchas expansivas e ganchos de aço galvanizado ou inoxidável, desenhados para se fixarem firmemente em tijolo, betão ou estruturas metálicas, sem risco de desprendimento.',
+      'Não só a rede é premium; o nosso sistema de ancoragem utiliza buchas expansivas e ganchos de aço galvanizado, desenhados para se fixarem firmemente em tijolo, betão ou estruturas metálicas. Em capoto ou superfícies ocas, usamos buchas químicas e soluções de fixação específicas, garantindo sempre o mesmo nível de segurança sem risco de desprendimento.',
     ctaTitle: 'Protegemos a sua casa com qualidade certificada?',
     ctaDescription:
       'Peça uma visita técnica gratuita no Norte de Portugal e comprove a qualidade dos nossos materiais.',

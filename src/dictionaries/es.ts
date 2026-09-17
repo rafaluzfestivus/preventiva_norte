@@ -288,7 +288,7 @@ export const es: SiteDict = {
     ninosF4Desc: 'Técnicos especialistas en todo el Norte de Portugal.',
     ninosQuote:
       'No esperes a que tu hijo empiece a gatear o escalar. Protege tu hogar hoy.',
-    ninosCta: 'Pide una visita técnica gratuita',
+    ninosCta: 'Pide el presupuesto en la visita técnica gratuita',
     ninosOverlay:
       'Casi imperceptible a la vista, total protección para tus hijos.',
     ninosBrand: 'Premium Safety Mesh Portugal',
@@ -337,7 +337,7 @@ export const es: SiteDict = {
     materialF3: 'Resistente a agentes químicos y ambientales',
     fixingTitle: 'Sistema de Fijación de Alta Performance',
     fixingDescription:
-      'No solo la red es premium; nuestro sistema de anclaje utiliza tacos expansivos y ganchos de acero galvanizado o inoxidable, diseñados para fijarse firmemente en ladrillo, hormigón o estructuras metálicas, sin riesgo de desprendimiento.',
+      'No solo la red es premium; nuestro sistema de anclaje utiliza tacos expansivos y ganchos de acero galvanizado, diseñados para fijarse firmemente en ladrillo, hormigón o estructuras metálicas. En fachadas con SATE (capoto) o superficies huecas, usamos tacos químicos y otras soluciones de fijación específicas, garantizando siempre el mismo nivel de seguridad sin riesgo de desprendimiento.',
     ctaTitle: '¿Protegemos tu casa con calidad certificada?',
     ctaDescription:
       'Solicita una visita técnica gratuita en el Norte de Portugal y comprueba la calidad de nuestros materiales.',

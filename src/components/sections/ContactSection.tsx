@@ -2,7 +2,7 @@
 
 import { Loader2, Send, CheckCircle, XCircle, Phone, Mail, MapPin, Instagram } from "lucide-react";
 import { useState } from "react";
-import { usePathname } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
 import Link from "next/link";
 import type { SiteDict } from "@/dictionaries/types";
 
@@ -20,6 +20,7 @@ type WindowWithGtag = Window & {
 export function ContactSection({ dict }: ContactSectionProps) {
   const [status, setStatus] = useState<"idle" | "sending" | "sent" | "error">("idle");
   const pathname = usePathname();
+  const router = useRouter();
   const isES = pathname.startsWith("/es");
   // Same locale-aware privacy link logic as Footer.tsx.
   const privacyHref = isES ? "/es/politica-privacitat" : "/politica-privacidade";
@@ -43,6 +44,7 @@ export function ContactSection({ dict }: ContactSectionProps) {
         if (typeof window !== "undefined") {
           (window as WindowWithGtag).gtag?.("event", "form_submit", { form_name: "contact" });
         }
+        router.push(isES ? "/es/gracias" : "/obrigado");
       } else {
         setStatus("error");
       }
