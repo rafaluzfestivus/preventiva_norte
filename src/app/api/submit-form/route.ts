@@ -21,7 +21,7 @@ export async function POST(request: NextRequest) {
         const replyEmail = formData.get("email")?.toString();
 
         const lines: string[] = [];
-        const attachments: { filename: string; content: Buffer }[] = [];
+        const attachments: { filename: string; content: string }[] = [];
 
         for (const [key, value] of formData.entries()) {
             if (key === "botcheck" || key === "subject" || key === "from_name") continue;
@@ -29,7 +29,10 @@ export async function POST(request: NextRequest) {
                 if (value.size > 0) {
                     attachments.push({
                         filename: value.name,
-                        content: Buffer.from(await value.arrayBuffer()),
+                        // Resend's SDK sends the request body via JSON.stringify(), which
+                        // turns a raw Buffer into {type:"Buffer",data:[...]} instead of the
+                        // base64 string the API expects — so it must be encoded here.
+                        content: Buffer.from(await value.arrayBuffer()).toString("base64"),
                     });
                 }
                 continue;
