@@ -2,6 +2,16 @@ import { NextRequest, NextResponse } from "next/server";
 import { Resend } from "resend";
 
 const TO_EMAIL = "comercial@preventivanorte.com";
+const EMAIL_PATTERN = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+// This endpoint is public, so any value read from formData is attacker-
+// controlled input, not just what the site's own forms send. Strip CR/LF
+// before it reaches an email-header-equivalent field (subject, replyTo) —
+// otherwise a POST with embedded newlines could inject extra headers into
+// the outgoing message.
+function sanitizeHeaderValue(value: string, maxLength: number): string {
+    return value.replace(/[\r\n\0]/g, "").trim().slice(0, maxLength);
+}
 
 // Generic handler for both the contact form and the kit order form: both
 // submit a FormData body with a "subject" field, a "botcheck" honeypot, an
@@ -16,9 +26,10 @@ export async function POST(request: NextRequest) {
         }
 
         const resend = new Resend(process.env.RESEND_API_KEY);
-        const subject = formData.get("subject")?.toString() || "Nova mensagem do site";
-        const fromName = formData.get("from_name")?.toString() || "Preventiva Norte";
-        const replyEmail = formData.get("email")?.toString();
+        const rawSubject = formData.get("subject")?.toString();
+        const subject = rawSubject ? sanitizeHeaderValue(rawSubject, 200) : "Nova mensagem do site";
+        const rawReplyEmail = formData.get("email")?.toString();
+        const replyEmail = rawReplyEmail ? sanitizeHeaderValue(rawReplyEmail, 254) : "";
 
         const lines: string[] = [];
         const attachments: { filename: string; content: string }[] = [];
@@ -41,9 +52,9 @@ export async function POST(request: NextRequest) {
         }
 
         const { error } = await resend.emails.send({
-            from: `${fromName} <no-reply@preventivanorte.com>`,
+            from: "Preventiva Norte <no-reply@preventivanorte.com>",
             to: TO_EMAIL,
-            replyTo: replyEmail || undefined,
+            replyTo: EMAIL_PATTERN.test(replyEmail) ? replyEmail : undefined,
             subject,
             text: lines.join("\n"),
             attachments: attachments.length ? attachments : undefined,
